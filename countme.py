@@ -61,6 +61,7 @@ END_DATE = datetime.datetime.now()  # "2025-02-02"
 for fig, oss in [
     ("ublue", ["Bluefin", "Bazzite", "Aurora"]),
     ("nonbazzite", ["Bluefin", "Aurora"]),
+    ("bazzite", ["Bazzite"]),
 ]:
     plt.figure()
     for os in oss:

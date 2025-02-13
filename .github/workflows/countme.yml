@@ -1,0 +1,26 @@
+name: CountMe Update
+on:
+  schedule: [{cron: "0 0 * * *"}]
+  workflow_dispatch:
+jobs:
+  update-countme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: Get Count
+        run: ./graph.sh
+        working-directory: ${{ github.workspace }}
+
+      - name: Write Growth Charts to Repostiory
+        uses: test-room-7/action-update-file@v2
+        with:
+            file-path: |
+              growth_ublue.png
+              growth_nonbazzite.png
+              growth_bazzite.png
+            commit-msg: Growth Chart Update
+            github-token: ${{ secrets.GITHUB_TOKEN }}
