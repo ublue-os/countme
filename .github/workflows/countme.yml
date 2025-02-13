@@ -15,6 +15,10 @@ jobs:
         run: ./graph.sh
         working-directory: ${{ github.workspace }}
 
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
       - name: Write Growth Charts to Repostiory
         uses: test-room-7/action-update-file@v2
         with:
@@ -22,5 +26,6 @@ jobs:
               growth_ublue.png
               growth_nonbazzite.png
               growth_bazzite.png
-            commit-msg: Growth Chart Update
+              growth_global.png
+            commit-msg: Growth Chart Update ${{ steps.date.outputs.date }}
             github-token: ${{ secrets.GITHUB_TOKEN }}

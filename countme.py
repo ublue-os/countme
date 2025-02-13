@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import datetime
 
 plt.style.use("default")
-plt.style.use("./cyberpunk.mplstyle")
+plt.style.use("./ublue.mplstyle")
 
 #
 # Load data
@@ -62,6 +62,7 @@ for fig, oss in [
     ("ublue", ["Bluefin", "Bazzite", "Aurora"]),
     ("nonbazzite", ["Bluefin", "Aurora"]),
     ("bazzite", ["Bazzite"]),
+    ("global", ["Silverblue", "Kinoite", "Bluefin", "Bazzite", "Aurora"]),
 ]:
     plt.figure()
     for os in oss:
