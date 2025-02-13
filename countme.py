@@ -82,7 +82,7 @@ for fig, oss in [
     plt.xticks(rotation=45, fontsize=14, fontweight='bold')
     plt.yticks(fontsize=14, fontweight='bold')
 
-    plt.legend(fontsize=16, fontweight='bold')
+    plt.legend(fontsize=16)
     plt.tight_layout()
 
     plt.savefig(f"growth_{fig}.png", dpi=80)
