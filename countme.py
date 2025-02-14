@@ -84,4 +84,4 @@ for fig, oss in [
     plt.legend(fontsize=16)
     plt.tight_layout()
 
-    plt.savefig(f"growth_{fig}.png", dpi=80)
+    plt.savefig(f"growth_{fig}.svg", dpi=80)
