@@ -56,7 +56,7 @@ d = d[
     # & (d["week_end"] != pd.to_datetime("2023-10-23"))
 ]
 
-START_DATE = datetime.datetime.now() - relativedelta(months=3)
+START_DATE = datetime.datetime.now() - relativedelta(months=9)
 END_DATE = datetime.datetime.now()
 
 for fig, oss in [
