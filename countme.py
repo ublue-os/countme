@@ -73,9 +73,8 @@ for fig, oss in [
         plt.plot(res.index, res.values, label=f"{os} ({res[res.index.max()] / 1000:.1f}k)")  # type: ignore
         # print(res)
 
-    plt.title("Active Devices per Week", fontsize=20, fontweight='bold')
-    plt.xlabel("Week", fontsize=16, fontweight='bold')
-    plt.ylabel("Hits", fontsize=16, fontweight='bold')
+    plt.title("User Statistics", fontsize=20, fontweight='bold')
+    plt.ylabel("Devices", fontsize=16, fontweight='bold')
 
     plt.xlim([pd.to_datetime(START_DATE), pd.to_datetime(END_DATE)])
 
