@@ -59,6 +59,9 @@ d = d[
 START_DATE = datetime.datetime.now() - relativedelta(months=9)
 END_DATE = datetime.datetime.now()
 
+def number_format(x, pos):
+    return f"{int(x / 1000)}k"
+
 for fig, oss in [
     ("ublue", ["Bluefin", "Bazzite", "Aurora"]),
     ("nonbazzite", ["Bluefin", "Aurora"]),
@@ -78,8 +81,12 @@ for fig, oss in [
 
     plt.xlim([pd.to_datetime(START_DATE), pd.to_datetime(END_DATE)])
 
+    plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%m/%Y"))
+
     plt.xticks(rotation=45, fontsize=14, fontweight='bold')
     plt.yticks(fontsize=14, fontweight='bold')
+
+    plt.gca().yaxis.set_major_formatter(mticker.FuncFormatter(number_format))
 
     plt.legend(fontsize=16)
     plt.tight_layout()
