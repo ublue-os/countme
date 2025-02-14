@@ -23,9 +23,9 @@ jobs:
         uses: test-room-7/action-update-file@v2
         with:
             file-path: |
-              growth_ublue.png
-              growth_nonbazzite.png
-              growth_bazzite.png
-              growth_global.png
+              growth_ublue.svg
+              growth_nonbazzite.svg
+              growth_bazzite.svg
+              growth_global.svg
             commit-msg: Growth Chart Update ${{ steps.date.outputs.date }}
             github-token: ${{ secrets.GITHUB_TOKEN }}
