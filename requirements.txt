@@ -12,7 +12,7 @@ fonttools==4.55.8
     # via matplotlib
 kiwisolver==1.4.8
     # via matplotlib
-matplotlib==3.10.0
+matplotlib==3.10.1
     # via -r requirements.in
 numpy==2.2.2
     # via
