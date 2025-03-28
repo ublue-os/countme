@@ -36,5 +36,5 @@ pytz==2025.1
     # via pandas
 six==1.17.0
     # via python-dateutil
-tzdata==2025.1
+tzdata==2025.2
     # via pandas
