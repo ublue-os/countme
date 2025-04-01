@@ -24,7 +24,7 @@ packaging==24.2
     # via matplotlib
 pandas==2.2.3
     # via -r requirements.in
-pillow==11.1.0
+pillow==11.2.0
     # via matplotlib
 pyparsing==3.2.1
     # via matplotlib
