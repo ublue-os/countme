@@ -9,6 +9,14 @@ from dateutil.relativedelta import relativedelta
 plt.style.use("default")
 plt.style.use("./ublue.mplstyle")
 
+colors = {
+    'Bazzite' : '#8A2BE2', # Purple
+    'Bluefin' : '#0546AD', # Blue
+    'Silverblue' : '#4285F4', # Light blue
+    'Aurora' : '#FF6308', # Orange
+    'Kinoite' : '#FF990A', # Light orange
+}
+
 #
 # Load data
 #
@@ -79,6 +87,7 @@ for fig, oss in [
             res.index,
             res.values,
             label=f"{os} ({res[res.index.max()] / 1000:.1f}k)",
+            color=colors[os],
         )  # type: ignore
         # print(res)
 
