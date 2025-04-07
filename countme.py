@@ -9,6 +9,14 @@ from dateutil.relativedelta import relativedelta
 plt.style.use("default")
 plt.style.use("./ublue.mplstyle")
 
+colors = {
+    'Bazzite' : '#8A2BE2', # Purple
+    'Bluefin' : '#0546AD', # Blue
+    'Silverblue' : '#4285F4', # Light blue
+    'Aurora' : '#FF6308', # Orange
+    'Kinoite' : '#FF990A', # Light orange
+}
+
 #
 # Load data
 #
@@ -75,7 +83,12 @@ for fig, oss in [
     for os in oss:
         mask = d["os_variant"].str.lower().str.contains(os.lower(), na=False)
         res = d[mask].groupby("week_end")["hits"].sum()
-        plt.plot(res.index, res.values, label=f"{os} ({res[res.index.max()] / 1000:.1f}k)")  # type: ignore
+        plt.plot(
+            res.index,
+            res.values,
+            label=f"{os} ({res[res.index.max()] / 1000:.1f}k)",
+            color=colors[os],
+        )  # type: ignore
         # print(res)
 
     plt.title("Active Users (Weekly)", fontsize=20, fontweight='bold')
