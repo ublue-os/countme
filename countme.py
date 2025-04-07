@@ -75,7 +75,11 @@ for fig, oss in [
     for os in oss:
         mask = d["os_variant"].str.lower().str.contains(os.lower(), na=False)
         res = d[mask].groupby("week_end")["hits"].sum()
-        plt.plot(res.index, res.values, label=f"{os} ({res[res.index.max()] / 1000:.1f}k)")  # type: ignore
+        plt.plot(
+            res.index,
+            res.values,
+            label=f"{os} ({res[res.index.max()] / 1000:.1f}k)",
+        )  # type: ignore
         # print(res)
 
     plt.title("Active Users (Weekly)", fontsize=20, fontweight='bold')
