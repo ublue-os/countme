@@ -91,7 +91,7 @@ for fig, oss in [
         )  # type: ignore
         # print(res)
 
-    plt.title("Active Users (Weekly)", fontsize=20, fontweight='bold')
+    plt.title("Active Users (Weekly)", fontsize=20, fontweight='bold', color='black')
     plt.ylabel("Devices", fontsize=16, fontweight='bold')
 
     plt.xlim([pd.to_datetime(START_DATE), pd.to_datetime(END_DATE)])
