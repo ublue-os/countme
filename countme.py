@@ -5,16 +5,17 @@ import matplotlib.ticker as mticker
 import matplotlib.dates as mdates
 import datetime
 from dateutil.relativedelta import relativedelta
+from bokeh.palettes import Light
 
 plt.style.use("default")
 plt.style.use("./ublue.mplstyle")
 
 colors = {
-    'Bazzite' : '#8A2BE2', # Purple
-    'Bluefin' : '#0546AD', # Blue
-    'Silverblue' : '#4285F4', # Light blue
-    'Aurora' : '#FF6308', # Orange
-    'Kinoite' : '#FF990A', # Light orange
+    'Bazzite' :    Light[5][3], # Pink
+    'Bluefin' :    Light[5][0], # Blue
+    'Silverblue' : Light[5][4], # Light blue
+    'Aurora' :     Light[5][1], # Orange
+    'Kinoite' :    Light[5][2], # Light orange
 }
 
 #
