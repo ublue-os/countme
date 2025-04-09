@@ -119,6 +119,7 @@ for fig, oss in [
     ("global", ["Silverblue", "Kinoite", "Bluefin", "Bazzite", "Aurora"]),
     ("ublue_lts", ["Bluefin", "Bluefin LTS", "Aurora", "Aurora Helium (LTS)"]),
     ("bluefins", ["Bluefin", "Bluefin LTS"]),
+    ("auroras", ["Aurora", "Aurora Helium (LTS)"]),
 ]:
     
     plt.figure(figsize=(16, 9))
