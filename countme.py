@@ -95,7 +95,8 @@ for alt_name in ["Aurora Helium (LTS)", "Aurora Helium", "Aurora LTS"]:
 
     aurora_lts_alt_name_hits[alt_name] = res
 
-os_hits['Aurora Helium (LTS)'] = aurora_lts_alt_name_hits.sum(axis=1, min_count = 1)
+# min_count=1 means there will be a NaN if there isn't at least a recorded value
+os_hits['Aurora Helium (LTS)'] = aurora_lts_alt_name_hits.sum(axis=1, min_count=1)
 
 # Bluefin LTS hits by alt name
 bluefin_lts_alt_name_hits  = pd.DataFrame()
@@ -105,14 +106,7 @@ for alt_name in ["Bluefin LTS", "Achillobator"]:
 
     bluefin_lts_alt_name_hits[alt_name] = res
 
-os_hits['Bluefin LTS'] = bluefin_lts_alt_name_hits.sum(axis=1, min_count = 1)
-
-
-# for os in ["Bluefin LTS", "Aurora Helium (LTS)"]:
-#     mask = orig["os_name"] == os
-#     res = orig[mask].groupby("week_end")["hits"].sum()
-
-#     os_hits[os] = res
+os_hits['Bluefin LTS'] = bluefin_lts_alt_name_hits.sum(axis=1, min_count=1)
 
 
 def number_format(x, pos):
