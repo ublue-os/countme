@@ -128,12 +128,12 @@ for fig, oss in [
     
     plt.figure(figsize=(16, 9))
     for os in oss:
-        os_max = os_hits[os].max()
+        os_latest_hits = os_hits[os].loc[os_hits[os].index.max()]
 
         plt.plot(
             os_hits.index,
             os_hits[os],
-            label=f"{os} ({os_max / 1000:.1f}k)",
+            label=f"{os} ({os_latest_hits / 1000:.1f}k)",
             color=colors[os],
         )  # type: ignore
         # print(res)
