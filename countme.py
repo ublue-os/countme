@@ -88,7 +88,7 @@ for os in ["Silverblue", "Kinoite", "Bluefin", "Bazzite", "Aurora"]:
 # They also used different names in the begining so those values need to be counted too
 
 # Aurora LTS hits by alt name
-aurora_lts_alt_name_hits  = pd.DataFrame()
+aurora_lts_alt_name_hits  = pd.DataFrame(index = os_hits.index)
 for alt_name in ["Aurora Helium (LTS)", "Aurora Helium", "Aurora LTS"]:
     mask = orig["os_name"] == alt_name
     res = orig[mask].groupby("week_end")["hits"].sum()
@@ -99,7 +99,7 @@ for alt_name in ["Aurora Helium (LTS)", "Aurora Helium", "Aurora LTS"]:
 os_hits['Aurora Helium (LTS)'] = aurora_lts_alt_name_hits.sum(axis=1, min_count=1)
 
 # Bluefin LTS hits by alt name
-bluefin_lts_alt_name_hits  = pd.DataFrame()
+bluefin_lts_alt_name_hits  = pd.DataFrame(index = os_hits.index)
 for alt_name in ["Achillobator", "Bluefin LTS"]:
     mask = orig["os_name"] == alt_name
     res = orig[mask].groupby("week_end")["hits"].sum()
