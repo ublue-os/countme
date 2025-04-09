@@ -63,6 +63,7 @@ orig = orig[
 START_DATE = datetime.datetime.now() - relativedelta(months=9)
 END_DATE = datetime.datetime.now()
 
+# Cut out old data
 orig = orig[orig["week_end"] >= START_DATE]
 
 # Select repos and filter outages
