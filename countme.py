@@ -11,11 +11,13 @@ plt.style.use("default")
 plt.style.use("./ublue.mplstyle")
 
 colors = {
-    'Bazzite' :    Light[5][3], # Pink
-    'Bluefin' :    Light[5][0], # Blue
-    'Silverblue' : Light[5][4], # Light blue
-    'Aurora' :     Light[5][1], # Orange
-    'Kinoite' :    Light[5][2], # Light orange
+    'Bazzite' :            Light[5][3], # Pink
+    'Bluefin' :            Light[5][0], # Blue
+    'Silverblue' :         Light[5][4], # Light blue
+    'Aurora' :             Light[5][1], # Orange
+    'Kinoite' :            Light[5][2], # Light orange
+    'Bluefin LTS':         Light[7][5], # Green
+    'Aurora Helium (LTS)': Light[7][6], # Light green
 }
 
 #
@@ -74,6 +76,21 @@ d = orig[
     )
 ]
 
+# Dataframe with one row per week in time range, one column per OS
+os_hits = pd.DataFrame()
+for os in ["Silverblue", "Kinoite", "Bluefin", "Bazzite", "Aurora"]:
+    mask = d["os_variant"].str.lower().str.contains(os.lower(), na=False)
+    res = d[mask].groupby("week_end")["hits"].sum()
+
+    os_hits[os] = res
+# LTS variants use os_name and are thus done separately and on data for all repos
+for os in ["Bluefin LTS", "Aurora Helium (LTS)"]:
+    mask = orig["os_name"] == os
+    res = orig[mask].groupby("week_end")["hits"].sum()
+
+    os_hits[os] = res
+
+
 def number_format(x, pos):
     return f"{int(x / 1000)}k"
 
@@ -82,20 +99,26 @@ for fig, oss in [
     ("nonbazzite", ["Bluefin", "Aurora"]),
     ("bazzite", ["Bazzite"]),
     ("global", ["Silverblue", "Kinoite", "Bluefin", "Bazzite", "Aurora"]),
-    ("ublue_lts", ["Bluefin", "Bluefin LTS"])
+    ("ublue_lts", ["Bluefin", "Bluefin LTS", "Aurora", "Aurora Helium (LTS)"])
 ]:
     
     plt.figure(figsize=(16, 9))
     for os in oss:
-        mask = d["os_variant"].str.lower().str.contains(os.lower(), na=False)
-        res = d[mask].groupby("week_end")["hits"].sum()
+        os_max = os_hits[os].max()
+
         plt.plot(
-            res.index,
-            res.values,
-            label=f"{os} ({res[res.index.max()] / 1000:.1f}k)",
+            os_hits.index,
+            os_hits[os],
+            label=f"{os} ({os_max / 1000:.1f}k)",
             color=colors[os],
         )  # type: ignore
         # print(res)
+
+    bottom, top = plt.ylim()
+    # Otherwise the ticker on the y prints duplicated values
+    if top < 5000:
+        top = 5000
+    plt.ylim(bottom=0, top=top)
 
     plt.title("Active Users (Weekly)", fontsize=20, fontweight='bold', color='black')
     plt.ylabel("Devices", fontsize=16, fontweight='bold')
