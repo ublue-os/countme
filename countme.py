@@ -100,7 +100,7 @@ os_hits['Aurora Helium (LTS)'] = aurora_lts_alt_name_hits.sum(axis=1, min_count=
 
 # Bluefin LTS hits by alt name
 bluefin_lts_alt_name_hits  = pd.DataFrame()
-for alt_name in ["Bluefin LTS", "Achillobator"]:
+for alt_name in ["Achillobator", "Bluefin LTS"]:
     mask = orig["os_name"] == alt_name
     res = orig[mask].groupby("week_end")["hits"].sum()
 
