@@ -32,6 +32,7 @@ orig = pd.read_csv(
     dtype={
         "repo_tag": "object",
         "os_variant": "category",
+        "os_name": "category",
     },
 )
 
