@@ -58,6 +58,11 @@ orig = orig[
     # & (d["week_end"] != pd.to_datetime("2023-10-23"))
 ]
 
+START_DATE = datetime.datetime.now() - relativedelta(months=9)
+END_DATE = datetime.datetime.now()
+
+orig = orig[orig['week_end'] >= START_DATE]
+
 # Select repos and filter outages
 print("Plotting...")
 d = orig[
@@ -69,9 +74,6 @@ d = orig[
     )
 ]
 
-START_DATE = datetime.datetime.now() - relativedelta(months=9)
-END_DATE = datetime.datetime.now()
-
 def number_format(x, pos):
     return f"{int(x / 1000)}k"
 
@@ -80,6 +82,7 @@ for fig, oss in [
     ("nonbazzite", ["Bluefin", "Aurora"]),
     ("bazzite", ["Bazzite"]),
     ("global", ["Silverblue", "Kinoite", "Bluefin", "Bazzite", "Aurora"]),
+    ("ublue_lts", ["Bluefin", "Bluefin LTS"])
 ]:
     
     plt.figure(figsize=(16, 9))
