@@ -11,13 +11,13 @@ plt.style.use("default")
 plt.style.use("./ublue.mplstyle")
 
 colors = {
-    'Bazzite' :            Light[5][3], # Pink
-    'Bluefin' :            Light[5][0], # Blue
-    'Silverblue' :         Light[5][4], # Light blue
-    'Aurora' :             Light[5][1], # Orange
-    'Kinoite' :            Light[5][2], # Light orange
-    'Bluefin LTS':         Light[7][6], # Light green
-    'Aurora Helium (LTS)': Light[7][5], # Green
+    "Bazzite" :            Light[5][3], # Pink
+    "Bluefin" :            Light[5][0], # Blue
+    "Silverblue" :         Light[5][4], # Light blue
+    "Aurora" :             Light[5][1], # Orange
+    "Kinoite" :            Light[5][2], # Light orange
+    "Bluefin LTS":         Light[7][6], # Light green
+    "Aurora Helium (LTS)": Light[7][5], # Green
 }
 
 #
@@ -63,7 +63,7 @@ orig = orig[
 START_DATE = datetime.datetime.now() - relativedelta(months=9)
 END_DATE = datetime.datetime.now()
 
-orig = orig[orig['week_end'] >= START_DATE]
+orig = orig[orig["week_end"] >= START_DATE]
 
 # Select repos and filter outages
 print("Plotting...")
@@ -96,7 +96,7 @@ for alt_name in ["Aurora Helium (LTS)", "Aurora Helium", "Aurora LTS"]:
     aurora_lts_alt_name_hits[alt_name] = res
 
 # min_count=1 means there will be a NaN if there isn't at least a recorded value
-os_hits['Aurora Helium (LTS)'] = aurora_lts_alt_name_hits.sum(axis=1, min_count=1)
+os_hits["Aurora Helium (LTS)"] = aurora_lts_alt_name_hits.sum(axis=1, min_count=1)
 
 # Bluefin LTS hits by alt name
 bluefin_lts_alt_name_hits  = pd.DataFrame(index = os_hits.index)
@@ -106,7 +106,7 @@ for alt_name in ["Achillobator", "Bluefin LTS"]:
 
     bluefin_lts_alt_name_hits[alt_name] = res
 
-os_hits['Bluefin LTS'] = bluefin_lts_alt_name_hits.sum(axis=1, min_count=1)
+os_hits["Bluefin LTS"] = bluefin_lts_alt_name_hits.sum(axis=1, min_count=1)
 
 
 def number_format(x, pos):
