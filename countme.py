@@ -16,8 +16,8 @@ colors = {
     'Silverblue' :         Light[5][4], # Light blue
     'Aurora' :             Light[5][1], # Orange
     'Kinoite' :            Light[5][2], # Light orange
-    'Bluefin LTS':         Light[7][5], # Green
-    'Aurora Helium (LTS)': Light[7][6], # Light green
+    'Bluefin LTS':         Light[7][6], # Light green
+    'Aurora Helium (LTS)': Light[7][5], # Green
 }
 
 #
