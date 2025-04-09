@@ -83,12 +83,36 @@ for os in ["Silverblue", "Kinoite", "Bluefin", "Bazzite", "Aurora"]:
     res = d[mask].groupby("week_end")["hits"].sum()
 
     os_hits[os] = res
+
 # LTS variants use os_name and are thus done separately and on data for all repos
-for os in ["Bluefin LTS", "Aurora Helium (LTS)"]:
-    mask = orig["os_name"] == os
+# They also used different names in the begining so those values need to be counted too
+
+# Aurora LTS hits by alt name
+aurora_lts_alt_name_hits  = pd.DataFrame()
+for alt_name in ["Aurora Helium (LTS)", "Aurora Helium", "Aurora LTS"]:
+    mask = orig["os_name"] == alt_name
     res = orig[mask].groupby("week_end")["hits"].sum()
 
-    os_hits[os] = res
+    aurora_lts_alt_name_hits[alt_name] = res
+
+os_hits['Aurora Helium (LTS)'] = aurora_lts_alt_name_hits.sum(axis=1, min_count = 1)
+
+# Bluefin LTS hits by alt name
+bluefin_lts_alt_name_hits  = pd.DataFrame()
+for alt_name in ["Bluefin LTS", "Achillobator"]:
+    mask = orig["os_name"] == alt_name
+    res = orig[mask].groupby("week_end")["hits"].sum()
+
+    bluefin_lts_alt_name_hits[alt_name] = res
+
+os_hits['Bluefin LTS'] = bluefin_lts_alt_name_hits.sum(axis=1, min_count = 1)
+
+
+# for os in ["Bluefin LTS", "Aurora Helium (LTS)"]:
+#     mask = orig["os_name"] == os
+#     res = orig[mask].groupby("week_end")["hits"].sum()
+
+#     os_hits[os] = res
 
 
 def number_format(x, pos):
