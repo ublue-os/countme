@@ -50,6 +50,13 @@ orig = pd.read_csv(
 #     },
 # )
 
+# Filter bad dates
+orig = orig[
+    # End of year partial week
+    (orig["week_end"] != pd.to_datetime("2024-12-29"))
+    # & (d["week_end"] != pd.to_datetime("2023-10-23"))
+]
+
 # Select repos and filter outages
 print("Plotting...")
 d = orig[
@@ -59,12 +66,6 @@ d = orig[
             # *[f"fedora-cisco-openh264-{v}" for v in range(40, 41)],
         ]
     )
-]
-
-d = d[
-    # End of year partial week
-    (d["week_end"] != pd.to_datetime("2024-12-29"))
-    # & (d["week_end"] != pd.to_datetime("2023-10-23"))
 ]
 
 START_DATE = datetime.datetime.now() - relativedelta(months=9)
