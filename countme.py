@@ -109,6 +109,8 @@ for alt_name in ["Achillobator", "Bluefin LTS"]:
 
 os_hits["Bluefin LTS"] = bluefin_lts_alt_name_hits.sum(axis=1, min_count=1)
 
+# List of OSs ordered by most recent hits value
+sorted_oss = os_hits.iloc[[-1]].melt().sort_values(by='value', ascending=False)['variable'].tolist()
 
 def number_format(x, pos):
     return f"{int(x / 1000)}k"
@@ -122,6 +124,10 @@ for fig, oss in [
     ("bluefins", ["Bluefin", "Bluefin LTS"]),
     ("auroras", ["Aurora", "Aurora Helium (LTS)"]),
 ]:
+    # Take sorted_oss and only use values in oss
+    #  this gives you only the OSs you care about, but ordered by most recent hits value.
+    #  This way you have a sorted legend
+    oss = [os for os in sorted_oss if os in oss]
     
     plt.figure(figsize=(16, 9))
     for os in oss:
