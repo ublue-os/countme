@@ -18,9 +18,9 @@ colors = {
     "Kinoite": Light[5][2],  # Light orange
     "Bluefin LTS": Light[7][1],  # Orange
     "Aurora Helium (LTS)": Light[7][5],  # Green
-    "Workstation": "Blue",
-    "Server": "Orange",
-    "Kde": "Green",
+    "Workstation": Light[5][2],
+    "Server": Light[7][1],
+    "Kde": Light[7][5],
 }
 
 #
@@ -82,7 +82,7 @@ d = orig[
     )
 ]
 
-var_os = [
+global_os = [
     "Silverblue",
     "Kinoite",
     "Bluefin",
@@ -90,11 +90,12 @@ var_os = [
     "Aurora",
     "Workstation",
     "Server",
+    "Kde",
 ]
 
 # Dataframe with one row per week in time range, one column per OS
 os_hits = pd.DataFrame()
-for os in var_os:
+for os in global_os:
     mask = d["os_variant"].str.lower().str.contains(os.lower(), na=False)
     res = d[mask].groupby("week_end")["hits"].sum()
 
@@ -143,7 +144,7 @@ for fig, oss in [
     ("bazzite", ["Bazzite"]),
     (
         "global",
-        var_os,
+        global_os,
     ),
     ("ublue_lts", ["Bluefin", "Bluefin LTS", "Aurora", "Aurora Helium (LTS)"]),
     ("bluefins", ["Bluefin", "Bluefin LTS"]),
