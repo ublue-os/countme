@@ -28,7 +28,7 @@ print("Loading data...")
 # https://data-analysis.fedoraproject.org/csv-reports/countme/totals.csv
 orig = pd.read_csv(
     "totals.csv",
-    usecols=["week_end", "repo_tag", "os_variant", "hits", "os_name"],
+    usecols=["week_end", "repo_tag", "os_variant", "hits", "os_name", "sys_age"],
     parse_dates=["week_end"],
     # low_memory=False,
     dtype={
@@ -37,6 +37,10 @@ orig = pd.read_csv(
         "os_name": "category",
     },
 )
+
+orig = orig[
+    orig["sys_age"] >= 1
+]
 
 # # Detailed data
 # orig = pd.read_csv(
