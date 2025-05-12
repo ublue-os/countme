@@ -11,13 +11,16 @@ plt.style.use("default")
 plt.style.use("./ublue.mplstyle")
 
 colors = {
-    "Bazzite" :            Light[5][3], # Pink
-    "Bluefin" :            Light[5][0], # Blue
-    "Silverblue" :         Light[5][4], # Light blue
-    "Aurora" :             Light[5][1], # Orange
-    "Kinoite" :            Light[5][2], # Light orange
-    "Bluefin LTS":         Light[7][1], # Orange
-    "Aurora Helium (LTS)": Light[7][5], # Green
+    "Bazzite": Light[5][3],  # Pink
+    "Bluefin": Light[5][0],  # Blue
+    "Silverblue": Light[5][4],  # Light blue
+    "Aurora": Light[5][1],  # Orange
+    "Kinoite": Light[5][2],  # Light orange
+    "Bluefin LTS": Light[7][1],  # Orange
+    "Aurora Helium (LTS)": Light[7][5],  # Green
+    "Workstation": "Blue",
+    "Server": "Orange",
+    "Kde": "Green",
 }
 
 #
@@ -38,9 +41,7 @@ orig = pd.read_csv(
     },
 )
 
-orig = orig[
-    orig["sys_age"] >= 1
-]
+orig = orig[orig["sys_age"] >= 1]
 
 # # Detailed data
 # orig = pd.read_csv(
@@ -81,9 +82,19 @@ d = orig[
     )
 ]
 
+var_os = [
+    "Silverblue",
+    "Kinoite",
+    "Bluefin",
+    "Bazzite",
+    "Aurora",
+    "Workstation",
+    "Server",
+]
+
 # Dataframe with one row per week in time range, one column per OS
 os_hits = pd.DataFrame()
-for os in ["Silverblue", "Kinoite", "Bluefin", "Bazzite", "Aurora"]:
+for os in var_os:
     mask = d["os_variant"].str.lower().str.contains(os.lower(), na=False)
     res = d[mask].groupby("week_end")["hits"].sum()
 
@@ -93,7 +104,7 @@ for os in ["Silverblue", "Kinoite", "Bluefin", "Bazzite", "Aurora"]:
 # They also used different names in the begining so those values need to be counted too
 
 # Aurora LTS hits by alt name
-aurora_lts_alt_name_hits  = pd.DataFrame(index = os_hits.index)
+aurora_lts_alt_name_hits = pd.DataFrame(index=os_hits.index)
 for alt_name in ["Aurora Helium (LTS)", "Aurora Helium", "Aurora LTS"]:
     mask = orig["os_name"] == alt_name
     res = orig[mask].groupby("week_end")["hits"].sum()
@@ -104,7 +115,7 @@ for alt_name in ["Aurora Helium (LTS)", "Aurora Helium", "Aurora LTS"]:
 os_hits["Aurora Helium (LTS)"] = aurora_lts_alt_name_hits.sum(axis=1, min_count=1)
 
 # Bluefin LTS hits by alt name
-bluefin_lts_alt_name_hits  = pd.DataFrame(index = os_hits.index)
+bluefin_lts_alt_name_hits = pd.DataFrame(index=os_hits.index)
 for alt_name in ["Achillobator", "Bluefin LTS"]:
     mask = orig["os_name"] == alt_name
     res = orig[mask].groupby("week_end")["hits"].sum()
@@ -114,16 +125,26 @@ for alt_name in ["Achillobator", "Bluefin LTS"]:
 os_hits["Bluefin LTS"] = bluefin_lts_alt_name_hits.sum(axis=1, min_count=1)
 
 # List of OSs ordered by most recent hits value
-sorted_oss = os_hits.iloc[[-1]].melt().sort_values(by='value', ascending=False)['variable'].tolist()
+sorted_oss = (
+    os_hits.iloc[[-1]]
+    .melt()
+    .sort_values(by="value", ascending=False)["variable"]
+    .tolist()
+)
+
 
 def number_format(x, pos):
     return f"{int(x / 1000)}k"
+
 
 for fig, oss in [
     ("ublue", ["Bluefin", "Bazzite", "Aurora"]),
     ("nonbazzite", ["Bluefin", "Aurora"]),
     ("bazzite", ["Bazzite"]),
-    ("global", ["Silverblue", "Kinoite", "Bluefin", "Bazzite", "Aurora"]),
+    (
+        "global",
+        var_os,
+    ),
     ("ublue_lts", ["Bluefin", "Bluefin LTS", "Aurora", "Aurora Helium (LTS)"]),
     ("bluefins", ["Bluefin", "Bluefin LTS"]),
     ("auroras", ["Aurora", "Aurora Helium (LTS)"]),
@@ -132,7 +153,7 @@ for fig, oss in [
     #  this gives you only the OSs you care about, but ordered by most recent hits value.
     #  This way you have a sorted legend
     oss = [os for os in sorted_oss if os in oss]
-    
+
     plt.figure(figsize=(16, 9))
     for os in oss:
         os_latest_hits = os_hits[os].loc[os_hits[os].index.max()]
@@ -151,15 +172,15 @@ for fig, oss in [
         top = 5000
     plt.ylim(bottom=0, top=top)
 
-    plt.title("Active Users (Weekly)", fontsize=20, fontweight='bold', color='black')
-    plt.ylabel("Devices", fontsize=16, fontweight='bold')
+    plt.title("Active Users (Weekly)", fontsize=20, fontweight="bold", color="black")
+    plt.ylabel("Devices", fontsize=16, fontweight="bold")
 
     plt.xlim([pd.to_datetime(START_DATE), pd.to_datetime(END_DATE)])
 
     plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%m/%Y"))
 
-    plt.xticks(rotation=45, fontsize=14, fontweight='bold')
-    plt.yticks(fontsize=14, fontweight='bold')
+    plt.xticks(rotation=45, fontsize=14, fontweight="bold")
+    plt.yticks(fontsize=14, fontweight="bold")
 
     plt.gca().yaxis.set_major_formatter(mticker.FuncFormatter(number_format))
 
