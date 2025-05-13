@@ -31,6 +31,7 @@ jobs:
               growth_ublue.svg
               growth_nonbazzite.svg
               growth_bazzite.svg
+              growth_bazzite_purple.svg
               growth_global.svg
               growth_ublue_lts.svg
             commit-msg: Growth Chart Update ${{ steps.date.outputs.date }}
