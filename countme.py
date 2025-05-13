@@ -123,6 +123,7 @@ for fig, oss in [
     ("ublue", ["Bluefin", "Bazzite", "Aurora"]),
     ("nonbazzite", ["Bluefin", "Aurora"]),
     ("bazzite", ["Bazzite"]),
+    ("bazzite_purple", ["Bazzite"]),
     ("global", ["Silverblue", "Kinoite", "Bluefin", "Bazzite", "Aurora"]),
     ("ublue_lts", ["Bluefin", "Bluefin LTS", "Aurora", "Aurora Helium (LTS)"]),
     ("bluefins", ["Bluefin", "Bluefin LTS"]),
@@ -137,11 +138,16 @@ for fig, oss in [
     for os in oss:
         os_latest_hits = os_hits[os].loc[os_hits[os].index.max()]
 
+        if fig == "bazzite_purple":
+            color="#6c3fc4"
+        else:
+            color=colors[os]
+        
         plt.plot(
             os_hits.index,
             os_hits[os],
             label=f"{os} ({os_latest_hits / 1000:.1f}k)",
-            color=colors[os],
+            color=color,
         )  # type: ignore
         # print(res)
 
