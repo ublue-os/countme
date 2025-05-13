@@ -18,9 +18,9 @@ colors = {
     "Kinoite":              Light[5][2],  # Light orange
     "Bluefin LTS":          Light[7][1],  # Orange
     "Aurora Helium (LTS)":  Light[7][5],  # Green
-    "Workstation":          Light[5][0],
-    "Server":               Light[7][1],
-    "KDE Plasma":           Light[7][5],
+    "Workstation":          "Blue",
+    "Server":               "Orange",
+    "KDE Plasma":           "Green",
     "CoreOS":               "Pink",
 }
 
