@@ -18,10 +18,10 @@ colors = {
     "Kinoite": Light[5][2],  # Light orange
     "Bluefin LTS": Light[7][1],  # Orange
     "Aurora Helium (LTS)": Light[7][5],  # Green
-    "Workstation": Light[5][2],
+    "Workstation": Light[5][0],
     "Server": Light[7][1],
     "Kde": Light[7][5],
-    "CoreOS": Light[5][0],
+    "CoreOS": Light[5][4],
 }
 
 #
@@ -66,7 +66,7 @@ orig = orig[
     # & (d["week_end"] != pd.to_datetime("2023-10-23"))
 ]
 
-START_DATE = datetime.datetime.now() - relativedelta(months=9)
+START_DATE = datetime.datetime.now() - relativedelta(months=60)
 END_DATE = datetime.datetime.now()
 
 # Cut out old data
