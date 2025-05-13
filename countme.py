@@ -20,7 +20,7 @@ colors = {
     "Aurora Helium (LTS)":  Light[7][5],  # Green
     "Workstation":          Light[5][0],
     "Server":               Light[7][1],
-    "Kde":                  Light[7][5],
+    "KDE Plasma":                  Light[7][5],
     "CoreOS":               Light[5][4],
 }
 
@@ -99,7 +99,7 @@ upstream_os = [
     "Bazzite",
     "Workstation",
     "Server",
-    "Kde",
+    "KDE Plasma",
     "CoreOS",
 ]
 
@@ -136,6 +136,17 @@ for alt_name in ["Achillobator", "Bluefin LTS"]:
     bluefin_lts_alt_name_hits[alt_name] = res
 
 os_hits["Bluefin LTS"] = bluefin_lts_alt_name_hits.sum(axis=1, min_count=1)
+
+# Fedora KDE hits (other OS use kde too)
+fedora_kde_hits = pd.DataFrame(index=os_hits.index)
+for alt_name in ["Fedora Linux"]:
+    mask = (orig["os_name"] == alt_name) & (orig["os_variant"] == "kde")
+    res = orig[mask].groupby("week_end")["hits"].sum()
+
+    fedora_kde_hits[alt_name] = res
+
+os_hits["KDE Plasma"] = fedora_kde_hits.sum(axis=1, min_count=1)
+
 
 # List of OSs ordered by most recent hits value
 sorted_oss = os_hits.iloc[[-1]].melt().sort_values(by='value', ascending=False)['variable'].tolist()
