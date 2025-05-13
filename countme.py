@@ -66,7 +66,7 @@ orig = orig[
     # & (d["week_end"] != pd.to_datetime("2023-10-23"))
 ]
 
-START_DATE = datetime.datetime.now() - relativedelta(months=60)
+START_DATE = datetime.datetime.now() - relativedelta(months=9)
 END_DATE = datetime.datetime.now()
 
 # Cut out old data
@@ -89,15 +89,23 @@ global_os = [
     "Bluefin",
     "Bazzite",
     "Aurora",
+]
+
+upstream_os = [
+    "Silverblue",
+    "Kinoite",
+    "Bazzite",
     "Workstation",
     "Server",
     "Kde",
     "CoreOS",
 ]
 
+complete_os = upstream_os + global_os
+
 # Dataframe with one row per week in time range, one column per OS
 os_hits = pd.DataFrame()
-for os in global_os:
+for os in complete_os:
     mask = d["os_variant"].str.lower().str.contains(os.lower(), na=False)
     res = d[mask].groupby("week_end")["hits"].sum()
 
@@ -147,6 +155,10 @@ for fig, oss in [
     (
         "global",
         global_os,
+    ),
+    (
+        "upstream",
+        upstream_os,
     ),
     ("ublue_lts", ["Bluefin", "Bluefin LTS", "Aurora", "Aurora Helium (LTS)"]),
     ("bluefins", ["Bluefin", "Bluefin LTS"]),
