@@ -5,9 +5,9 @@ countme
 ## How to run locally
 
 ```
-git clone https://github.com/u-blue/countme
+git clone https://github.com/ublue-os/countme
 cd countme
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ./graph.sh
