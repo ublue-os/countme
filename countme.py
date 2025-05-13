@@ -11,13 +11,17 @@ plt.style.use("default")
 plt.style.use("./ublue.mplstyle")
 
 colors = {
-    "Bazzite" :            Light[5][3], # Pink
-    "Bluefin" :            Light[5][0], # Blue
-    "Silverblue" :         Light[5][4], # Light blue
-    "Aurora" :             Light[5][1], # Orange
-    "Kinoite" :            Light[5][2], # Light orange
-    "Bluefin LTS":         Light[7][1], # Orange
-    "Aurora Helium (LTS)": Light[7][5], # Green
+    "Bazzite":              "#6c3fc4",    # Purple
+    "Bluefin":              Light[5][0],  # Blue
+    "Silverblue":           Light[5][4],  # Light blue
+    "Aurora":               Light[5][1],  # Orange
+    "Kinoite":              Light[5][2],  # Light orange
+    "Bluefin LTS":          Light[7][1],  # Orange
+    "Aurora Helium (LTS)":  Light[7][5],  # Green
+    "Workstation":          "Blue",
+    "Server":               "Orange",
+    "KDE Plasma":           "Green",
+    "CoreOS":               "Pink",
 }
 
 #
@@ -81,9 +85,29 @@ d = orig[
     )
 ]
 
+global_os = [
+    "Silverblue",
+    "Kinoite",
+    "Bluefin",
+    "Bazzite",
+    "Aurora",
+]
+
+upstream_os = [
+    "Silverblue",
+    "Kinoite",
+    "Bazzite",
+    "Workstation",
+    "Server",
+    "KDE Plasma",
+    "CoreOS",
+]
+
+complete_os = upstream_os + global_os
+
 # Dataframe with one row per week in time range, one column per OS
 os_hits = pd.DataFrame()
-for os in ["Silverblue", "Kinoite", "Bluefin", "Bazzite", "Aurora"]:
+for os in complete_os:
     mask = d["os_variant"].str.lower().str.contains(os.lower(), na=False)
     res = d[mask].groupby("week_end")["hits"].sum()
 
@@ -113,6 +137,17 @@ for alt_name in ["Achillobator", "Bluefin LTS"]:
 
 os_hits["Bluefin LTS"] = bluefin_lts_alt_name_hits.sum(axis=1, min_count=1)
 
+# Fedora KDE hits (other OS use kde too)
+fedora_kde_hits = pd.DataFrame(index=os_hits.index)
+for alt_name in ["Fedora Linux"]:
+    mask = (orig["os_name"] == alt_name) & (orig["os_variant"] == "kde")
+    res = orig[mask].groupby("week_end")["hits"].sum()
+
+    fedora_kde_hits[alt_name] = res
+
+os_hits["KDE Plasma"] = fedora_kde_hits.sum(axis=1, min_count=1)
+
+
 # List of OSs ordered by most recent hits value
 sorted_oss = os_hits.iloc[[-1]].melt().sort_values(by='value', ascending=False)['variable'].tolist()
 
@@ -124,7 +159,8 @@ for fig, oss in [
     ("nonbazzite", ["Bluefin", "Aurora"]),
     ("bazzite", ["Bazzite"]),
     ("bazzite_purple", ["Bazzite"]),
-    ("global", ["Silverblue", "Kinoite", "Bluefin", "Bazzite", "Aurora"]),
+    ("global", global_os),
+    ("upstream", upstream_os),
     ("ublue_lts", ["Bluefin", "Bluefin LTS", "Aurora", "Aurora Helium (LTS)"]),
     ("bluefins", ["Bluefin", "Bluefin LTS"]),
     ("auroras", ["Aurora", "Aurora Helium (LTS)"]),
