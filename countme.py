@@ -11,7 +11,7 @@ plt.style.use("default")
 plt.style.use("./ublue.mplstyle")
 
 colors = {
-    "Bazzite":              "Purple",  # Purple
+    "Bazzite":              "#6c3fc4",    # Purple
     "Bluefin":              Light[5][0],  # Blue
     "Silverblue":           Light[5][4],  # Light blue
     "Aurora":               Light[5][1],  # Orange
