@@ -152,10 +152,7 @@ os_hits["KDE Plasma"] = fedora_kde_hits.sum(axis=1, min_count=1)
 sorted_oss = os_hits.iloc[[-1]].melt().sort_values(by='value', ascending=False)['variable'].tolist()
 
 def number_format(x, pos):
-    if x > 0 and x < 1000:
-        return f"{x / 1000:.1f}k"
-    else:
-        return f"{int(x / 1000)}k"
+    return f"{int(x / 1000)}k"
 
 for fig, oss in [
     ("ublue", ["Bluefin", "Bazzite", "Aurora"]),
@@ -200,7 +197,13 @@ for fig, oss in [
     plt.xticks(rotation=45, fontsize=14, fontweight='bold')
     plt.yticks(fontsize=14, fontweight='bold')
 
-    plt.gca().yaxis.set_major_formatter(mticker.FuncFormatter(number_format))
+    _, top = plt.ylim()
+    plt.ylim(bottom=0)
+    
+    if top < 5000:
+        plt.gca().yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, pos : f"{x / 1000:.1f}k"))
+    else:
+        plt.gca().yaxis.set_major_formatter(mticker.FuncFormatter(number_format))
 
     plt.legend(fontsize=16)
     plt.tight_layout()
