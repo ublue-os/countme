@@ -152,7 +152,10 @@ os_hits["KDE Plasma"] = fedora_kde_hits.sum(axis=1, min_count=1)
 sorted_oss = os_hits.iloc[[-1]].melt().sort_values(by='value', ascending=False)['variable'].tolist()
 
 def number_format(x, pos):
-    return f"{int(x / 1000)}k"
+    if x > 0 and x < 1000:
+        return f"{x / 1000:.1f}k"
+    else:
+        return f"{int(x / 1000)}k"
 
 for fig, oss in [
     ("ublue", ["Bluefin", "Bazzite", "Aurora"]),
@@ -186,12 +189,6 @@ for fig, oss in [
             color=color,
         )  # type: ignore
         # print(res)
-
-    bottom, top = plt.ylim()
-    # Otherwise the ticker on the y prints duplicated values
-    if top < 5000:
-        top = 5000
-    plt.ylim(bottom=0, top=top)
 
     plt.title("Active Users (Weekly)", fontsize=20, fontweight='bold', color='black')
     plt.ylabel("Devices", fontsize=16, fontweight='bold')
