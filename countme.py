@@ -187,12 +187,6 @@ for fig, oss in [
         )  # type: ignore
         # print(res)
 
-    bottom, top = plt.ylim()
-    # Otherwise the ticker on the y prints duplicated values
-    if top < 5000:
-        top = 5000
-    plt.ylim(bottom=0, top=top)
-
     plt.title("Active Users (Weekly)", fontsize=20, fontweight='bold', color='black')
     plt.ylabel("Devices", fontsize=16, fontweight='bold')
 
@@ -203,7 +197,13 @@ for fig, oss in [
     plt.xticks(rotation=45, fontsize=14, fontweight='bold')
     plt.yticks(fontsize=14, fontweight='bold')
 
-    plt.gca().yaxis.set_major_formatter(mticker.FuncFormatter(number_format))
+    _, top = plt.ylim()
+    plt.ylim(bottom=0)
+    
+    if top < 5000:
+        plt.gca().yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, pos : f"{x / 1000:.1f}k"))
+    else:
+        plt.gca().yaxis.set_major_formatter(mticker.FuncFormatter(number_format))
 
     plt.legend(fontsize=16)
     plt.tight_layout()
