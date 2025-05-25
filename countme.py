@@ -97,7 +97,6 @@ global_os = [
 upstream_os = [
     "Silverblue",
     "Kinoite",
-    "Bazzite",
     "Workstation",
     "Server",
     "KDE Plasma",
