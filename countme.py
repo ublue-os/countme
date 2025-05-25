@@ -22,6 +22,7 @@ colors = {
     "Server":               "Orange",
     "KDE Plasma":           "Green",
     "CoreOS":               "Pink",
+    "IoT":                  "Red"
 }
 
 #
@@ -101,6 +102,7 @@ upstream_os = [
     "Server",
     "KDE Plasma",
     "CoreOS",
+    "IoT"
 ]
 
 complete_os = upstream_os + global_os
