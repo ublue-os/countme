@@ -18,6 +18,7 @@ colors = {
     "Kinoite":              Light[5][2],  # Light orange
     "Bluefin LTS":          Light[7][1],  # Orange
     "Aurora Helium (LTS)":  Light[7][5],  # Green
+    "uCore":                Light[7][2],
     "Workstation":          "Blue",
     "Server":               "Orange",
     "KDE Plasma":           "Green",
@@ -92,6 +93,7 @@ global_os = [
     "Bluefin",
     "Bazzite",
     "Aurora",
+    "uCore"
 ]
 
 upstream_os = [
