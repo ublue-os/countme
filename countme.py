@@ -11,14 +11,14 @@ plt.style.use("default")
 plt.style.use("./ublue.mplstyle")
 
 colors = {
-    "Bazzite":              "#6c3fc4",    # Purple
+    "Bazzite":              "#6c3fc4",  # Purple
     "Bluefin":              Light[5][0],  # Blue
     "Silverblue":           Light[5][4],  # Light blue
     "Aurora":               Light[5][1],  # Orange
     "Kinoite":              Light[5][2],  # Light orange
     "Bluefin LTS":          Light[7][1],  # Orange
     "Aurora Helium (LTS)":  Light[7][5],  # Green
-    "uCore":                Light[7][2],
+    "uCore":                Light[7][3],  # Sunset
     "Workstation":          "Blue",
     "Server":               "Orange",
     "KDE Plasma":           "Green",
