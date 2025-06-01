@@ -55,7 +55,7 @@ pyyaml==6.0.2
     # via bokeh
 six==1.17.0
     # via python-dateutil
-tornado==6.4.2
+tornado==6.5
     # via bokeh
 tzdata==2025.2
     # via pandas
