@@ -19,26 +19,26 @@ This repository generates Shield.io compatible badge endpoints that display acti
 
 ### Available Badges
 
+- **Aurora**: ![Aurora Users](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/ublue-os/countme/main/badge-endpoints/aurora.json)
 - **Bazzite**: ![Bazzite Users](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/ublue-os/countme/main/badge-endpoints/bazzite.json)
 - **Bluefin**: ![Bluefin Users](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/ublue-os/countme/main/badge-endpoints/bluefin.json)
-- **Aurora**: ![Aurora Users](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/ublue-os/countme/main/badge-endpoints/aurora.json)
 
 ### Markdown Code
 
 Add these to your README.md:
 
 ```markdown
+![Aurora Users](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/ublue-os/countme/main/badge-endpoints/aurora.json)
 ![Bazzite Users](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/ublue-os/countme/main/badge-endpoints/bazzite.json)
 ![Bluefin Users](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/ublue-os/countme/main/badge-endpoints/bluefin.json)
-![Aurora Users](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/ublue-os/countme/main/badge-endpoints/aurora.json)
 ```
 
 ## Badge Data Format
 
 The system generates Shield.io compatible endpoint files:
+- `badge-endpoints/aurora.json`
 - `badge-endpoints/bazzite.json`
 - `badge-endpoints/bluefin.json`
-- `badge-endpoints/aurora.json`
 
 Each file contains:
 ```json

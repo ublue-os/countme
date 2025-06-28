@@ -118,7 +118,7 @@ def generate_badge_data(os_hits):
         "aurora": {
             "name": "Aurora",
             "os_variants": ["Aurora", "Aurora Helium (LTS)"],
-            "color": "ff6600"
+            "color": "9b59b6"
         }
     }
 
