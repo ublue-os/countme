@@ -67,6 +67,8 @@ orig = orig[
 orig = orig[
     # End of year partial week
     (orig["week_end"] != pd.to_datetime("2024-12-29"))
+    # Fedora infrastructure migration; 40% drop
+    & (orig["week_end"] != pd.to_datetime("2025-07-06"))
     # & (d["week_end"] != pd.to_datetime("2023-10-23"))
 ]
 
