@@ -22,7 +22,10 @@ def load_and_process_data():
 
     # Filter bad dates
     orig = orig[
+        # End of year partial week
         (orig["week_end"] != pd.to_datetime("2024-12-29"))
+        # Fedora infrastructure migration
+        & (orig["week_end"] != pd.to_datetime("2025-07-06"))
     ]
 
     # Get recent data (last 9 months)
