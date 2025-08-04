@@ -115,8 +115,13 @@ def generate_badge_data(os_hits):
         },
         "bluefin": {
             "name": "Bluefin",
-            "os_variants": ["Bluefin", "Bluefin LTS"],
+            "os_variants": ["Bluefin"],
             "color": "0066cc"
+        },
+        "bluefin-lts": {
+            "name": "Bluefin LTS",
+            "os_variants": ["Bluefin LTS"],
+            "color": "67563e"
         },
         "aurora": {
             "name": "Aurora",
