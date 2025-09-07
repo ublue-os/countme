@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from matplotlib.lines import Line2D
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 import matplotlib.dates as mdates
@@ -195,13 +196,6 @@ for fig, oss in [
         else:
             hits = os_hits[os]
 
-        plt.plot(
-            os_hits.index,
-            hits,
-            label=f"{os} ({os_latest_hits / 1000:.1f}k)",
-            color=color,
-            linewidth=0 if stacked else None, # 0 linewidth for stacked charts, default value otherwise
-        )  # type: ignore
 
         if stacked:
             plt.fill_between(
@@ -211,8 +205,22 @@ for fig, oss in [
                 color=color,
             )
             prev_hits = hits
+        else:
+            plt.plot(
+                os_hits.index,
+                hits,
+                label=f"{os} ({os_latest_hits / 1000:.1f}k)",
+                color=color,
+                
+            )  # type: ignore
 
         # print(res)
+
+    # Manually create legend to allow consistent legends with stacked charts
+    legend_lines = [
+        Line2D([0], [0], color=colors[os], lw=5) for os in oss
+    ]
+    plt.legend(legend_lines, oss, fontsize=16)
 
     plt.title("Active Users (Weekly)", fontsize=20, fontweight='bold', color='black')
     plt.ylabel("Devices", fontsize=16, fontweight='bold')
@@ -232,7 +240,6 @@ for fig, oss in [
     else:
         plt.gca().yaxis.set_major_formatter(mticker.FuncFormatter(number_format))
 
-    plt.legend(fontsize=16)
     plt.tight_layout()
 
     plt.savefig(f"growth_{fig}.svg", dpi=80)
