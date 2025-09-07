@@ -209,7 +209,7 @@ for fig, oss in [
             plt.plot(
                 os_hits.index,
                 hits,
-                label=f"{os} ({os_latest_hits / 1000:.1f}k)",
+                # label=f"{os} ({os_latest_hits / 1000:.1f}k)",
                 color=color,
                 
             )  # type: ignore
@@ -221,9 +221,12 @@ for fig, oss in [
     if stacked:
         oss = oss[::-1]
     legend_lines = [
-        Line2D([0], [0], color=colors[os], lw=5) for os in oss
+        Line2D([0], [0], color=colors[os]) for os in oss
     ]
-    plt.legend(legend_lines, oss, fontsize=16)
+    legend_labels = [
+        f"{os} ({os_hits[os].loc[os_hits[os].index.max()] / 1000:.1f}k)" for os in oss # Add latest hits value to legend
+    ]
+    plt.legend(legend_lines, legend_labels, fontsize=16)
 
     plt.title("Active Users (Weekly)", fontsize=20, fontweight='bold', color='black')
     plt.ylabel("Devices", fontsize=16, fontweight='bold')
