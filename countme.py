@@ -144,7 +144,6 @@ orig = (
 )
 
 # Select repos and filter outages
-print("Plotting...") # TODO: Move to proper place
 d = (
     orig
     .filter(
@@ -288,6 +287,7 @@ sorted_oss = (
 def number_format(x, pos):
     return f"{int(x / 1000)}k"
 
+print("Plotting...")
 for fig, oss in [
     ("ublue", ["Bluefin", "Bazzite", "Aurora"]),
     ("nonbazzite", ["Bluefin", "Aurora"]),
