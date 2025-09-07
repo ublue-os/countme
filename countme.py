@@ -352,7 +352,7 @@ for fig, oss in [
         Line2D([0], [0], color=colors[os]) for os in oss
     ]
     legend_labels = [
-        f"{os} ({os_hits.select(pl.col(os)).tail(1).item() / 1000:.1f}k)" for os in oss # Add latest hits value to legend
+        f"{os} ({os_hits.select(pl.col(os)).drop_nulls().tail(1).item() / 1000:.1f}k)" for os in oss # Add latest hits value to legend
     ]
     plt.legend(legend_lines, legend_labels, fontsize=16)
 
