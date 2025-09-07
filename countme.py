@@ -217,6 +217,9 @@ for fig, oss in [
         # print(res)
 
     # Manually create legend to allow consistent legends with stacked charts
+    # Reverse legend order if stakced
+    if stacked:
+        oss = oss[::-1]
     legend_lines = [
         Line2D([0], [0], color=colors[os], lw=5) for os in oss
     ]
