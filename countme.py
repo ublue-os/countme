@@ -313,8 +313,6 @@ for fig, oss in [
     cumsum = 0
     prev_hits = 0
     for os in oss:
-        os_latest_hits = os_hits.select(pl.col(os)).tail(1).item()
-
         if fig == "bazzite_purple":
             color="#6c3fc4"
         else:
