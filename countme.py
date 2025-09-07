@@ -178,7 +178,7 @@ for fig, oss in [
     oss = [os for os in sorted_oss if os in oss]
 
     stacked = fig.split('_')[-1] == 'stacked'
-    
+
     plt.figure(figsize=(16, 9))
     cumsum = 0
     prev_hits = 0
@@ -196,7 +196,6 @@ for fig, oss in [
         else:
             hits = os_hits[os]
 
-
         if stacked:
             plt.fill_between(
                 os_hits.index,
@@ -211,8 +210,7 @@ for fig, oss in [
                 hits,
                 # label=f"{os} ({os_latest_hits / 1000:.1f}k)",
                 color=color,
-                
-            )  # type: ignore
+            )
 
         # print(res)
 
