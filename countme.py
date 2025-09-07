@@ -66,15 +66,17 @@ def get_alt_name_hits(
     hits = (
         alt_name_hits
         .with_columns(
-            pl.sum_horizontal(
-                alt_names,
-                ignore_nulls=True, # pandas' min_count=1 is better
+            pl.Series(
+                alt_name_hits.collect()
+                .drop('week_end')
+                .to_pandas()
+                .sum(axis=1, min_count=1) # Use pandas' sum since Polars' sum_horizontal() yields 0 even if summing all nulls
             )
-            .alias(final_name),
+            .alias('sum')
         )
         .select(
             pl.col('week_end'),
-            pl.col(final_name),
+            pl.col('sum').alias(final_name),
         )
     )
 
