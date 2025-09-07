@@ -175,6 +175,8 @@ for fig, oss in [
     #  this gives you only the OSs you care about, but ordered by most recent hits value.
     #  This way you have a sorted legend
     oss = [os for os in sorted_oss if os in oss]
+
+    stacked = fig.split('_')[-1] == 'stacked'
     
     plt.figure(figsize=(16, 9))
     cumsum = 0
@@ -187,7 +189,7 @@ for fig, oss in [
         else:
             color=colors[os]
 
-        if fig.split('_')[-1] == 'stacked':
+        if stacked:
             cumsum = cumsum + os_hits[os]
             hits = cumsum
         else:
@@ -198,9 +200,10 @@ for fig, oss in [
             hits,
             label=f"{os} ({os_latest_hits / 1000:.1f}k)",
             color=color,
+            linewidth=0 if stacked else None, # 0 linewidth for stacked charts, default value otherwise
         )  # type: ignore
 
-        if fig.split('_')[-1] == 'stacked':
+        if stacked:
             plt.fill_between(
                 os_hits.index,
                 prev_hits,
