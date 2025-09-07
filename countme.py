@@ -168,6 +168,7 @@ for fig, oss in [
     ("upstream", upstream_os),
     ("ublue_lts", ["Bluefin", "Bluefin LTS", "Aurora", "Aurora Helium (LTS)"]),
     ("bluefins", ["Bluefin", "Bluefin LTS"]),
+    ("bluefins_stacked", ["Bluefin", "Bluefin LTS"]),
     ("auroras", ["Aurora", "Aurora Helium (LTS)"]),
 ]:
     # Take sorted_oss and only use values in oss
@@ -176,6 +177,8 @@ for fig, oss in [
     oss = [os for os in sorted_oss if os in oss]
     
     plt.figure(figsize=(16, 9))
+    cumsum = 0
+    prev_hits = 0
     for os in oss:
         os_latest_hits = os_hits[os].loc[os_hits[os].index.max()]
 
@@ -183,13 +186,29 @@ for fig, oss in [
             color="#6c3fc4"
         else:
             color=colors[os]
-        
+
+        if fig.split('_')[-1] == 'stacked':
+            cumsum = cumsum + os_hits[os]
+            hits = cumsum
+        else:
+            hits = os_hits[os]
+
         plt.plot(
             os_hits.index,
-            os_hits[os],
+            hits,
             label=f"{os} ({os_latest_hits / 1000:.1f}k)",
             color=color,
         )  # type: ignore
+
+        if fig.split('_')[-1] == 'stacked':
+            plt.fill_between(
+                os_hits.index,
+                prev_hits,
+                hits,
+                color=color,
+            )
+            prev_hits = hits
+
         # print(res)
 
     plt.title("Active Users (Weekly)", fontsize=20, fontweight='bold', color='black')
