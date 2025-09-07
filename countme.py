@@ -1,4 +1,5 @@
 import pandas as pd
+import polars as pl
 import numpy as np
 from matplotlib.lines import Line2D
 import matplotlib.pyplot as plt
@@ -27,27 +28,83 @@ colors = {
     "IoT":                  "Red"
 }
 
+def get_alt_name_hits(
+        original_data: pl.LazyFrame | pl.DataFrame,
+        alt_names: list[str],
+        final_name: str,
+    ) -> pl.LazyFrame:
+    orig = original_data.lazy()
+
+    alt_name_hits  = pl.LazyFrame(orig.select(pl.col('week_end').unique()).collect())
+    for alt_name in alt_names:
+        res = (
+            orig
+            .filter(
+                pl.col('os_name') == pl.lit(alt_name)
+            )
+            .group_by(
+                pl.col('week_end')
+            )
+            .agg(
+                pl.col('hits').sum()
+            )
+            .select(
+                pl.col('week_end'),
+                pl.col('hits').alias(alt_name),
+            )
+        )
+
+        alt_name_hits = (
+            alt_name_hits
+            .join(
+                other=res,
+                on='week_end',
+                how='left',
+            )
+        )
+
+    hits = (
+        alt_name_hits
+        .with_columns(
+            pl.sum_horizontal(
+                alt_names,
+                ignore_nulls=True, # pandas' min_count=1 is better
+            )
+            .alias(final_name),
+        )
+        .select(
+            pl.col('week_end'),
+            pl.col(final_name),
+        )
+    )
+
+    return hits
+
 #
 # Load data
 #
 
 print("Loading data...")
 # https://data-analysis.fedoraproject.org/csv-reports/countme/totals.csv
-orig = pd.read_csv(
-    "totals.csv",
-    usecols=["week_end", "repo_tag", "os_variant", "hits", "os_name", "sys_age"],
-    parse_dates=["week_end"],
-    # low_memory=False,
-    dtype={
-        "repo_tag": "object",
-        "os_variant": "category",
-        "os_name": "category",
+orig = pl.scan_csv(
+    'totals.csv',
+    schema_overrides={
+        'week_start': pl.Date,
+        'week_end': pl.Date,
+        # 'repo_tag': pl.Categorical,
+        # 'os_name': pl.Categorical,
+        # 'os_variant': pl.Categorical,
+        'os_version': pl.Categorical,
+        'os_arch': pl.Categorical,
+        'sys_age': pl.Categorical,
+        'repo_arch': pl.Categorical,
     },
 )
 
-orig = orig[
-    orig["sys_age"] >= 1
-]
+orig = orig.filter(
+    pl.col('sys_age') != pl.lit('-1')
+    # pl.col('sys_age') != pl.lit(-1)
+)
 
 # # Detailed data
 # orig = pd.read_csv(
@@ -65,30 +122,39 @@ orig = orig[
 # )
 
 # Filter bad dates
-orig = orig[
+orig = orig.filter(
     # End of year partial week
-    (orig["week_end"] != pd.to_datetime("2024-12-29"))
+    pl.col('week_end') != pl.lit('2024-12-29', dtype=pl.Date),
     # Fedora infrastructure migration; 40% drop
-    & (orig["week_end"] != pd.to_datetime("2025-07-06"))
-    # & (d["week_end"] != pd.to_datetime("2023-10-23"))
-]
+    pl.col('week_end') != pl.lit('2025-07-06', dtype=pl.Date),
+)
 
 START_DATE = datetime.datetime.now() - relativedelta(months=9)
 END_DATE = datetime.datetime.now()
 
 # Cut out old data
-orig = orig[orig["week_end"] >= START_DATE]
+orig = (
+    orig
+    .filter(
+        pl.col('week_end') >+ pl.lit(START_DATE, dtype=pl.Date)
+    )
+    .sort(
+        pl.col('week_end')
+    )
+)
 
 # Select repos and filter outages
-print("Plotting...")
-d = orig[
-    orig["repo_tag"].isin(
-        [
-            *[f"fedora-{v}" for v in range(30, 45)],
-            # *[f"fedora-cisco-openh264-{v}" for v in range(40, 41)],
-        ]
+print("Plotting...") # TODO: Move to proper place
+d = (
+    orig
+    .filter(
+        pl.col('repo_tag').str.contains_any(
+            [
+                *[f"fedora-{v}" for v in range(30, 45)],
+            ]
+        )
     )
-]
+)
 
 global_os = [
     "Silverblue",
@@ -112,50 +178,112 @@ upstream_os = [
 complete_os = upstream_os + global_os
 
 # Dataframe with one row per week in time range, one column per OS
-os_hits = pd.DataFrame()
-for os in complete_os:
-    mask = d["os_variant"].str.lower().str.contains(os.lower(), na=False)
-    res = d[mask].groupby("week_end")["hits"].sum()
+os_hits = pl.LazyFrame(orig.select(pl.col('week_end').unique()).collect())
+for os in set(complete_os): # Make it a set to remove duplicates
+    res = (
+        d
+        .filter(
+            pl.col('os_variant').str.contains_any([os], ascii_case_insensitive=True)
+        )
+        .group_by(
+            pl.col('week_end')
+        )
+        .agg(
+            pl.col('hits').sum()
+        )
+        .select(
+            pl.col('week_end'),
+            pl.col('hits').alias(os),
+        )
+    )
 
-    os_hits[os] = res
+    os_hits = (
+        os_hits
+        .join(
+            other=res,
+            on='week_end',
+            how='left',
+        )
+    )
+
+# Drop KDE Plasma as it must be done separately
+os_hits = os_hits.drop('KDE Plasma')
 
 # LTS variants use os_name and are thus done separately and on data for all repos
 # They also used different names in the begining so those values need to be counted too
+aurora_lts_hits = get_alt_name_hits(
+    orig,
+    ["Aurora Helium (LTS)", "Aurora Helium", "Aurora LTS"],
+    "Aurora Helium (LTS)",
+)
+os_hits = (
+    os_hits
+    .join(
+        other=aurora_lts_hits,
+        on='week_end',
+        how='left',
+    )
+)
 
-# Aurora LTS hits by alt name
-aurora_lts_alt_name_hits  = pd.DataFrame(index = os_hits.index)
-for alt_name in ["Aurora Helium (LTS)", "Aurora Helium", "Aurora LTS"]:
-    mask = orig["os_name"] == alt_name
-    res = orig[mask].groupby("week_end")["hits"].sum()
-
-    aurora_lts_alt_name_hits[alt_name] = res
-
-# min_count=1 means there will be a NaN if there isn't at least a recorded value
-os_hits["Aurora Helium (LTS)"] = aurora_lts_alt_name_hits.sum(axis=1, min_count=1)
-
-# Bluefin LTS hits by alt name
-bluefin_lts_alt_name_hits  = pd.DataFrame(index = os_hits.index)
-for alt_name in ["Achillobator", "Bluefin LTS"]:
-    mask = orig["os_name"] == alt_name
-    res = orig[mask].groupby("week_end")["hits"].sum()
-
-    bluefin_lts_alt_name_hits[alt_name] = res
-
-os_hits["Bluefin LTS"] = bluefin_lts_alt_name_hits.sum(axis=1, min_count=1)
+bluefin_lts_hits = get_alt_name_hits(
+    orig,
+    ["Achillobator", "Bluefin LTS"],
+    "Bluefin LTS",
+)
+os_hits = (
+    os_hits
+    .join(
+        other=bluefin_lts_hits,
+        on='week_end',
+        how='left',
+    )
+)
 
 # Fedora KDE hits (other OS use kde too)
-fedora_kde_hits = pd.DataFrame(index=os_hits.index)
-for alt_name in ["Fedora Linux"]:
-    mask = (orig["os_name"] == alt_name) & (orig["os_variant"] == "kde")
-    res = orig[mask].groupby("week_end")["hits"].sum()
+fedora_kde_hits = (
+    orig
+    .filter(
+        pl.col('os_name') == pl.lit("Fedora Linux"),
+        pl.col('os_variant') == pl.lit("kde"),
+    )
+    .group_by(
+        pl.col('week_end')
+    )
+    .agg(
+        pl.col('hits').sum()
+    )
+    .select(
+        pl.col('week_end'),
+        pl.col('hits').alias('KDE Plasma'),
+    )
+)
+os_hits = (
+    os_hits
+    .join(
+        other=fedora_kde_hits,
+        on='week_end',
+        how='left',
+    )
+)
 
-    fedora_kde_hits[alt_name] = res
+# Ensure data is sorted by date
+os_hits = os_hits.sort(pl.col('week_end'))
 
-os_hits["KDE Plasma"] = fedora_kde_hits.sum(axis=1, min_count=1)
+# Run one big collect now
+os_hits = os_hits.collect()
 
 
 # List of OSs ordered by most recent hits value
-sorted_oss = os_hits.iloc[[-1]].melt().sort_values(by='value', ascending=False)['variable'].tolist()
+sorted_oss = (
+    os_hits
+    .drop('week_end')
+    .tail(1)
+    .unpivot(variable_name='os')
+    .sort('value', descending=True)
+    .select(pl.col('os'))
+    .to_series()
+    .to_list()
+)
 
 def number_format(x, pos):
     return f"{int(x / 1000)}k"
@@ -183,7 +311,7 @@ for fig, oss in [
     cumsum = 0
     prev_hits = 0
     for os in oss:
-        os_latest_hits = os_hits[os].loc[os_hits[os].index.max()]
+        os_latest_hits = os_hits.select(pl.col(os)).tail(1).item()
 
         if fig == "bazzite_purple":
             color="#6c3fc4"
@@ -198,7 +326,7 @@ for fig, oss in [
 
         if stacked:
             plt.fill_between(
-                os_hits.index,
+                os_hits['week_end'],
                 prev_hits,
                 hits,
                 color=color,
@@ -206,7 +334,7 @@ for fig, oss in [
             prev_hits = hits
         else:
             plt.plot(
-                os_hits.index,
+                os_hits['week_end'],
                 hits,
                 # label=f"{os} ({os_latest_hits / 1000:.1f}k)",
                 color=color,
@@ -222,7 +350,7 @@ for fig, oss in [
         Line2D([0], [0], color=colors[os]) for os in oss
     ]
     legend_labels = [
-        f"{os} ({os_hits[os].loc[os_hits[os].index.max()] / 1000:.1f}k)" for os in oss # Add latest hits value to legend
+        f"{os} ({os_hits.select(pl.col(os)).tail(1).item() / 1000:.1f}k)" for os in oss # Add latest hits value to legend
     ]
     plt.legend(legend_lines, legend_labels, fontsize=16)
 
