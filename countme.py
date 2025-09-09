@@ -138,7 +138,7 @@ END_DATE = datetime.datetime.now()
 orig = (
     orig
     .filter(
-        pl.col("week_end") >+ pl.lit(START_DATE, dtype=pl.Date)
+        pl.col("week_end") >= pl.lit(START_DATE, dtype=pl.Date)
     )
     .sort(
         pl.col("week_end")
