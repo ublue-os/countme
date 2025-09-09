@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from matplotlib.lines import Line2D
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 import matplotlib.dates as mdates
@@ -168,14 +169,19 @@ for fig, oss in [
     ("upstream", upstream_os),
     ("ublue_lts", ["Bluefin", "Bluefin LTS", "Aurora", "Aurora Helium (LTS)"]),
     ("bluefins", ["Bluefin", "Bluefin LTS"]),
+    ("bluefins_stacked", ["Bluefin", "Bluefin LTS"]),
     ("auroras", ["Aurora", "Aurora Helium (LTS)"]),
 ]:
     # Take sorted_oss and only use values in oss
     #  this gives you only the OSs you care about, but ordered by most recent hits value.
     #  This way you have a sorted legend
     oss = [os for os in sorted_oss if os in oss]
-    
+
+    stacked = fig.split('_')[-1] == 'stacked'
+
     plt.figure(figsize=(16, 9))
+    cumsum = 0
+    prev_hits = 0
     for os in oss:
         os_latest_hits = os_hits[os].loc[os_hits[os].index.max()]
 
@@ -183,14 +189,42 @@ for fig, oss in [
             color="#6c3fc4"
         else:
             color=colors[os]
-        
-        plt.plot(
-            os_hits.index,
-            os_hits[os],
-            label=f"{os} ({os_latest_hits / 1000:.1f}k)",
-            color=color,
-        )  # type: ignore
+
+        if stacked:
+            cumsum = cumsum + os_hits[os]
+            hits = cumsum
+        else:
+            hits = os_hits[os]
+
+        if stacked:
+            plt.fill_between(
+                os_hits.index,
+                prev_hits,
+                hits,
+                color=color,
+            )
+            prev_hits = hits
+        else:
+            plt.plot(
+                os_hits.index,
+                hits,
+                # label=f"{os} ({os_latest_hits / 1000:.1f}k)",
+                color=color,
+            )
+
         # print(res)
+
+    # Manually create legend to allow consistent legends with stacked charts
+    # Reverse legend order if stakced
+    if stacked:
+        oss = oss[::-1]
+    legend_lines = [
+        Line2D([0], [0], color=colors[os]) for os in oss
+    ]
+    legend_labels = [
+        f"{os} ({os_hits[os].loc[os_hits[os].index.max()] / 1000:.1f}k)" for os in oss # Add latest hits value to legend
+    ]
+    plt.legend(legend_lines, legend_labels, fontsize=16)
 
     plt.title("Active Users (Weekly)", fontsize=20, fontweight='bold', color='black')
     plt.ylabel("Devices", fontsize=16, fontweight='bold')
@@ -210,7 +244,6 @@ for fig, oss in [
     else:
         plt.gca().yaxis.set_major_formatter(mticker.FuncFormatter(number_format))
 
-    plt.legend(fontsize=16)
     plt.tight_layout()
 
     plt.savefig(f"growth_{fig}.svg", dpi=80)
