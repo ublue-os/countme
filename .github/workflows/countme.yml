@@ -34,7 +34,6 @@ jobs:
               growth_bazzite.svg
               growth_bazzite_purple.svg
               growth_global.svg
-              growth_ublue_lts.svg
               growth_upstream.svg
               badge-endpoints/*.json
             commit-msg: Growth Chart Update ${{ steps.date.outputs.date }}
