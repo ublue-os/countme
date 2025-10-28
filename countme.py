@@ -18,7 +18,6 @@ colors = {
     "Aurora":               Light[5][1],  # Orange
     "Kinoite":              Light[5][2],  # Light orange
     "Bluefin LTS":          Light[7][1],  # Orange
-    "Aurora Helium (LTS)":  Light[7][5],  # Green
     "uCore":                Light[7][3],  # Sunset
     "Workstation":          "Blue",
     "Server":               "Orange",
@@ -122,17 +121,6 @@ for os in complete_os:
 # LTS variants use os_name and are thus done separately and on data for all repos
 # They also used different names in the begining so those values need to be counted too
 
-# Aurora LTS hits by alt name
-aurora_lts_alt_name_hits  = pd.DataFrame(index = os_hits.index)
-for alt_name in ["Aurora Helium (LTS)", "Aurora Helium", "Aurora LTS"]:
-    mask = orig["os_name"] == alt_name
-    res = orig[mask].groupby("week_end")["hits"].sum()
-
-    aurora_lts_alt_name_hits[alt_name] = res
-
-# min_count=1 means there will be a NaN if there isn't at least a recorded value
-os_hits["Aurora Helium (LTS)"] = aurora_lts_alt_name_hits.sum(axis=1, min_count=1)
-
 # Bluefin LTS hits by alt name
 bluefin_lts_alt_name_hits  = pd.DataFrame(index = os_hits.index)
 for alt_name in ["Achillobator", "Bluefin LTS"]:
@@ -167,10 +155,9 @@ for fig, oss in [
     ("bazzite_purple", ["Bazzite"]),
     ("global", global_os),
     ("upstream", upstream_os),
-    ("ublue_lts", ["Bluefin", "Bluefin LTS", "Aurora", "Aurora Helium (LTS)"]),
     ("bluefins", ["Bluefin", "Bluefin LTS"]),
     ("bluefins_stacked", ["Bluefin", "Bluefin LTS"]),
-    ("auroras", ["Aurora", "Aurora Helium (LTS)"]),
+    ("aurora", ["Aurora"]),
 ]:
     # Take sorted_oss and only use values in oss
     #  this gives you only the OSs you care about, but ordered by most recent hits value.

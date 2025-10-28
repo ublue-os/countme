@@ -54,17 +54,6 @@ def calculate_os_hits(d, orig):
         res = d[mask].groupby("week_end")["hits"].sum()
         os_hits[os] = res
 
-    # Handle LTS variants separately using os_name
-
-    # Aurora LTS hits
-    aurora_lts_alt_name_hits = pd.DataFrame(index=os_hits.index)
-    for alt_name in ["Aurora Helium (LTS)", "Aurora Helium", "Aurora LTS"]:
-        mask = orig["os_name"] == alt_name
-        res = orig[mask].groupby("week_end")["hits"].sum()
-        aurora_lts_alt_name_hits[alt_name] = res
-
-    os_hits["Aurora Helium (LTS)"] = aurora_lts_alt_name_hits.sum(axis=1, min_count=1)
-
     # Bluefin LTS hits
     bluefin_lts_alt_name_hits = pd.DataFrame(index=os_hits.index)
     for alt_name in ["Achillobator", "Bluefin LTS"]:
@@ -125,7 +114,7 @@ def generate_badge_data(os_hits):
         },
         "aurora": {
             "name": "Aurora",
-            "os_variants": ["Aurora", "Aurora Helium (LTS)"],
+            "os_variants": ["Aurora"],
             "color": "9b59b6"
         }
     }

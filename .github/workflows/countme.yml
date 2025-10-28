@@ -26,7 +26,7 @@ jobs:
         uses: test-room-7/action-update-file@be6fb6d9c59d5ec4b56542f2e8ad2516a99e3402 # v2
         with:
             file-path: |
-              growth_auroras.svg
+              growth_aurora.svg
               growth_bluefins.svg
               growth_bluefins_stacked.svg
               growth_ublue.svg
@@ -34,7 +34,6 @@ jobs:
               growth_bazzite.svg
               growth_bazzite_purple.svg
               growth_global.svg
-              growth_ublue_lts.svg
               growth_upstream.svg
               badge-endpoints/*.json
             commit-msg: Growth Chart Update ${{ steps.date.outputs.date }}
