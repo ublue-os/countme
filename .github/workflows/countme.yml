@@ -26,7 +26,7 @@ jobs:
         uses: test-room-7/action-update-file@be6fb6d9c59d5ec4b56542f2e8ad2516a99e3402 # v2
         with:
             file-path: |
-              growth_auroras.svg
+              growth_aurora.svg
               growth_bluefins.svg
               growth_bluefins_stacked.svg
               growth_ublue.svg
