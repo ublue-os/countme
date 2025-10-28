@@ -155,7 +155,7 @@ for fig, oss in [
     ("bazzite_purple", ["Bazzite"]),
     ("global", global_os),
     ("upstream", upstream_os),
-    ("ublue_lts", ["Bluefin", "Bluefin LTS""]),
+    ("ublue_lts", ["Bluefin", "Bluefin LTS"]),
     ("bluefins", ["Bluefin", "Bluefin LTS"]),
     ("bluefins_stacked", ["Bluefin", "Bluefin LTS"]),
     ("aurora", ["Aurora"]),
