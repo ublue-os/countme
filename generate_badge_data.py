@@ -66,8 +66,8 @@ def calculate_os_hits(d, orig):
     # Fedora KDE hits
     fedora_kde_hits = pd.DataFrame(index=os_hits.index)
     for alt_name in ["Fedora Linux"]:
-        mask = (orig["os_name"] == alt_name) & (orig["os_variant"] == "kde")
-        res = orig[mask].groupby("week_end")["hits"].sum()
+        mask = (d["os_name"] == alt_name) & (d["os_variant"] == "kde")
+        res = d[mask].groupby("week_end")["hits"].sum()
         fedora_kde_hits[alt_name] = res
 
     os_hits["KDE Plasma"] = fedora_kde_hits.sum(axis=1, min_count=1)
