@@ -134,8 +134,8 @@ os_hits["Bluefin LTS"] = bluefin_lts_alt_name_hits.sum(axis=1, min_count=1)
 # Fedora KDE hits (other OS use kde too)
 fedora_kde_hits = pd.DataFrame(index=os_hits.index)
 for alt_name in ["Fedora Linux"]:
-    mask = (orig["os_name"] == alt_name) & (orig["os_variant"] == "kde")
-    res = orig[mask].groupby("week_end")["hits"].sum()
+    mask = (d["os_name"] == alt_name) & (d["os_variant"] == "kde")
+    res = d[mask].groupby("week_end")["hits"].sum()
 
     fedora_kde_hits[alt_name] = res
 
