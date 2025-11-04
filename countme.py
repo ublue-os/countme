@@ -69,7 +69,7 @@ orig = orig[
     (orig["week_end"] != pd.to_datetime("2024-12-29"))
     # Fedora infrastructure migration; 40% drop
     & (orig["week_end"] != pd.to_datetime("2025-07-06"))
-    # & (d["week_end"] != pd.to_datetime("2023-10-23"))
+    # & (fedora_repos_hits["week_end"] != pd.to_datetime("2023-10-23"))
 ]
 
 START_DATE = datetime.datetime.now() - relativedelta(months=9)
@@ -80,7 +80,7 @@ orig = orig[orig["week_end"] >= START_DATE]
 
 # Select repos and filter outages
 print("Plotting...")
-d = orig[
+fedora_repos_hits = orig[
     orig["repo_tag"].isin(
         [
             *[f"fedora-{v}" for v in range(30, 45)],
@@ -113,8 +113,8 @@ complete_os = upstream_os + global_os
 # Dataframe with one row per week in time range, one column per OS
 os_hits = pd.DataFrame()
 for os in complete_os:
-    mask = d["os_variant"].str.lower().str.contains(os.lower(), na=False)
-    res = d[mask].groupby("week_end")["hits"].sum()
+    mask = fedora_repos_hits["os_variant"].str.lower().str.contains(os.lower(), na=False)
+    res = fedora_repos_hits[mask].groupby("week_end")["hits"].sum()
 
     os_hits[os] = res
 
@@ -134,8 +134,8 @@ os_hits["Bluefin LTS"] = bluefin_lts_alt_name_hits.sum(axis=1, min_count=1)
 # Fedora KDE hits (other OS use kde too)
 fedora_kde_hits = pd.DataFrame(index=os_hits.index)
 for alt_name in ["Fedora Linux"]:
-    mask = (orig["os_name"] == alt_name) & (orig["os_variant"] == "kde")
-    res = orig[mask].groupby("week_end")["hits"].sum()
+    mask = (fedora_repos_hits["os_name"] == alt_name) & (fedora_repos_hits["os_variant"] == "kde")
+    res = fedora_repos_hits[mask].groupby("week_end")["hits"].sum()
 
     fedora_kde_hits[alt_name] = res
 

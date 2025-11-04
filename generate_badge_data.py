@@ -33,13 +33,13 @@ def load_and_process_data():
     orig = orig[orig["week_end"] >= START_DATE]
 
     # Filter for Fedora repos
-    d = orig[
+    fedora_repos_hits = orig[
         orig["repo_tag"].isin([f"fedora-{v}" for v in range(30, 45)])
     ]
 
-    return d, orig
+    return fedora_repos_hits, orig
 
-def calculate_os_hits(d, orig):
+def calculate_os_hits(fedora_repos_hits, orig):
     """Calculate hits for each OS."""
     os_list = [
         "Silverblue", "Kinoite", "Bluefin", "Bazzite", "Aurora", "uCore",
@@ -50,8 +50,8 @@ def calculate_os_hits(d, orig):
     os_hits = pd.DataFrame()
 
     for os in os_list:
-        mask = d["os_variant"].str.lower().str.contains(os.lower(), na=False)
-        res = d[mask].groupby("week_end")["hits"].sum()
+        mask = fedora_repos_hits["os_variant"].str.lower().str.contains(os.lower(), na=False)
+        res = fedora_repos_hits[mask].groupby("week_end")["hits"].sum()
         os_hits[os] = res
 
     # Bluefin LTS hits
@@ -66,8 +66,8 @@ def calculate_os_hits(d, orig):
     # Fedora KDE hits
     fedora_kde_hits = pd.DataFrame(index=os_hits.index)
     for alt_name in ["Fedora Linux"]:
-        mask = (orig["os_name"] == alt_name) & (orig["os_variant"] == "kde")
-        res = orig[mask].groupby("week_end")["hits"].sum()
+        mask = (fedora_repos_hits["os_name"] == alt_name) & (fedora_repos_hits["os_variant"] == "kde")
+        res = fedora_repos_hits[mask].groupby("week_end")["hits"].sum()
         fedora_kde_hits[alt_name] = res
 
     os_hits["KDE Plasma"] = fedora_kde_hits.sum(axis=1, min_count=1)
@@ -156,8 +156,8 @@ def generate_badge_data(os_hits):
     return generated_projects
 
 def main():
-        d, orig = load_and_process_data()
-        os_hits = calculate_os_hits(d, orig)
+        fedora_repos_hits, orig = load_and_process_data()
+        os_hits = calculate_os_hits(fedora_repos_hits, orig)
 
         generated_projects = generate_badge_data(os_hits)
 
