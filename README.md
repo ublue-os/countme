@@ -8,10 +8,15 @@ cd countme
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-./graph.sh
+./graph.sh -d
 ```
 
-Comment out `wget` line on graph.sh after first run if you don't want to re-download dataset every time (only changes once per day).
+### Usage
+
+- `./graph.sh -d` or `./graph.sh --download` - Downloads fresh dataset and generates graphs
+- `./graph.sh` - Generates graphs using existing dataset (skips download)
+
+The dataset only changes once per day, so you typically only need to use the `-d` flag once per day to get fresh data.
 
 ## Badge System
 
