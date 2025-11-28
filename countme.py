@@ -156,6 +156,7 @@ for fig, oss in [
     ("global", global_os),
     ("upstream", upstream_os),
     ("bluefins", ["Bluefin"]),
+    ("bluefins_dark", ["Bluefin"]),
     # ("bluefins_stacked", ["Bluefin", "Bluefin LTS"]),
     ("aurora", ["Aurora"]),
 ]:
@@ -225,6 +226,10 @@ for fig, oss in [
 
     _, top = plt.ylim()
     plt.ylim(bottom=0)
+
+    if fig == "bluefins_dark":
+        plt.gcf().patch.set_facecolor("#0c1016")
+        plt.gca().set_facecolor("#0c1016")
     
     if top < 5000:
         plt.gca().yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, pos : f"{x / 1000:.1f}k"))
