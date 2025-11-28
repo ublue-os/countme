@@ -155,8 +155,8 @@ for fig, oss in [
     ("bazzite_purple", ["Bazzite"]),
     ("global", global_os),
     ("upstream", upstream_os),
-    # ("bluefins", ["Bluefin", "Bluefin LTS"]),
-    # ("bluefins_stacked", ["Bluefin", "Bluefin LTS"]),
+    ("bluefins", ["Bluefin", "Bluefin LTS"]),
+    ("bluefins_stacked", ["Bluefin", "Bluefin LTS"]),
     ("aurora", ["Aurora"]),
 ]:
     # Take sorted_oss and only use values in oss

@@ -27,6 +27,8 @@ jobs:
         with:
             file-path: |
               growth_aurora.svg
+              growth_bluefins.svg
+              growth_bluefins_stacked.svg
               growth_ublue.svg
               growth_nonbazzite.svg
               growth_bazzite.svg
