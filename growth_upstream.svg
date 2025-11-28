@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2025-11-28T00:14:38.065589</dc:date>
+    <dc:date>2025-11-28T17:49:53.454570</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -30,199 +30,203 @@ z
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 66.36 585.333896 
-L 1141.2 585.333896 
-L 1141.2 32.64 
-L 66.36 32.64 
+    <path d="M 64.56 589.343192 
+L 1141.2 589.343192 
+L 1141.2 31.2 
+L 64.56 31.2 
 z
 " style="fill: #ffffff"/>
    </g>
    <g id="matplotlib.axis_1">
     <g id="xtick_1">
      <g id="line2d_1">
-      <path d="M 68.463709 589.343192 
-L 68.463709 31.2 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
+      <path d="M 65.573675 589.343192 
+L 65.573675 31.2 
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
      </g>
      <g id="line2d_2"/>
      <g id="text_1">
       <!-- 03/2025 -->
-      <g style="fill: #616161" transform="translate(53.133413 635.797719) rotate(-45) scale(0.14 -0.14)">
+      <g style="fill: #616161" transform="translate(50.243379 635.797719) rotate(-45) scale(0.14 -0.14)">
        <defs>
-        <path id="OpenSans-Bold-30" d="M 3425 2284 
-Q 3425 1088 3033 512 
-Q 2641 -63 1825 -63 
-Q 1034 -63 632 531 
-Q 231 1125 231 2284 
-Q 231 3494 622 4067 
-Q 1013 4641 1825 4641 
-Q 2616 4641 3020 4041 
-Q 3425 3441 3425 2284 
+        <path id="LiberationSans-Bold-30" d="M 3297 2203 
+Q 3297 1088 2914 512 
+Q 2531 -63 1766 -63 
+Q 253 -63 253 2203 
+Q 253 2994 418 3494 
+Q 584 3994 915 4231 
+Q 1247 4469 1791 4469 
+Q 2572 4469 2934 3903 
+Q 3297 3338 3297 2203 
 z
-M 1191 2284 
-Q 1191 1444 1336 1080 
-Q 1481 716 1825 716 
-Q 2163 716 2313 1084 
-Q 2463 1453 2463 2284 
-Q 2463 3125 2311 3492 
-Q 2159 3859 1825 3859 
-Q 1484 3859 1337 3492 
-Q 1191 3125 1191 2284 
-z
-" transform="scale(0.015625)"/>
-        <path id="OpenSans-Bold-33" d="M 3272 3547 
-Q 3272 3119 3012 2819 
-Q 2753 2519 2284 2406 
-L 2284 2388 
-Q 2838 2319 3122 2051 
-Q 3406 1784 3406 1331 
-Q 3406 672 2928 304 
-Q 2450 -63 1563 -63 
-Q 819 -63 244 184 
-L 244 1006 
-Q 509 872 828 787 
-Q 1147 703 1459 703 
-Q 1938 703 2166 865 
-Q 2394 1028 2394 1388 
-Q 2394 1709 2131 1843 
-Q 1869 1978 1294 1978 
-L 947 1978 
-L 947 2719 
-L 1300 2719 
-Q 1831 2719 2076 2858 
-Q 2322 2997 2322 3334 
-Q 2322 3853 1672 3853 
-Q 1447 3853 1214 3778 
-Q 981 3703 697 3519 
-L 250 4184 
-Q 875 4634 1741 4634 
-Q 2450 4634 2861 4346 
-Q 3272 4059 3272 3547 
+M 2416 2203 
+Q 2416 2813 2356 3150 
+Q 2297 3488 2165 3634 
+Q 2034 3781 1784 3781 
+Q 1519 3781 1383 3632 
+Q 1247 3484 1189 3148 
+Q 1131 2813 1131 2203 
+Q 1131 1600 1192 1261 
+Q 1253 922 1386 775 
+Q 1519 628 1772 628 
+Q 2022 628 2158 783 
+Q 2294 938 2355 1278 
+Q 2416 1619 2416 2203 
 z
 " transform="scale(0.015625)"/>
-        <path id="OpenSans-Bold-2f" d="M 2613 4569 
-L 909 0 
-L 44 0 
-L 1747 4569 
-L 2613 4569 
+        <path id="LiberationSans-Bold-33" d="M 3328 1222 
+Q 3328 603 2922 265 
+Q 2516 -72 1766 -72 
+Q 1056 -72 637 254 
+Q 219 581 147 1197 
+L 1041 1275 
+Q 1125 641 1763 641 
+Q 2078 641 2253 797 
+Q 2428 953 2428 1275 
+Q 2428 1569 2215 1725 
+Q 2003 1881 1584 1881 
+L 1278 1881 
+L 1278 2591 
+L 1566 2591 
+Q 1944 2591 2134 2745 
+Q 2325 2900 2325 3188 
+Q 2325 3459 2173 3614 
+Q 2022 3769 1731 3769 
+Q 1459 3769 1292 3619 
+Q 1125 3469 1100 3194 
+L 222 3256 
+Q 291 3825 694 4147 
+Q 1097 4469 1747 4469 
+Q 2438 4469 2827 4158 
+Q 3216 3847 3216 3297 
+Q 3216 2884 2973 2618 
+Q 2731 2353 2275 2266 
+L 2275 2253 
+Q 2781 2194 3054 1920 
+Q 3328 1647 3328 1222 
 z
 " transform="scale(0.015625)"/>
-        <path id="OpenSans-Bold-32" d="M 3450 0 
-L 256 0 
-L 256 672 
-L 1403 1831 
-Q 1913 2353 2069 2554 
-Q 2225 2756 2294 2928 
-Q 2363 3100 2363 3284 
-Q 2363 3559 2211 3693 
-Q 2059 3828 1806 3828 
-Q 1541 3828 1291 3706 
-Q 1041 3584 769 3359 
-L 244 3981 
-Q 581 4269 803 4387 
-Q 1025 4506 1287 4570 
-Q 1550 4634 1875 4634 
-Q 2303 4634 2631 4478 
-Q 2959 4322 3140 4040 
-Q 3322 3759 3322 3397 
-Q 3322 3081 3211 2804 
-Q 3100 2528 2867 2237 
-Q 2634 1947 2047 1409 
-L 1459 856 
-L 1459 813 
-L 3450 813 
-L 3450 0 
+        <path id="LiberationSans-Bold-2f" d="M 63 -128 
+L 972 4638 
+L 1716 4638 
+L 822 -128 
+L 63 -128 
 z
 " transform="scale(0.015625)"/>
-        <path id="OpenSans-Bold-35" d="M 1919 2919 
-Q 2581 2919 2973 2547 
-Q 3366 2175 3366 1528 
-Q 3366 763 2894 350 
-Q 2422 -63 1544 -63 
-Q 781 -63 313 184 
-L 313 1019 
-Q 559 888 887 805 
-Q 1216 722 1509 722 
-Q 2394 722 2394 1447 
-Q 2394 2138 1478 2138 
-Q 1313 2138 1113 2105 
-Q 913 2072 788 2034 
-L 403 2241 
-L 575 4569 
-L 3053 4569 
-L 3053 3750 
-L 1422 3750 
-L 1338 2853 
-L 1447 2875 
-Q 1638 2919 1919 2919 
+        <path id="LiberationSans-Bold-32" d="M 222 0 
+L 222 609 
+Q 394 988 711 1347 
+Q 1028 1706 1509 2097 
+Q 1972 2472 2158 2715 
+Q 2344 2959 2344 3194 
+Q 2344 3769 1766 3769 
+Q 1484 3769 1336 3617 
+Q 1188 3466 1144 3163 
+L 259 3213 
+Q 334 3825 717 4147 
+Q 1100 4469 1759 4469 
+Q 2472 4469 2853 4144 
+Q 3234 3819 3234 3231 
+Q 3234 2922 3112 2672 
+Q 2991 2422 2800 2211 
+Q 2609 2000 2376 1815 
+Q 2144 1631 1925 1456 
+Q 1706 1281 1526 1103 
+Q 1347 925 1259 722 
+L 3303 722 
+L 3303 0 
+L 222 0 
+z
+" transform="scale(0.015625)"/>
+        <path id="LiberationSans-Bold-35" d="M 3381 1466 
+Q 3381 766 2945 351 
+Q 2509 -63 1750 -63 
+Q 1088 -63 689 235 
+Q 291 534 197 1100 
+L 1075 1172 
+Q 1144 891 1319 762 
+Q 1494 634 1759 634 
+Q 2088 634 2283 843 
+Q 2478 1053 2478 1447 
+Q 2478 1794 2293 2001 
+Q 2109 2209 1778 2209 
+Q 1413 2209 1181 1925 
+L 325 1925 
+L 478 4403 
+L 3125 4403 
+L 3125 3750 
+L 1275 3750 
+L 1203 2638 
+Q 1522 2919 2000 2919 
+Q 2628 2919 3004 2528 
+Q 3381 2138 3381 1466 
 z
 " transform="scale(0.015625)"/>
        </defs>
-       <use xlink:href="#OpenSans-Bold-30"/>
-       <use xlink:href="#OpenSans-Bold-33" transform="translate(57.080078 0)"/>
-       <use xlink:href="#OpenSans-Bold-2f" transform="translate(114.160156 0)"/>
-       <use xlink:href="#OpenSans-Bold-32" transform="translate(155.46875 0)"/>
-       <use xlink:href="#OpenSans-Bold-30" transform="translate(212.548828 0)"/>
-       <use xlink:href="#OpenSans-Bold-32" transform="translate(269.628906 0)"/>
-       <use xlink:href="#OpenSans-Bold-35" transform="translate(326.708984 0)"/>
+       <use xlink:href="#LiberationSans-Bold-30"/>
+       <use xlink:href="#LiberationSans-Bold-33" transform="translate(55.615234 0)"/>
+       <use xlink:href="#LiberationSans-Bold-2f" transform="translate(111.230469 0)"/>
+       <use xlink:href="#LiberationSans-Bold-32" transform="translate(139.013672 0)"/>
+       <use xlink:href="#LiberationSans-Bold-30" transform="translate(194.628906 0)"/>
+       <use xlink:href="#LiberationSans-Bold-32" transform="translate(250.244141 0)"/>
+       <use xlink:href="#LiberationSans-Bold-35" transform="translate(305.859375 0)"/>
       </g>
      </g>
     </g>
     <g id="xtick_2">
      <g id="line2d_3">
-      <path d="M 190.719533 589.343192 
-L 190.719533 31.2 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
+      <path d="M 187.829499 589.343192 
+L 187.829499 31.2 
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
      </g>
      <g id="line2d_4"/>
      <g id="text_2">
       <!-- 04/2025 -->
-      <g style="fill: #616161" transform="translate(175.389237 635.797719) rotate(-45) scale(0.14 -0.14)">
+      <g style="fill: #616161" transform="translate(172.499203 635.797719) rotate(-45) scale(0.14 -0.14)">
        <defs>
-        <path id="OpenSans-Bold-34" d="M 3553 947 
-L 3003 947 
-L 3003 0 
-L 2059 0 
-L 2059 947 
-L 109 947 
-L 109 1619 
-L 2113 4569 
-L 3003 4569 
-L 3003 1697 
-L 3553 1697 
-L 3553 947 
+        <path id="LiberationSans-Bold-34" d="M 2938 897 
+L 2938 0 
+L 2100 0 
+L 2100 897 
+L 97 897 
+L 97 1556 
+L 1956 4403 
+L 2938 4403 
+L 2938 1550 
+L 3525 1550 
+L 3525 897 
+L 2938 897 
 z
-M 2059 1697 
-L 2059 2472 
-Q 2059 2666 2075 3034 
-Q 2091 3403 2100 3463 
-L 2075 3463 
-Q 1959 3206 1797 2963 
-L 959 1697 
-L 2059 1697 
+M 2100 2991 
+Q 2100 3159 2111 3356 
+Q 2122 3553 2128 3609 
+Q 2047 3434 1834 3103 
+L 813 1550 
+L 2100 1550 
+L 2100 2991 
 z
 " transform="scale(0.015625)"/>
        </defs>
-       <use xlink:href="#OpenSans-Bold-30"/>
-       <use xlink:href="#OpenSans-Bold-34" transform="translate(57.080078 0)"/>
-       <use xlink:href="#OpenSans-Bold-2f" transform="translate(114.160156 0)"/>
-       <use xlink:href="#OpenSans-Bold-32" transform="translate(155.46875 0)"/>
-       <use xlink:href="#OpenSans-Bold-30" transform="translate(212.548828 0)"/>
-       <use xlink:href="#OpenSans-Bold-32" transform="translate(269.628906 0)"/>
-       <use xlink:href="#OpenSans-Bold-35" transform="translate(326.708984 0)"/>
+       <use xlink:href="#LiberationSans-Bold-30"/>
+       <use xlink:href="#LiberationSans-Bold-34" transform="translate(55.615234 0)"/>
+       <use xlink:href="#LiberationSans-Bold-2f" transform="translate(111.230469 0)"/>
+       <use xlink:href="#LiberationSans-Bold-32" transform="translate(139.013672 0)"/>
+       <use xlink:href="#LiberationSans-Bold-30" transform="translate(194.628906 0)"/>
+       <use xlink:href="#LiberationSans-Bold-32" transform="translate(250.244141 0)"/>
+       <use xlink:href="#LiberationSans-Bold-35" transform="translate(305.859375 0)"/>
       </g>
      </g>
     </g>
     <g id="xtick_3">
      <g id="line2d_5">
-      <path d="M 309.031621 589.343192 
-L 309.031621 31.2 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
+      <path d="M 306.141587 589.343192 
+L 306.141587 31.2 
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
      </g>
      <g id="line2d_6"/>
      <g id="text_3">
       <!-- 05/2025 -->
-      <g style="fill: #616161" transform="translate(293.701325 635.797719) rotate(-45) scale(0.14 -0.14)">
+      <g style="fill: #616161" transform="translate(290.811291 635.797719) rotate(-45) scale(0.14 -0.14)">
        <use xlink:href="#LiberationSans-Bold-30"/>
        <use xlink:href="#LiberationSans-Bold-35" transform="translate(55.615234 0)"/>
        <use xlink:href="#LiberationSans-Bold-2f" transform="translate(111.230469 0)"/>
@@ -235,246 +239,249 @@ L 309.031621 31.2
     </g>
     <g id="xtick_4">
      <g id="line2d_7">
-      <path d="M 431.287445 589.343192 
-L 431.287445 31.2 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
+      <path d="M 428.397411 589.343192 
+L 428.397411 31.2 
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
      </g>
      <g id="line2d_8"/>
      <g id="text_4">
       <!-- 06/2025 -->
-      <g style="fill: #616161" transform="translate(415.95715 635.797719) rotate(-45) scale(0.14 -0.14)">
+      <g style="fill: #616161" transform="translate(413.067115 635.797719) rotate(-45) scale(0.14 -0.14)">
        <defs>
-        <path id="OpenSans-Bold-36" d="M 225 1941 
-Q 225 3297 798 3959 
-Q 1372 4622 2516 4622 
-Q 2906 4622 3128 4575 
-L 3128 3803 
-Q 2850 3866 2578 3866 
-Q 2081 3866 1767 3716 
-Q 1453 3566 1297 3272 
-Q 1141 2978 1113 2438 
-L 1153 2438 
-Q 1463 2969 2144 2969 
-Q 2756 2969 3103 2584 
-Q 3450 2200 3450 1522 
-Q 3450 791 3037 364 
-Q 2625 -63 1894 -63 
-Q 1388 -63 1011 171 
-Q 634 406 429 856 
-Q 225 1306 225 1941 
+        <path id="LiberationSans-Bold-36" d="M 3328 1441 
+Q 3328 738 2934 337 
+Q 2541 -63 1847 -63 
+Q 1069 -63 651 482 
+Q 234 1028 234 2100 
+Q 234 3278 657 3873 
+Q 1081 4469 1869 4469 
+Q 2428 4469 2751 4222 
+Q 3075 3975 3209 3456 
+L 2381 3341 
+Q 2263 3775 1850 3775 
+Q 1497 3775 1295 3422 
+Q 1094 3069 1094 2350 
+Q 1234 2584 1484 2709 
+Q 1734 2834 2050 2834 
+Q 2641 2834 2984 2459 
+Q 3328 2084 3328 1441 
 z
-M 1875 709 
-Q 2184 709 2350 917 
-Q 2516 1125 2516 1509 
-Q 2516 1844 2361 2036 
-Q 2206 2228 1894 2228 
-Q 1600 2228 1392 2037 
-Q 1184 1847 1184 1594 
-Q 1184 1222 1379 965 
-Q 1575 709 1875 709 
+M 2447 1416 
+Q 2447 1791 2273 1989 
+Q 2100 2188 1797 2188 
+Q 1506 2188 1331 2002 
+Q 1156 1816 1156 1509 
+Q 1156 1125 1339 873 
+Q 1522 622 1819 622 
+Q 2116 622 2281 833 
+Q 2447 1044 2447 1416 
 z
 " transform="scale(0.015625)"/>
        </defs>
-       <use xlink:href="#OpenSans-Bold-30"/>
-       <use xlink:href="#OpenSans-Bold-36" transform="translate(57.080078 0)"/>
-       <use xlink:href="#OpenSans-Bold-2f" transform="translate(114.160156 0)"/>
-       <use xlink:href="#OpenSans-Bold-32" transform="translate(155.46875 0)"/>
-       <use xlink:href="#OpenSans-Bold-30" transform="translate(212.548828 0)"/>
-       <use xlink:href="#OpenSans-Bold-32" transform="translate(269.628906 0)"/>
-       <use xlink:href="#OpenSans-Bold-35" transform="translate(326.708984 0)"/>
+       <use xlink:href="#LiberationSans-Bold-30"/>
+       <use xlink:href="#LiberationSans-Bold-36" transform="translate(55.615234 0)"/>
+       <use xlink:href="#LiberationSans-Bold-2f" transform="translate(111.230469 0)"/>
+       <use xlink:href="#LiberationSans-Bold-32" transform="translate(139.013672 0)"/>
+       <use xlink:href="#LiberationSans-Bold-30" transform="translate(194.628906 0)"/>
+       <use xlink:href="#LiberationSans-Bold-32" transform="translate(250.244141 0)"/>
+       <use xlink:href="#LiberationSans-Bold-35" transform="translate(305.859375 0)"/>
       </g>
      </g>
     </g>
     <g id="xtick_5">
      <g id="line2d_9">
-      <path d="M 549.599533 589.343192 
-L 549.599533 31.2 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
+      <path d="M 546.709499 589.343192 
+L 546.709499 31.2 
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
      </g>
      <g id="line2d_10"/>
      <g id="text_5">
       <!-- 07/2025 -->
-      <g style="fill: #616161" transform="translate(534.269237 635.797719) rotate(-45) scale(0.14 -0.14)">
+      <g style="fill: #616161" transform="translate(531.379203 635.797719) rotate(-45) scale(0.14 -0.14)">
        <defs>
-        <path id="OpenSans-Bold-37" d="M 709 0 
-L 2425 3750 
-L 172 3750 
-L 172 4563 
-L 3450 4563 
-L 3450 3956 
-L 1722 0 
-L 709 0 
+        <path id="LiberationSans-Bold-37" d="M 3278 3706 
+Q 2981 3238 2717 2797 
+Q 2453 2356 2256 1911 
+Q 2059 1466 1945 995 
+Q 1831 525 1831 0 
+L 916 0 
+Q 916 550 1059 1064 
+Q 1203 1578 1475 2111 
+Q 1747 2644 2463 3681 
+L 275 3681 
+L 275 4403 
+L 3278 4403 
+L 3278 3706 
 z
 " transform="scale(0.015625)"/>
        </defs>
-       <use xlink:href="#OpenSans-Bold-30"/>
-       <use xlink:href="#OpenSans-Bold-37" transform="translate(57.080078 0)"/>
-       <use xlink:href="#OpenSans-Bold-2f" transform="translate(114.160156 0)"/>
-       <use xlink:href="#OpenSans-Bold-32" transform="translate(155.46875 0)"/>
-       <use xlink:href="#OpenSans-Bold-30" transform="translate(212.548828 0)"/>
-       <use xlink:href="#OpenSans-Bold-32" transform="translate(269.628906 0)"/>
-       <use xlink:href="#OpenSans-Bold-35" transform="translate(326.708984 0)"/>
+       <use xlink:href="#LiberationSans-Bold-30"/>
+       <use xlink:href="#LiberationSans-Bold-37" transform="translate(55.615234 0)"/>
+       <use xlink:href="#LiberationSans-Bold-2f" transform="translate(111.230469 0)"/>
+       <use xlink:href="#LiberationSans-Bold-32" transform="translate(139.013672 0)"/>
+       <use xlink:href="#LiberationSans-Bold-30" transform="translate(194.628906 0)"/>
+       <use xlink:href="#LiberationSans-Bold-32" transform="translate(250.244141 0)"/>
+       <use xlink:href="#LiberationSans-Bold-35" transform="translate(305.859375 0)"/>
       </g>
      </g>
     </g>
     <g id="xtick_6">
      <g id="line2d_11">
-      <path d="M 671.855358 589.343192 
-L 671.855358 31.2 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
+      <path d="M 668.965324 589.343192 
+L 668.965324 31.2 
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
      </g>
      <g id="line2d_12"/>
      <g id="text_6">
       <!-- 08/2025 -->
-      <g style="fill: #616161" transform="translate(656.525062 635.797719) rotate(-45) scale(0.14 -0.14)">
+      <g style="fill: #616161" transform="translate(653.635028 635.797719) rotate(-45) scale(0.14 -0.14)">
        <defs>
-        <path id="OpenSans-Bold-38" d="M 1831 4628 
-Q 2488 4628 2889 4329 
-Q 3291 4031 3291 3525 
-Q 3291 3175 3097 2901 
-Q 2903 2628 2472 2413 
-Q 2984 2138 3207 1839 
-Q 3431 1541 3431 1184 
-Q 3431 622 2990 279 
-Q 2550 -63 1831 -63 
-Q 1081 -63 653 256 
-Q 225 575 225 1159 
-Q 225 1550 433 1853 
-Q 641 2156 1100 2388 
-Q 709 2634 537 2915 
-Q 366 3197 366 3531 
-Q 366 4022 772 4325 
-Q 1178 4628 1831 4628 
+        <path id="LiberationSans-Bold-38" d="M 3363 1241 
+Q 3363 622 2953 279 
+Q 2544 -63 1784 -63 
+Q 1031 -63 617 278 
+Q 203 619 203 1234 
+Q 203 1656 447 1945 
+Q 691 2234 1100 2303 
+L 1100 2316 
+Q 744 2394 525 2669 
+Q 306 2944 306 3303 
+Q 306 3844 689 4156 
+Q 1072 4469 1772 4469 
+Q 2488 4469 2870 4164 
+Q 3253 3859 3253 3297 
+Q 3253 2938 3036 2666 
+Q 2819 2394 2453 2322 
+L 2453 2309 
+Q 2878 2241 3120 1961 
+Q 3363 1681 3363 1241 
 z
-M 1119 1216 
-Q 1119 947 1306 797 
-Q 1494 647 1819 647 
-Q 2178 647 2356 801 
-Q 2534 956 2534 1209 
-Q 2534 1419 2357 1601 
-Q 2181 1784 1784 1991 
-Q 1119 1684 1119 1216 
+M 2350 3250 
+Q 2350 3563 2206 3708 
+Q 2063 3853 1772 3853 
+Q 1203 3853 1203 3250 
+Q 1203 2619 1778 2619 
+Q 2066 2619 2208 2766 
+Q 2350 2913 2350 3250 
 z
-M 1825 3922 
-Q 1578 3922 1426 3795 
-Q 1275 3669 1275 3456 
-Q 1275 3269 1395 3120 
-Q 1516 2972 1831 2816 
-Q 2138 2959 2259 3109 
-Q 2381 3259 2381 3456 
-Q 2381 3672 2225 3797 
-Q 2069 3922 1825 3922 
+M 2453 1313 
+Q 2453 2003 1766 2003 
+Q 1447 2003 1276 1822 
+Q 1106 1641 1106 1300 
+Q 1106 913 1275 734 
+Q 1444 556 1791 556 
+Q 2131 556 2292 734 
+Q 2453 913 2453 1313 
 z
 " transform="scale(0.015625)"/>
        </defs>
-       <use xlink:href="#OpenSans-Bold-30"/>
-       <use xlink:href="#OpenSans-Bold-38" transform="translate(57.080078 0)"/>
-       <use xlink:href="#OpenSans-Bold-2f" transform="translate(114.160156 0)"/>
-       <use xlink:href="#OpenSans-Bold-32" transform="translate(155.46875 0)"/>
-       <use xlink:href="#OpenSans-Bold-30" transform="translate(212.548828 0)"/>
-       <use xlink:href="#OpenSans-Bold-32" transform="translate(269.628906 0)"/>
-       <use xlink:href="#OpenSans-Bold-35" transform="translate(326.708984 0)"/>
+       <use xlink:href="#LiberationSans-Bold-30"/>
+       <use xlink:href="#LiberationSans-Bold-38" transform="translate(55.615234 0)"/>
+       <use xlink:href="#LiberationSans-Bold-2f" transform="translate(111.230469 0)"/>
+       <use xlink:href="#LiberationSans-Bold-32" transform="translate(139.013672 0)"/>
+       <use xlink:href="#LiberationSans-Bold-30" transform="translate(194.628906 0)"/>
+       <use xlink:href="#LiberationSans-Bold-32" transform="translate(250.244141 0)"/>
+       <use xlink:href="#LiberationSans-Bold-35" transform="translate(305.859375 0)"/>
       </g>
      </g>
     </g>
     <g id="xtick_7">
      <g id="line2d_13">
-      <path d="M 794.111182 589.343192 
-L 794.111182 31.2 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
+      <path d="M 791.221148 589.343192 
+L 791.221148 31.2 
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
      </g>
      <g id="line2d_14"/>
      <g id="text_7">
       <!-- 09/2025 -->
-      <g style="fill: #616161" transform="translate(778.780886 635.797719) rotate(-45) scale(0.14 -0.14)">
+      <g style="fill: #616161" transform="translate(775.890852 635.797719) rotate(-45) scale(0.14 -0.14)">
        <defs>
-        <path id="OpenSans-Bold-39" d="M 3431 2619 
-Q 3431 1269 2862 603 
-Q 2294 -63 1141 -63 
-Q 734 -63 525 -19 
-L 525 756 
-Q 788 691 1075 691 
-Q 1559 691 1871 833 
-Q 2184 975 2350 1279 
-Q 2516 1584 2541 2119 
-L 2503 2119 
-Q 2322 1825 2084 1706 
-Q 1847 1588 1491 1588 
-Q 894 1588 550 1970 
-Q 206 2353 206 3034 
-Q 206 3769 623 4195 
-Q 1041 4622 1759 4622 
-Q 2266 4622 2645 4384 
-Q 3025 4147 3228 3695 
-Q 3431 3244 3431 2619 
+        <path id="LiberationSans-Bold-39" d="M 3322 2272 
+Q 3322 1100 2894 518 
+Q 2466 -63 1678 -63 
+Q 1097 -63 767 185 
+Q 438 434 300 972 
+L 1125 1088 
+Q 1247 628 1688 628 
+Q 2056 628 2254 981 
+Q 2453 1334 2459 2028 
+Q 2341 1794 2070 1661 
+Q 1800 1528 1488 1528 
+Q 906 1528 564 1923 
+Q 222 2319 222 2994 
+Q 222 3688 623 4078 
+Q 1025 4469 1759 4469 
+Q 2550 4469 2936 3920 
+Q 3322 3372 3322 2272 
 z
-M 1778 3847 
-Q 1478 3847 1309 3640 
-Q 1141 3434 1141 3047 
-Q 1141 2716 1294 2522 
-Q 1447 2328 1759 2328 
-Q 2053 2328 2262 2520 
-Q 2472 2713 2472 2963 
-Q 2472 3334 2276 3590 
-Q 2081 3847 1778 3847 
+M 2394 2888 
+Q 2394 3297 2214 3539 
+Q 2034 3781 1738 3781 
+Q 1447 3781 1280 3570 
+Q 1113 3359 1113 2988 
+Q 1113 2622 1278 2401 
+Q 1444 2181 1741 2181 
+Q 2022 2181 2208 2373 
+Q 2394 2566 2394 2888 
 z
 " transform="scale(0.015625)"/>
        </defs>
-       <use xlink:href="#OpenSans-Bold-30"/>
-       <use xlink:href="#OpenSans-Bold-39" transform="translate(57.080078 0)"/>
-       <use xlink:href="#OpenSans-Bold-2f" transform="translate(114.160156 0)"/>
-       <use xlink:href="#OpenSans-Bold-32" transform="translate(155.46875 0)"/>
-       <use xlink:href="#OpenSans-Bold-30" transform="translate(212.548828 0)"/>
-       <use xlink:href="#OpenSans-Bold-32" transform="translate(269.628906 0)"/>
-       <use xlink:href="#OpenSans-Bold-35" transform="translate(326.708984 0)"/>
+       <use xlink:href="#LiberationSans-Bold-30"/>
+       <use xlink:href="#LiberationSans-Bold-39" transform="translate(55.615234 0)"/>
+       <use xlink:href="#LiberationSans-Bold-2f" transform="translate(111.230469 0)"/>
+       <use xlink:href="#LiberationSans-Bold-32" transform="translate(139.013672 0)"/>
+       <use xlink:href="#LiberationSans-Bold-30" transform="translate(194.628906 0)"/>
+       <use xlink:href="#LiberationSans-Bold-32" transform="translate(250.244141 0)"/>
+       <use xlink:href="#LiberationSans-Bold-35" transform="translate(305.859375 0)"/>
       </g>
      </g>
     </g>
     <g id="xtick_8">
      <g id="line2d_15">
-      <path d="M 912.42327 589.343192 
-L 912.42327 31.2 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
+      <path d="M 909.533236 589.343192 
+L 909.533236 31.2 
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
      </g>
      <g id="line2d_16"/>
      <g id="text_8">
       <!-- 10/2025 -->
-      <g style="fill: #616161" transform="translate(897.092974 635.797719) rotate(-45) scale(0.14 -0.14)">
+      <g style="fill: #616161" transform="translate(894.20294 635.797719) rotate(-45) scale(0.14 -0.14)">
        <defs>
-        <path id="OpenSans-Bold-31" d="M 2644 0 
-L 1678 0 
-L 1678 2644 
-L 1688 3078 
-L 1703 3553 
-Q 1463 3313 1369 3238 
-L 844 2816 
-L 378 3397 
-L 1850 4569 
-L 2644 4569 
-L 2644 0 
+        <path id="LiberationSans-Bold-31" d="M 403 0 
+L 403 653 
+L 1494 653 
+L 1494 3656 
+L 438 2997 
+L 438 3688 
+L 1541 4403 
+L 2372 4403 
+L 2372 653 
+L 3381 653 
+L 3381 0 
+L 403 0 
 z
 " transform="scale(0.015625)"/>
        </defs>
-       <use xlink:href="#OpenSans-Bold-31"/>
-       <use xlink:href="#OpenSans-Bold-30" transform="translate(57.080078 0)"/>
-       <use xlink:href="#OpenSans-Bold-2f" transform="translate(114.160156 0)"/>
-       <use xlink:href="#OpenSans-Bold-32" transform="translate(155.46875 0)"/>
-       <use xlink:href="#OpenSans-Bold-30" transform="translate(212.548828 0)"/>
-       <use xlink:href="#OpenSans-Bold-32" transform="translate(269.628906 0)"/>
-       <use xlink:href="#OpenSans-Bold-35" transform="translate(326.708984 0)"/>
+       <use xlink:href="#LiberationSans-Bold-31"/>
+       <use xlink:href="#LiberationSans-Bold-30" transform="translate(55.615234 0)"/>
+       <use xlink:href="#LiberationSans-Bold-2f" transform="translate(111.230469 0)"/>
+       <use xlink:href="#LiberationSans-Bold-32" transform="translate(139.013672 0)"/>
+       <use xlink:href="#LiberationSans-Bold-30" transform="translate(194.628906 0)"/>
+       <use xlink:href="#LiberationSans-Bold-32" transform="translate(250.244141 0)"/>
+       <use xlink:href="#LiberationSans-Bold-35" transform="translate(305.859375 0)"/>
       </g>
      </g>
     </g>
     <g id="xtick_9">
      <g id="line2d_17">
-      <path d="M 1034.679094 589.343192 
-L 1034.679094 31.2 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
+      <path d="M 1031.78906 589.343192 
+L 1031.78906 31.2 
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
      </g>
      <g id="line2d_18"/>
      <g id="text_9">
       <!-- 11/2025 -->
-      <g style="fill: #616161" transform="translate(1019.621034 635.253247) rotate(-45) scale(0.14 -0.14)">
+      <g style="fill: #616161" transform="translate(1016.731 635.253247) rotate(-45) scale(0.14 -0.14)">
        <use xlink:href="#LiberationSans-Bold-31"/>
        <use xlink:href="#LiberationSans-Bold-31" transform="translate(50.115234 0)"/>
        <use xlink:href="#LiberationSans-Bold-2f" transform="translate(105.730469 0)"/>
@@ -491,34 +498,31 @@ L 1034.679094 31.2
      <g id="line2d_19">
       <path d="M 64.56 589.343192 
 L 1141.2 589.343192 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
      </g>
      <g id="line2d_20"/>
      <g id="text_10">
       <!-- 0k -->
-      <g style="fill: #616161" transform="translate(46.186875 590.652802) scale(0.14 -0.14)">
+      <g style="fill: #616161" transform="translate(45.489375 594.416004) scale(0.14 -0.14)">
        <defs>
-        <path id="OpenSans-Bold-6b" d="M 1416 1900 
-L 1831 2431 
-L 2809 3494 
-L 3884 3494 
-L 2497 1978 
-L 3969 0 
-L 2869 0 
-L 1863 1416 
-L 1453 1088 
-L 1453 0 
-L 500 0 
-L 500 4863 
-L 1453 4863 
-L 1453 2694 
-L 1403 1900 
-L 1416 1900 
+        <path id="LiberationSans-Bold-6b" d="M 2606 0 
+L 1703 1531 
+L 1325 1269 
+L 1325 0 
+L 447 0 
+L 447 4638 
+L 1325 4638 
+L 1325 1981 
+L 2531 3381 
+L 3475 3381 
+L 2288 2063 
+L 3566 0 
+L 2606 0 
 z
 " transform="scale(0.015625)"/>
        </defs>
-       <use xlink:href="#OpenSans-Bold-30"/>
-       <use xlink:href="#OpenSans-Bold-6b" transform="translate(57.080078 0)"/>
+       <use xlink:href="#LiberationSans-Bold-30"/>
+       <use xlink:href="#LiberationSans-Bold-6b" transform="translate(55.615234 0)"/>
       </g>
      </g>
     </g>
@@ -526,7 +530,7 @@ z
      <g id="line2d_21">
       <path d="M 64.56 507.787545 
 L 1141.2 507.787545 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
      </g>
      <g id="line2d_22"/>
      <g id="text_11">
@@ -542,7 +546,7 @@ L 1141.2 507.787545
      <g id="line2d_23">
       <path d="M 64.56 426.231899 
 L 1141.2 426.231899 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
      </g>
      <g id="line2d_24"/>
      <g id="text_12">
@@ -559,7 +563,7 @@ L 1141.2 426.231899
      <g id="line2d_25">
       <path d="M 64.56 344.676253 
 L 1141.2 344.676253 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
      </g>
      <g id="line2d_26"/>
      <g id="text_13">
@@ -576,7 +580,7 @@ L 1141.2 344.676253
      <g id="line2d_27">
       <path d="M 64.56 263.120607 
 L 1141.2 263.120607 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
      </g>
      <g id="line2d_28"/>
      <g id="text_14">
@@ -593,7 +597,7 @@ L 1141.2 263.120607
      <g id="line2d_29">
       <path d="M 64.56 181.56496 
 L 1141.2 181.56496 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
      </g>
      <g id="line2d_30"/>
      <g id="text_15">
@@ -610,7 +614,7 @@ L 1141.2 181.56496
      <g id="line2d_31">
       <path d="M 64.56 100.009314 
 L 1141.2 100.009314 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #cccccc; stroke-width: 0.8; stroke-linecap: round"/>
      </g>
      <g id="line2d_32"/>
      <g id="text_16">
@@ -625,620 +629,627 @@ L 1141.2 100.009314
     </g>
     <g id="text_17">
      <!-- Devices -->
-     <g style="fill: #616161" transform="translate(22.36 339.284448) rotate(-90) scale(0.16 -0.16)">
+     <g style="fill: #616161" transform="translate(22.59875 340.515346) rotate(-90) scale(0.16 -0.16)">
       <defs>
-       <path id="OpenSans-Bold-44" d="M 4366 2328 
-Q 4366 1200 3723 600 
-Q 3081 0 1869 0 
-L 575 0 
-L 575 4569 
-L 2009 4569 
-Q 3128 4569 3747 3978 
-Q 4366 3388 4366 2328 
+       <path id="LiberationSans-Bold-44" d="M 4353 2234 
+Q 4353 1553 4086 1045 
+Q 3819 538 3330 269 
+Q 2841 0 2209 0 
+L 428 0 
+L 428 4403 
+L 2022 4403 
+Q 3134 4403 3743 3842 
+Q 4353 3281 4353 2234 
 z
-M 3359 2303 
-Q 3359 3775 2059 3775 
-L 1544 3775 
-L 1544 800 
-L 1959 800 
-Q 3359 800 3359 2303 
-z
-" transform="scale(0.015625)"/>
-       <path id="OpenSans-Bold-65" d="M 1947 2881 
-Q 1644 2881 1472 2689 
-Q 1300 2497 1275 2144 
-L 2613 2144 
-Q 2606 2497 2428 2689 
-Q 2250 2881 1947 2881 
-z
-M 2081 -63 
-Q 1238 -63 763 403 
-Q 288 869 288 1722 
-Q 288 2600 727 3079 
-Q 1166 3559 1941 3559 
-Q 2681 3559 3093 3137 
-Q 3506 2716 3506 1972 
-L 3506 1509 
-L 1253 1509 
-Q 1269 1103 1494 875 
-Q 1719 647 2125 647 
-Q 2441 647 2722 712 
-Q 3003 778 3309 922 
-L 3309 184 
-Q 3059 59 2775 -2 
-Q 2491 -63 2081 -63 
+M 3425 2234 
+Q 3425 2944 3056 3317 
+Q 2688 3691 2003 3691 
+L 1350 3691 
+L 1350 713 
+L 2131 713 
+Q 2725 713 3075 1122 
+Q 3425 1531 3425 2234 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-Bold-76" d="M 1331 0 
-L 0 3494 
-L 997 3494 
-L 1672 1503 
-Q 1784 1125 1813 788 
-L 1831 788 
-Q 1847 1088 1972 1503 
-L 2644 3494 
-L 3641 3494 
-L 2309 0 
-L 1331 0 
+       <path id="LiberationSans-Bold-65" d="M 1831 -63 
+Q 1069 -63 659 389 
+Q 250 841 250 1706 
+Q 250 2544 665 2994 
+Q 1081 3444 1844 3444 
+Q 2572 3444 2956 2961 
+Q 3341 2478 3341 1547 
+L 3341 1522 
+L 1172 1522 
+Q 1172 1028 1355 776 
+Q 1538 525 1875 525 
+Q 2341 525 2463 928 
+L 3291 856 
+Q 2931 -63 1831 -63 
+z
+M 1831 2891 
+Q 1522 2891 1355 2675 
+Q 1188 2459 1178 2072 
+L 2491 2072 
+Q 2466 2481 2294 2686 
+Q 2122 2891 1831 2891 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-Bold-69" d="M 459 4397 
-Q 459 4863 978 4863 
-Q 1497 4863 1497 4397 
-Q 1497 4175 1367 4051 
-Q 1238 3928 978 3928 
-Q 459 3928 459 4397 
-z
-M 1453 0 
-L 500 0 
-L 500 3494 
-L 1453 3494 
-L 1453 0 
+       <path id="LiberationSans-Bold-76" d="M 2284 0 
+L 1234 0 
+L 25 3381 
+L 953 3381 
+L 1544 1491 
+Q 1591 1334 1766 709 
+Q 1797 838 1894 1159 
+Q 1991 1481 2613 3381 
+L 3531 3381 
+L 2284 0 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-Bold-63" d="M 1919 -63 
-Q 288 -63 288 1728 
-Q 288 2619 731 3089 
-Q 1175 3559 2003 3559 
-Q 2609 3559 3091 3322 
-L 2809 2584 
-Q 2584 2675 2390 2733 
-Q 2197 2791 2003 2791 
-Q 1259 2791 1259 1734 
-Q 1259 709 2003 709 
-Q 2278 709 2512 782 
-Q 2747 856 2981 1013 
-L 2981 197 
-Q 2750 50 2514 -6 
-Q 2278 -63 1919 -63 
+       <path id="LiberationSans-Bold-69" d="M 447 3991 
+L 447 4638 
+L 1325 4638 
+L 1325 3991 
+L 447 3991 
+z
+M 447 0 
+L 447 3381 
+L 1325 3381 
+L 1325 0 
+L 447 0 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-Bold-73" d="M 2938 1038 
-Q 2938 500 2564 218 
-Q 2191 -63 1447 -63 
-Q 1066 -63 797 -11 
-Q 528 41 294 141 
-L 294 928 
-Q 559 803 892 718 
-Q 1225 634 1478 634 
-Q 1997 634 1997 934 
-Q 1997 1047 1928 1117 
-Q 1859 1188 1690 1277 
-Q 1522 1366 1241 1484 
-Q 838 1653 648 1797 
-Q 459 1941 373 2127 
-Q 288 2313 288 2584 
-Q 288 3050 648 3304 
-Q 1009 3559 1672 3559 
-Q 2303 3559 2900 3284 
-L 2613 2597 
-Q 2350 2709 2122 2781 
-Q 1894 2853 1656 2853 
-Q 1234 2853 1234 2625 
-Q 1234 2497 1370 2403 
-Q 1506 2309 1966 2125 
-Q 2375 1959 2565 1815 
-Q 2756 1672 2847 1484 
-Q 2938 1297 2938 1038 
+       <path id="LiberationSans-Bold-63" d="M 1856 -63 
+Q 1088 -63 669 395 
+Q 250 853 250 1672 
+Q 250 2509 672 2976 
+Q 1094 3444 1869 3444 
+Q 2466 3444 2856 3144 
+Q 3247 2844 3347 2316 
+L 2463 2272 
+Q 2425 2531 2275 2686 
+Q 2125 2841 1850 2841 
+Q 1172 2841 1172 1706 
+Q 1172 538 1863 538 
+Q 2113 538 2281 695 
+Q 2450 853 2491 1166 
+L 3372 1125 
+Q 3325 778 3123 506 
+Q 2922 234 2594 85 
+Q 2266 -63 1856 -63 
+z
+" transform="scale(0.015625)"/>
+       <path id="LiberationSans-Bold-73" d="M 3297 988 
+Q 3297 497 2895 217 
+Q 2494 -63 1784 -63 
+Q 1088 -63 717 157 
+Q 347 378 225 844 
+L 997 959 
+Q 1063 719 1223 619 
+Q 1384 519 1784 519 
+Q 2153 519 2322 612 
+Q 2491 706 2491 906 
+Q 2491 1069 2355 1164 
+Q 2219 1259 1894 1325 
+Q 1150 1472 890 1598 
+Q 631 1725 495 1926 
+Q 359 2128 359 2422 
+Q 359 2906 732 3176 
+Q 1106 3447 1791 3447 
+Q 2394 3447 2761 3212 
+Q 3128 2978 3219 2534 
+L 2441 2453 
+Q 2403 2659 2256 2761 
+Q 2109 2863 1791 2863 
+Q 1478 2863 1322 2783 
+Q 1166 2703 1166 2516 
+Q 1166 2369 1286 2283 
+Q 1406 2197 1691 2141 
+Q 2088 2059 2395 1973 
+Q 2703 1888 2889 1769 
+Q 3075 1650 3186 1464 
+Q 3297 1278 3297 988 
 z
 " transform="scale(0.015625)"/>
       </defs>
-      <use xlink:href="#OpenSans-Bold-44"/>
-      <use xlink:href="#OpenSans-Bold-65" transform="translate(74.023438 0)"/>
-      <use xlink:href="#OpenSans-Bold-76" transform="translate(131.105469 0)"/>
-      <use xlink:href="#OpenSans-Bold-69" transform="translate(187.990234 0)"/>
-      <use xlink:href="#OpenSans-Bold-63" transform="translate(218.507812 0)"/>
-      <use xlink:href="#OpenSans-Bold-65" transform="translate(269.923828 0)"/>
-      <use xlink:href="#OpenSans-Bold-73" transform="translate(329.005859 0)"/>
+      <use xlink:href="#LiberationSans-Bold-44"/>
+      <use xlink:href="#LiberationSans-Bold-65" transform="translate(72.216797 0)"/>
+      <use xlink:href="#LiberationSans-Bold-76" transform="translate(127.832031 0)"/>
+      <use xlink:href="#LiberationSans-Bold-69" transform="translate(183.447266 0)"/>
+      <use xlink:href="#LiberationSans-Bold-63" transform="translate(211.230469 0)"/>
+      <use xlink:href="#LiberationSans-Bold-65" transform="translate(266.845703 0)"/>
+      <use xlink:href="#LiberationSans-Bold-73" transform="translate(322.460938 0)"/>
      </g>
     </g>
    </g>
    <g id="line2d_33">
-    <path d="M 72.407445 251.066682 
-L 100.013599 252.978347 
-L 127.619753 254.501806 
-L 155.225907 245.900948 
-L 182.832061 256.736431 
-L 210.438215 253.62753 
-L 238.044369 255.133047 
-L 265.650522 106.706664 
-L 293.256676 224.743782 
-L 320.86283 274.861358 
-L 348.468984 267.257109 
-L 376.075138 226.528219 
-L 403.681292 209.143818 
-L 431.287445 219.646554 
-L 458.893599 230.491824 
-L 486.499753 252.068186 
-L 514.105907 247.540216 
-L 541.712061 252.794031 
-L 596.924369 310.055881 
-L 624.530522 265.33892 
-L 652.136676 267.178816 
-L 679.74283 268.157483 
-L 707.348984 276.428857 
-L 734.955138 269.150831 
-L 762.561292 267.930759 
-L 790.167445 267.131513 
-L 817.773599 260.680462 
-L 845.379753 257.631912 
-L 872.985907 245.674223 
-L 900.592061 251.635941 
-L 928.198215 251.23958 
-L 955.804369 252.033932 
-L 983.410522 252.735311 
-L 1011.016676 251.631047 
-L 1038.62283 57.556338 
-L 1066.228984 188.546124 
-L 1093.835138 210.564517 
-L 1121.441292 193.550378 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #0000ff; stroke-width: 5; stroke-linecap: round"/>
+    <path d="M 69.517411 251.066682 
+L 97.123565 252.978347 
+L 124.729719 254.501806 
+L 152.335873 245.900948 
+L 179.942027 256.736431 
+L 207.548181 253.62753 
+L 235.154335 255.133047 
+L 262.760488 106.706664 
+L 290.366642 224.743782 
+L 317.972796 274.861358 
+L 345.57895 267.257109 
+L 373.185104 226.528219 
+L 400.791258 209.143818 
+L 428.397411 219.646554 
+L 456.003565 230.491824 
+L 483.609719 252.068186 
+L 511.215873 247.540216 
+L 538.822027 252.794031 
+L 594.034335 310.055881 
+L 621.640488 265.33892 
+L 649.246642 267.178816 
+L 676.852796 268.157483 
+L 704.45895 276.428857 
+L 732.065104 269.150831 
+L 759.671258 267.930759 
+L 787.277411 267.131513 
+L 814.883565 260.680462 
+L 842.489719 257.631912 
+L 870.095873 245.674223 
+L 897.702027 251.635941 
+L 925.308181 251.23958 
+L 952.914335 252.033932 
+L 980.520488 252.735311 
+L 1008.126642 251.631047 
+L 1035.732796 57.556338 
+L 1063.33895 188.546124 
+L 1090.945104 210.564517 
+L 1118.551258 193.550378 
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #0000ff; stroke-width: 5; stroke-linecap: round"/>
    </g>
    <g id="line2d_34">
-    <path d="M 72.407445 404.657169 
-L 100.013599 406.43345 
-L 127.619753 402.150148 
-L 155.225907 402.292055 
-L 182.832061 407.046749 
-L 210.438215 403.828563 
-L 238.044369 400.788169 
-L 265.650522 405.417267 
-L 293.256676 400.638106 
-L 320.86283 412.049372 
-L 348.468984 404.601711 
-L 376.075138 402.789544 
-L 403.681292 400.918658 
-L 431.287445 401.871228 
-L 458.893599 404.582137 
-L 486.499753 423.520989 
-L 514.105907 414.143721 
-L 541.712061 413.636445 
-L 596.924369 450.827451 
-L 624.530522 414.106206 
-L 652.136676 412.426159 
-L 679.74283 412.917124 
-L 707.348984 415.637821 
-L 734.955138 416.182612 
-L 762.561292 411.312109 
-L 790.167445 410.781998 
-L 817.773599 410.326917 
-L 845.379753 406.456286 
-L 872.985907 402.026183 
-L 900.592061 403.360434 
-L 928.198215 405.316138 
-L 955.804369 403.006482 
-L 983.410522 406.307855 
-L 1011.016676 399.680643 
-L 1038.62283 397.436232 
-L 1066.228984 395.018922 
-L 1093.835138 397.048027 
-L 1121.441292 402.37361 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #ffc0cb; stroke-width: 5; stroke-linecap: round"/>
+    <path d="M 69.517411 404.657169 
+L 97.123565 406.43345 
+L 124.729719 402.150148 
+L 152.335873 402.292055 
+L 179.942027 407.046749 
+L 207.548181 403.828563 
+L 235.154335 400.788169 
+L 262.760488 405.417267 
+L 290.366642 400.638106 
+L 317.972796 412.049372 
+L 345.57895 404.601711 
+L 373.185104 402.789544 
+L 400.791258 400.918658 
+L 428.397411 401.871228 
+L 456.003565 404.582137 
+L 483.609719 423.520989 
+L 511.215873 414.143721 
+L 538.822027 413.636445 
+L 594.034335 450.827451 
+L 621.640488 414.106206 
+L 649.246642 412.426159 
+L 676.852796 412.917124 
+L 704.45895 415.637821 
+L 732.065104 416.182612 
+L 759.671258 411.312109 
+L 787.277411 410.781998 
+L 814.883565 410.326917 
+L 842.489719 406.456286 
+L 870.095873 402.026183 
+L 897.702027 403.360434 
+L 925.308181 405.316138 
+L 952.914335 403.006482 
+L 980.520488 406.307855 
+L 1008.126642 399.680643 
+L 1035.732796 397.436232 
+L 1063.33895 395.018922 
+L 1090.945104 397.048027 
+L 1118.551258 402.37361 
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #ffc0cb; stroke-width: 5; stroke-linecap: round"/>
    </g>
    <g id="line2d_35">
-    <path d="M 72.407445 516.003461 
-L 100.013599 515.373852 
-L 127.619753 515.249887 
-L 155.225907 514.021659 
-L 182.832061 515.044367 
-L 210.438215 513.734583 
-L 238.044369 513.639979 
-L 265.650522 482.852722 
-L 293.256676 497.332112 
-L 320.86283 508.559062 
-L 348.468984 506.81214 
-L 376.075138 494.583686 
-L 403.681292 480.986729 
-L 431.287445 482.353602 
-L 458.893599 485.671285 
-L 486.499753 490.319957 
-L 514.105907 484.410435 
-L 541.712061 485.030258 
-L 596.924369 500.928716 
-L 624.530522 485.380947 
-L 652.136676 486.617331 
-L 679.74283 485.097134 
-L 707.348984 487.181696 
-L 734.955138 481.425498 
-L 762.561292 482.891869 
-L 790.167445 481.629387 
-L 817.773599 481.074809 
-L 845.379753 479.919981 
-L 872.985907 470.943967 
-L 900.592061 474.126268 
-L 928.198215 473.888125 
-L 955.804369 472.442959 
-L 983.410522 468.77948 
-L 1011.016676 464.784884 
-L 1038.62283 424.356119 
-L 1066.228984 447.348287 
-L 1093.835138 455.727314 
-L 1121.441292 437.352827 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #008000; stroke-width: 5; stroke-linecap: round"/>
+    <path d="M 69.517411 516.003461 
+L 97.123565 515.373852 
+L 124.729719 515.249887 
+L 152.335873 514.021659 
+L 179.942027 515.044367 
+L 207.548181 513.734583 
+L 235.154335 513.639979 
+L 262.760488 482.852722 
+L 290.366642 497.332112 
+L 317.972796 508.559062 
+L 345.57895 506.81214 
+L 373.185104 494.583686 
+L 400.791258 480.986729 
+L 428.397411 482.353602 
+L 456.003565 485.671285 
+L 483.609719 490.319957 
+L 511.215873 484.410435 
+L 538.822027 485.030258 
+L 594.034335 500.928716 
+L 621.640488 485.380947 
+L 649.246642 486.617331 
+L 676.852796 485.097134 
+L 704.45895 487.181696 
+L 732.065104 481.425498 
+L 759.671258 482.891869 
+L 787.277411 481.629387 
+L 814.883565 481.074809 
+L 842.489719 479.919981 
+L 870.095873 470.943967 
+L 897.702027 474.126268 
+L 925.308181 473.888125 
+L 952.914335 472.442959 
+L 980.520488 468.77948 
+L 1008.126642 464.784884 
+L 1035.732796 424.356119 
+L 1063.33895 447.348287 
+L 1090.945104 455.727314 
+L 1118.551258 437.352827 
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #008000; stroke-width: 5; stroke-linecap: round"/>
    </g>
    <g id="line2d_36">
-    <path d="M 72.407445 473.614099 
-L 100.013599 471.686123 
-L 127.619753 471.31586 
-L 155.225907 471.467554 
-L 182.832061 472.597915 
-L 210.438215 473.656507 
-L 238.044369 471.472447 
-L 265.650522 468.89692 
-L 293.256676 468.642466 
-L 320.86283 488.284328 
-L 348.468984 480.136919 
-L 376.075138 475.2289 
-L 403.681292 475.003807 
-L 431.287445 478.561264 
-L 458.893599 478.30681 
-L 486.499753 487.566638 
-L 514.105907 481.865899 
-L 541.712061 490.708162 
-L 596.924369 520.352008 
-L 624.530522 508.821671 
-L 652.136676 509.297956 
-L 679.74283 510.532708 
-L 707.348984 514.670842 
-L 734.955138 506.991562 
-L 762.561292 509.351783 
-L 790.167445 502.964344 
-L 817.773599 491.639527 
-L 845.379753 484.814951 
-L 872.985907 476.935044 
-L 900.592061 477.678832 
-L 928.198215 489.01996 
-L 955.804369 482.412322 
-L 983.410522 476.171684 
-L 1011.016676 475.254998 
-L 1038.62283 470.590015 
-L 1066.228984 475.773692 
-L 1093.835138 479.448589 
-L 1121.441292 483.627501 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #ffa500; stroke-width: 5; stroke-linecap: round"/>
+    <path d="M 69.517411 473.614099 
+L 97.123565 471.686123 
+L 124.729719 471.31586 
+L 152.335873 471.467554 
+L 179.942027 472.597915 
+L 207.548181 473.656507 
+L 235.154335 471.472447 
+L 262.760488 468.89692 
+L 290.366642 468.642466 
+L 317.972796 488.284328 
+L 345.57895 480.136919 
+L 373.185104 475.2289 
+L 400.791258 475.003807 
+L 428.397411 478.561264 
+L 456.003565 478.30681 
+L 483.609719 487.566638 
+L 511.215873 481.865899 
+L 538.822027 490.708162 
+L 594.034335 520.352008 
+L 621.640488 508.821671 
+L 649.246642 509.297956 
+L 676.852796 510.532708 
+L 704.45895 514.670842 
+L 732.065104 506.991562 
+L 759.671258 509.351783 
+L 787.277411 502.964344 
+L 814.883565 491.639527 
+L 842.489719 484.814951 
+L 870.095873 476.935044 
+L 897.702027 477.678832 
+L 925.308181 489.01996 
+L 952.914335 482.412322 
+L 980.520488 476.171684 
+L 1008.126642 475.254998 
+L 1035.732796 470.590015 
+L 1063.33895 475.773692 
+L 1090.945104 479.448589 
+L 1118.551258 483.627501 
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #ffa500; stroke-width: 5; stroke-linecap: round"/>
    </g>
    <g id="line2d_37">
-    <path d="M 72.407445 579.261283 
-L 100.013599 579.153629 
-L 127.619753 579.124269 
-L 155.225907 578.786629 
-L 182.832061 579.269438 
-L 210.438215 579.269438 
-L 238.044369 579.013353 
-L 265.650522 577.884623 
-L 293.256676 578.892651 
-L 320.86283 578.24673 
-L 348.468984 578.458775 
-L 376.075138 578.21737 
-L 403.681292 578.307082 
-L 431.287445 578.522388 
-L 458.893599 577.452378 
-L 486.499753 578.548486 
-L 514.105907 577.972703 
-L 541.712061 578.483242 
-L 596.924369 579.717994 
-L 624.530522 577.710094 
-L 652.136676 578.161913 
-L 679.74283 578.426153 
-L 707.348984 577.946606 
-L 734.955138 578.059152 
-L 762.561292 577.493156 
-L 790.167445 577.48337 
-L 817.773599 577.661161 
-L 845.379753 577.361036 
-L 872.985907 577.271325 
-L 900.592061 578.155388 
-L 928.198215 578.152126 
-L 955.804369 577.431174 
-L 983.410522 577.602441 
-L 1011.016676 577.414863 
-L 1038.62283 576.266559 
-L 1066.228984 576.964676 
-L 1093.835138 576.915742 
-L 1121.441292 577.204449 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #99ddff; stroke-width: 5; stroke-linecap: round"/>
+    <path d="M 69.517411 579.261283 
+L 97.123565 579.153629 
+L 124.729719 579.124269 
+L 152.335873 578.786629 
+L 179.942027 579.269438 
+L 207.548181 579.269438 
+L 235.154335 579.013353 
+L 262.760488 577.884623 
+L 290.366642 578.892651 
+L 317.972796 578.24673 
+L 345.57895 578.458775 
+L 373.185104 578.21737 
+L 400.791258 578.307082 
+L 428.397411 578.522388 
+L 456.003565 577.452378 
+L 483.609719 578.548486 
+L 511.215873 577.972703 
+L 538.822027 578.483242 
+L 594.034335 579.717994 
+L 621.640488 577.710094 
+L 649.246642 578.161913 
+L 676.852796 578.426153 
+L 704.45895 577.946606 
+L 732.065104 578.059152 
+L 759.671258 577.493156 
+L 787.277411 577.48337 
+L 814.883565 577.661161 
+L 842.489719 577.361036 
+L 870.095873 577.271325 
+L 897.702027 578.155388 
+L 925.308181 578.152126 
+L 952.914335 577.431174 
+L 980.520488 577.602441 
+L 1008.126642 577.414863 
+L 1035.732796 576.266559 
+L 1063.33895 576.964676 
+L 1090.945104 576.915742 
+L 1118.551258 577.204449 
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #99ddff; stroke-width: 5; stroke-linecap: round"/>
    </g>
    <g id="line2d_38">
-    <path d="M 72.407445 584.345462 
-L 100.013599 583.745212 
-L 127.619753 583.58047 
-L 155.225907 583.456505 
-L 182.832061 583.603305 
-L 210.438215 583.414096 
-L 238.044369 583.347221 
-L 265.650522 583.420621 
-L 293.256676 583.397785 
-L 320.86283 583.810457 
-L 348.468984 583.281976 
-L 376.075138 583.226518 
-L 403.681292 583.267296 
-L 431.287445 583.249354 
-L 458.893599 583.189003 
-L 486.499753 583.414096 
-L 514.105907 583.172691 
-L 541.712061 583.065038 
-L 596.924369 584.343831 
-L 624.530522 583.069931 
-L 652.136676 583.510332 
-L 679.74283 583.516856 
-L 707.348984 583.621247 
-L 734.955138 583.394523 
-L 762.561292 583.577207 
-L 790.167445 583.436932 
-L 817.773599 583.603305 
-L 845.379753 583.420621 
-L 872.985907 583.47771 
-L 900.592061 583.425514 
-L 928.198215 583.533167 
-L 955.804369 583.44835 
-L 983.410522 583.418989 
-L 1011.016676 583.357007 
-L 1038.62283 583.312967 
-L 1066.228984 583.255878 
-L 1093.835138 583.316229 
-L 1121.441292 583.277083 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #ff0000; stroke-width: 5; stroke-linecap: round"/>
+    <path d="M 69.517411 584.345462 
+L 97.123565 583.745212 
+L 124.729719 583.58047 
+L 152.335873 583.456505 
+L 179.942027 583.603305 
+L 207.548181 583.414096 
+L 235.154335 583.347221 
+L 262.760488 583.420621 
+L 290.366642 583.397785 
+L 317.972796 583.810457 
+L 345.57895 583.281976 
+L 373.185104 583.226518 
+L 400.791258 583.267296 
+L 428.397411 583.249354 
+L 456.003565 583.189003 
+L 483.609719 583.414096 
+L 511.215873 583.172691 
+L 538.822027 583.065038 
+L 594.034335 584.343831 
+L 621.640488 583.069931 
+L 649.246642 583.510332 
+L 676.852796 583.516856 
+L 704.45895 583.621247 
+L 732.065104 583.394523 
+L 759.671258 583.577207 
+L 787.277411 583.436932 
+L 814.883565 583.603305 
+L 842.489719 583.420621 
+L 870.095873 583.47771 
+L 897.702027 583.425514 
+L 925.308181 583.533167 
+L 952.914335 583.44835 
+L 980.520488 583.418989 
+L 1008.126642 583.357007 
+L 1035.732796 583.312967 
+L 1063.33895 583.255878 
+L 1090.945104 583.316229 
+L 1118.551258 583.277083 
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #ff0000; stroke-width: 5; stroke-linecap: round"/>
    </g>
    <g id="line2d_39">
-    <path d="M 72.407445 584.652111 
-L 100.013599 584.608071 
-L 127.619753 584.296528 
-L 155.225907 584.404182 
-L 182.832061 584.65048 
-L 210.438215 584.683102 
-L 238.044369 584.529777 
-L 265.650522 583.717483 
-L 293.256676 584.441697 
-L 320.86283 584.291635 
-L 348.468984 584.430279 
-L 376.075138 584.066541 
-L 403.681292 584.379715 
-L 431.287445 584.436804 
-L 458.893599 583.518487 
-L 486.499753 584.056755 
-L 514.105907 583.329278 
-L 541.712061 583.955626 
-L 596.924369 584.351986 
-L 624.530522 583.242829 
-L 652.136676 583.518487 
-L 679.74283 584.030657 
-L 707.348984 583.730532 
-L 734.955138 583.637559 
-L 762.561292 583.31786 
-L 790.167445 583.309705 
-L 817.773599 583.523381 
-L 845.379753 583.203683 
-L 872.985907 583.347221 
-L 900.592061 583.870808 
-L 928.198215 584.081221 
-L 955.804369 583.779465 
-L 983.410522 583.53643 
-L 1011.016676 583.130282 
-L 1038.62283 582.688251 
-L 1066.228984 583.277083 
-L 1093.835138 583.242829 
-L 1121.441292 583.453243 
-" clip-path="url(#p652a9f4bee)" style="fill: none; stroke: #eedd88; stroke-width: 5; stroke-linecap: round"/>
+    <path d="M 69.517411 584.652111 
+L 97.123565 584.608071 
+L 124.729719 584.296528 
+L 152.335873 584.404182 
+L 179.942027 584.65048 
+L 207.548181 584.683102 
+L 235.154335 584.529777 
+L 262.760488 583.717483 
+L 290.366642 584.441697 
+L 317.972796 584.291635 
+L 345.57895 584.430279 
+L 373.185104 584.066541 
+L 400.791258 584.379715 
+L 428.397411 584.436804 
+L 456.003565 583.518487 
+L 483.609719 584.056755 
+L 511.215873 583.329278 
+L 538.822027 583.955626 
+L 594.034335 584.351986 
+L 621.640488 583.242829 
+L 649.246642 583.518487 
+L 676.852796 584.030657 
+L 704.45895 583.730532 
+L 732.065104 583.637559 
+L 759.671258 583.31786 
+L 787.277411 583.309705 
+L 814.883565 583.523381 
+L 842.489719 583.203683 
+L 870.095873 583.347221 
+L 897.702027 583.870808 
+L 925.308181 584.081221 
+L 952.914335 583.779465 
+L 980.520488 583.53643 
+L 1008.126642 583.130282 
+L 1035.732796 582.688251 
+L 1063.33895 583.277083 
+L 1090.945104 583.242829 
+L 1118.551258 583.453243 
+" clip-path="url(#pccd21effad)" style="fill: none; stroke: #eedd88; stroke-width: 5; stroke-linecap: round"/>
    </g>
    <g id="patch_3">
-    <path d="M 66.36 585.333896 
-L 66.36 32.64 
+    <path d="M 64.56 589.343192 
+L 64.56 31.2 
 " style="fill: none"/>
    </g>
    <g id="patch_4">
-    <path d="M 1141.2 585.333896 
-L 1141.2 32.64 
+    <path d="M 1141.2 589.343192 
+L 1141.2 31.2 
 " style="fill: none"/>
    </g>
    <g id="patch_5">
-    <path d="M 66.36 585.333896 
-L 1141.2 585.333896 
+    <path d="M 64.56 589.343192 
+L 1141.2 589.343192 
 " style="fill: none"/>
    </g>
    <g id="patch_6">
-    <path d="M 66.36 32.64 
-L 1141.2 32.64 
+    <path d="M 64.56 31.2 
+L 1141.2 31.2 
 " style="fill: none"/>
    </g>
    <g id="text_18">
     <!-- Active Users (Weekly) -->
-    <g transform="translate(496.59875 26.64) scale(0.2 -0.2)">
+    <g transform="translate(498.569063 25.2) scale(0.2 -0.2)">
      <defs>
-      <path id="OpenSans-Bold-41" d="M 3372 0 
-L 3041 1088 
-L 1375 1088 
-L 1044 0 
-L 0 0 
-L 1613 4588 
-L 2797 4588 
-L 4416 0 
-L 3372 0 
+      <path id="LiberationSans-Bold-41" d="M 3541 0 
+L 3150 1125 
+L 1472 1125 
+L 1081 0 
+L 159 0 
+L 1766 4403 
+L 2853 4403 
+L 4453 0 
+L 3541 0 
 z
-M 2809 1900 
-Q 2350 3378 2292 3572 
-Q 2234 3766 2209 3878 
-Q 2106 3478 1619 1900 
-L 2809 1900 
-z
-" transform="scale(0.015625)"/>
-      <path id="OpenSans-Bold-74" d="M 1972 697 
-Q 2222 697 2572 806 
-L 2572 97 
-Q 2216 -63 1697 -63 
-Q 1125 -63 864 226 
-Q 603 516 603 1094 
-L 603 2778 
-L 147 2778 
-L 147 3181 
-L 672 3500 
-L 947 4238 
-L 1556 4238 
-L 1556 3494 
-L 2534 3494 
-L 2534 2778 
-L 1556 2778 
-L 1556 1094 
-Q 1556 891 1670 794 
-Q 1784 697 1972 697 
+M 2309 3725 
+L 2291 3656 
+Q 2259 3544 2215 3400 
+Q 2172 3256 1678 1819 
+L 2944 1819 
+L 2509 3084 
+L 2375 3509 
+L 2309 3725 
 z
 " transform="scale(0.015625)"/>
-      <path id="OpenSans-Bold-20" transform="scale(0.015625)"/>
-      <path id="OpenSans-Bold-55" d="M 4294 4569 
-L 4294 1613 
-Q 4294 1106 4067 725 
-Q 3841 344 3412 140 
-Q 2984 -63 2400 -63 
-Q 1519 -63 1031 389 
-Q 544 841 544 1625 
-L 544 4569 
-L 1509 4569 
-L 1509 1772 
-Q 1509 1244 1721 997 
-Q 1934 750 2425 750 
-Q 2900 750 3114 998 
-Q 3328 1247 3328 1778 
-L 3328 4569 
-L 4294 4569 
+      <path id="LiberationSans-Bold-74" d="M 1313 -56 
+Q 925 -56 715 155 
+Q 506 366 506 794 
+L 506 2788 
+L 78 2788 
+L 78 3381 
+L 550 3381 
+L 825 4175 
+L 1375 4175 
+L 1375 3381 
+L 2016 3381 
+L 2016 2788 
+L 1375 2788 
+L 1375 1031 
+Q 1375 784 1469 667 
+Q 1563 550 1759 550 
+Q 1863 550 2053 594 
+L 2053 50 
+Q 1728 -56 1313 -56 
 z
 " transform="scale(0.015625)"/>
-      <path id="OpenSans-Bold-72" d="M 2450 3559 
-Q 2644 3559 2772 3531 
-L 2700 2638 
-Q 2584 2669 2419 2669 
-Q 1963 2669 1708 2434 
-Q 1453 2200 1453 1778 
-L 1453 0 
-L 500 0 
-L 500 3494 
-L 1222 3494 
-L 1363 2906 
-L 1409 2906 
-Q 1572 3200 1848 3379 
-Q 2125 3559 2450 3559 
+      <path id="LiberationSans-Bold-20" transform="scale(0.015625)"/>
+      <path id="LiberationSans-Bold-55" d="M 2259 -63 
+Q 1350 -63 867 381 
+Q 384 825 384 1650 
+L 384 4403 
+L 1306 4403 
+L 1306 1722 
+Q 1306 1200 1554 929 
+Q 1803 659 2284 659 
+Q 2778 659 3043 942 
+Q 3309 1225 3309 1753 
+L 3309 4403 
+L 4231 4403 
+L 4231 1697 
+Q 4231 859 3714 398 
+Q 3197 -63 2259 -63 
 z
 " transform="scale(0.015625)"/>
-      <path id="OpenSans-Bold-28" d="M 256 1753 
-Q 256 2581 498 3303 
-Q 741 4025 1197 4569 
-L 1978 4569 
-Q 1538 3966 1313 3244 
-Q 1088 2522 1088 1759 
-Q 1088 994 1317 280 
-Q 1547 -434 1972 -1013 
-L 1197 -1013 
-Q 738 -481 497 228 
-Q 256 938 256 1753 
+      <path id="LiberationSans-Bold-72" d="M 447 0 
+L 447 2588 
+Q 447 2866 439 3052 
+Q 431 3238 422 3381 
+L 1259 3381 
+Q 1269 3325 1284 3039 
+Q 1300 2753 1300 2659 
+L 1313 2659 
+Q 1441 3016 1541 3161 
+Q 1641 3306 1778 3376 
+Q 1916 3447 2122 3447 
+Q 2291 3447 2394 3400 
+L 2394 2666 
+Q 2181 2713 2019 2713 
+Q 1691 2713 1508 2447 
+Q 1325 2181 1325 1659 
+L 1325 0 
+L 447 0 
 z
 " transform="scale(0.015625)"/>
-      <path id="OpenSans-Bold-57" d="M 5025 0 
-L 3922 0 
-L 3303 2400 
-Q 3269 2528 3186 2929 
-Q 3103 3331 3091 3469 
-Q 3072 3300 2997 2926 
-Q 2922 2553 2881 2394 
-L 2266 0 
-L 1166 0 
-L 0 4569 
-L 953 4569 
-L 1538 2075 
-Q 1691 1384 1759 878 
-Q 1778 1056 1845 1429 
-Q 1913 1803 1972 2009 
-L 2638 4569 
-L 3553 4569 
-L 4219 2009 
-Q 4263 1838 4328 1484 
-Q 4394 1131 4428 878 
-Q 4459 1122 4528 1486 
-Q 4597 1850 4653 2075 
-L 5234 4569 
-L 6188 4569 
-L 5025 0 
+      <path id="LiberationSans-Bold-28" d="M 1247 -1328 
+Q 756 -622 537 81 
+Q 319 784 319 1659 
+Q 319 2531 537 3232 
+Q 756 3934 1247 4638 
+L 2125 4638 
+Q 1631 3925 1407 3219 
+Q 1184 2513 1184 1656 
+Q 1184 803 1406 101 
+Q 1628 -600 2125 -1328 
+L 1247 -1328 
 z
 " transform="scale(0.015625)"/>
-      <path id="OpenSans-Bold-6c" d="M 1453 0 
-L 500 0 
-L 500 4863 
-L 1453 4863 
-L 1453 0 
+      <path id="LiberationSans-Bold-57" d="M 4897 0 
+L 3803 0 
+L 3206 2547 
+Q 3097 2997 3022 3488 
+Q 2947 3078 2900 2864 
+Q 2853 2650 2234 0 
+L 1141 0 
+L 6 4403 
+L 941 4403 
+L 1578 1559 
+L 1722 872 
+Q 1809 1306 1892 1701 
+Q 1975 2097 2516 4403 
+L 3547 4403 
+L 4103 2059 
+Q 4169 1797 4325 872 
+L 4403 1234 
+L 4569 1953 
+L 5100 4403 
+L 6034 4403 
+L 4897 0 
 z
 " transform="scale(0.015625)"/>
-      <path id="OpenSans-Bold-79" d="M 0 3494 
-L 1044 3494 
-L 1703 1528 
-Q 1788 1272 1819 922 
-L 1838 922 
-Q 1872 1244 1972 1528 
-L 2619 3494 
-L 3641 3494 
-L 2163 -447 
-Q 1959 -994 1582 -1266 
-Q 1206 -1538 703 -1538 
-Q 456 -1538 219 -1484 
-L 219 -728 
-Q 391 -769 594 -769 
-Q 847 -769 1036 -614 
-Q 1225 -459 1331 -147 
-L 1388 25 
-L 0 3494 
+      <path id="LiberationSans-Bold-6c" d="M 447 0 
+L 447 4638 
+L 1325 4638 
+L 1325 0 
+L 447 0 
 z
 " transform="scale(0.015625)"/>
-      <path id="OpenSans-Bold-29" d="M 1913 1753 
-Q 1913 931 1670 221 
-Q 1428 -488 972 -1013 
-L 197 -1013 
-Q 619 -438 850 276 
-Q 1081 991 1081 1759 
-Q 1081 2522 856 3244 
-Q 631 3966 191 4569 
-L 972 4569 
-Q 1431 4022 1672 3298 
-Q 1913 2575 1913 1753 
+      <path id="LiberationSans-Bold-79" d="M 884 -1328 
+Q 569 -1328 331 -1288 
+L 331 -663 
+Q 497 -688 634 -688 
+Q 822 -688 945 -628 
+Q 1069 -569 1167 -431 
+Q 1266 -294 1388 34 
+L 50 3381 
+L 978 3381 
+L 1509 1797 
+Q 1634 1456 1825 753 
+L 1903 1050 
+L 2106 1784 
+L 2606 3381 
+L 3525 3381 
+L 2188 -178 
+Q 1919 -828 1630 -1078 
+Q 1341 -1328 884 -1328 
+z
+" transform="scale(0.015625)"/>
+      <path id="LiberationSans-Bold-29" d="M 6 -1328 
+Q 506 -597 726 101 
+Q 947 800 947 1656 
+Q 947 2516 722 3223 
+Q 497 3931 6 4638 
+L 884 4638 
+Q 1378 3928 1595 3225 
+Q 1813 2522 1813 1659 
+Q 1813 791 1595 87 
+Q 1378 -616 884 -1328 
+L 6 -1328 
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#OpenSans-Bold-41"/>
-     <use xlink:href="#OpenSans-Bold-63" transform="translate(68.994141 0)"/>
-     <use xlink:href="#OpenSans-Bold-74" transform="translate(120.410156 0)"/>
-     <use xlink:href="#OpenSans-Bold-69" transform="translate(163.818359 0)"/>
-     <use xlink:href="#OpenSans-Bold-76" transform="translate(194.335938 0)"/>
-     <use xlink:href="#OpenSans-Bold-65" transform="translate(251.220703 0)"/>
-     <use xlink:href="#OpenSans-Bold-20" transform="translate(310.302734 0)"/>
-     <use xlink:href="#OpenSans-Bold-55" transform="translate(336.279297 0)"/>
-     <use xlink:href="#OpenSans-Bold-73" transform="translate(411.865234 0)"/>
-     <use xlink:href="#OpenSans-Bold-65" transform="translate(461.572266 0)"/>
-     <use xlink:href="#OpenSans-Bold-72" transform="translate(520.654297 0)"/>
-     <use xlink:href="#OpenSans-Bold-73" transform="translate(566.064453 0)"/>
-     <use xlink:href="#OpenSans-Bold-20" transform="translate(615.771484 0)"/>
-     <use xlink:href="#OpenSans-Bold-28" transform="translate(641.748047 0)"/>
-     <use xlink:href="#OpenSans-Bold-57" transform="translate(675.634766 0)"/>
-     <use xlink:href="#OpenSans-Bold-65" transform="translate(770.314453 0)"/>
-     <use xlink:href="#OpenSans-Bold-65" transform="translate(829.396484 0)"/>
-     <use xlink:href="#OpenSans-Bold-6b" transform="translate(888.478516 0)"/>
-     <use xlink:href="#OpenSans-Bold-6c" transform="translate(950.490234 0)"/>
-     <use xlink:href="#OpenSans-Bold-79" transform="translate(981.007812 0)"/>
-     <use xlink:href="#OpenSans-Bold-29" transform="translate(1037.892578 0)"/>
+     <use xlink:href="#LiberationSans-Bold-41"/>
+     <use xlink:href="#LiberationSans-Bold-63" transform="translate(72.216797 0)"/>
+     <use xlink:href="#LiberationSans-Bold-74" transform="translate(127.832031 0)"/>
+     <use xlink:href="#LiberationSans-Bold-69" transform="translate(161.132812 0)"/>
+     <use xlink:href="#LiberationSans-Bold-76" transform="translate(188.916016 0)"/>
+     <use xlink:href="#LiberationSans-Bold-65" transform="translate(244.53125 0)"/>
+     <use xlink:href="#LiberationSans-Bold-20" transform="translate(300.146484 0)"/>
+     <use xlink:href="#LiberationSans-Bold-55" transform="translate(327.929688 0)"/>
+     <use xlink:href="#LiberationSans-Bold-73" transform="translate(400.146484 0)"/>
+     <use xlink:href="#LiberationSans-Bold-65" transform="translate(455.761719 0)"/>
+     <use xlink:href="#LiberationSans-Bold-72" transform="translate(511.376953 0)"/>
+     <use xlink:href="#LiberationSans-Bold-73" transform="translate(550.292969 0)"/>
+     <use xlink:href="#LiberationSans-Bold-20" transform="translate(605.908203 0)"/>
+     <use xlink:href="#LiberationSans-Bold-28" transform="translate(633.691406 0)"/>
+     <use xlink:href="#LiberationSans-Bold-57" transform="translate(666.992188 0)"/>
+     <use xlink:href="#LiberationSans-Bold-65" transform="translate(759.626953 0)"/>
+     <use xlink:href="#LiberationSans-Bold-65" transform="translate(815.242188 0)"/>
+     <use xlink:href="#LiberationSans-Bold-6b" transform="translate(870.857422 0)"/>
+     <use xlink:href="#LiberationSans-Bold-6c" transform="translate(926.472656 0)"/>
+     <use xlink:href="#LiberationSans-Bold-79" transform="translate(954.255859 0)"/>
+     <use xlink:href="#LiberationSans-Bold-29" transform="translate(1009.871094 0)"/>
     </g>
    </g>
    <g id="legend_1">
@@ -1252,261 +1263,275 @@ L 538.82 51.595
      <!-- Workstation (242.7k) -->
      <g style="fill: #616161" transform="translate(551.62 57.195) scale(0.16 -0.16)">
       <defs>
-       <path id="OpenSans-57" d="M 4616 0 
-L 4091 0 
-L 3169 3059 
-Q 3103 3263 3022 3572 
-Q 2941 3881 2938 3944 
-Q 2869 3531 2719 3041 
-L 1825 0 
-L 1300 0 
-L 84 4569 
-L 647 4569 
-L 1369 1747 
-Q 1519 1153 1588 672 
-Q 1672 1244 1838 1791 
-L 2656 4569 
-L 3219 4569 
-L 4078 1766 
-Q 4228 1281 4331 672 
-Q 4391 1116 4556 1753 
-L 5275 4569 
-L 5838 4569 
-L 4616 0 
+       <path id="LiberationSans-57" d="M 4722 0 
+L 4009 0 
+L 3247 2797 
+Q 3172 3059 3028 3738 
+Q 2947 3375 2890 3131 
+Q 2834 2888 2038 0 
+L 1325 0 
+L 28 4403 
+L 650 4403 
+L 1441 1606 
+Q 1581 1081 1700 525 
+Q 1775 869 1873 1275 
+Q 1972 1681 2741 4403 
+L 3313 4403 
+L 4078 1663 
+Q 4253 991 4353 525 
+L 4381 634 
+Q 4466 994 4519 1220 
+Q 4572 1447 5397 4403 
+L 6019 4403 
+L 4722 0 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-6f" d="M 3506 1716 
-Q 3506 878 3084 407 
-Q 2663 -63 1919 -63 
-Q 1459 -63 1103 153 
-Q 747 369 553 772 
-Q 359 1175 359 1716 
-Q 359 2553 778 3020 
-Q 1197 3488 1941 3488 
-Q 2659 3488 3082 3009 
-Q 3506 2531 3506 1716 
+       <path id="LiberationSans-6f" d="M 3291 1694 
+Q 3291 806 2900 371 
+Q 2509 -63 1766 -63 
+Q 1025 -63 647 389 
+Q 269 841 269 1694 
+Q 269 3444 1784 3444 
+Q 2559 3444 2925 3017 
+Q 3291 2591 3291 1694 
 z
-M 897 1716 
-Q 897 1059 1159 715 
-Q 1422 372 1931 372 
-Q 2441 372 2705 714 
-Q 2969 1056 2969 1716 
-Q 2969 2369 2705 2708 
-Q 2441 3047 1925 3047 
-Q 1416 3047 1156 2712 
-Q 897 2378 897 1716 
+M 2700 1694 
+Q 2700 2394 2492 2711 
+Q 2284 3028 1794 3028 
+Q 1300 3028 1079 2704 
+Q 859 2381 859 1694 
+Q 859 1025 1076 689 
+Q 1294 353 1759 353 
+Q 2266 353 2483 678 
+Q 2700 1003 2700 1694 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-72" d="M 2113 3488 
-Q 2341 3488 2522 3450 
-L 2450 2969 
-Q 2238 3016 2075 3016 
-Q 1659 3016 1364 2678 
-Q 1069 2341 1069 1838 
-L 1069 0 
-L 550 0 
-L 550 3425 
-L 978 3425 
-L 1038 2791 
-L 1063 2791 
-Q 1253 3125 1522 3306 
-Q 1791 3488 2113 3488 
+       <path id="LiberationSans-72" d="M 444 0 
+L 444 2594 
+Q 444 2950 425 3381 
+L 956 3381 
+Q 981 2806 981 2691 
+L 994 2691 
+Q 1128 3125 1303 3284 
+Q 1478 3444 1797 3444 
+Q 1909 3444 2025 3413 
+L 2025 2897 
+Q 1913 2928 1725 2928 
+Q 1375 2928 1190 2626 
+Q 1006 2325 1006 1763 
+L 1006 0 
+L 444 0 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-6b" d="M 1063 1753 
-Q 1197 1944 1472 2253 
-L 2578 3425 
-L 3194 3425 
-L 1806 1966 
-L 3291 0 
-L 2663 0 
-L 1453 1619 
-L 1063 1281 
-L 1063 0 
-L 550 0 
-L 550 4863 
-L 1063 4863 
-L 1063 2284 
-Q 1063 2113 1038 1753 
-L 1063 1753 
+       <path id="LiberationSans-6b" d="M 2550 0 
+L 1406 1544 
+L 994 1203 
+L 994 0 
+L 431 0 
+L 431 4638 
+L 994 4638 
+L 994 1741 
+L 2478 3381 
+L 3138 3381 
+L 1766 1928 
+L 3209 0 
+L 2550 0 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-73" d="M 2759 934 
-Q 2759 456 2403 196 
-Q 2047 -63 1403 -63 
-Q 722 -63 341 153 
-L 341 634 
-Q 588 509 870 437 
-Q 1153 366 1416 366 
-Q 1822 366 2040 495 
-Q 2259 625 2259 891 
-Q 2259 1091 2086 1233 
-Q 1913 1375 1409 1569 
-Q 931 1747 729 1880 
-Q 528 2013 429 2181 
-Q 331 2350 331 2584 
-Q 331 3003 672 3245 
-Q 1013 3488 1606 3488 
-Q 2159 3488 2688 3263 
-L 2503 2841 
-Q 1988 3053 1569 3053 
-Q 1200 3053 1012 2937 
-Q 825 2822 825 2619 
-Q 825 2481 895 2384 
-Q 966 2288 1122 2200 
-Q 1278 2113 1722 1947 
-Q 2331 1725 2545 1500 
-Q 2759 1275 2759 934 
+       <path id="LiberationSans-73" d="M 2969 934 
+Q 2969 456 2608 196 
+Q 2247 -63 1597 -63 
+Q 966 -63 623 145 
+Q 281 353 178 794 
+L 675 891 
+Q 747 619 972 492 
+Q 1197 366 1597 366 
+Q 2025 366 2223 497 
+Q 2422 628 2422 891 
+Q 2422 1091 2284 1216 
+Q 2147 1341 1841 1422 
+L 1438 1528 
+Q 953 1653 748 1773 
+Q 544 1894 428 2066 
+Q 313 2238 313 2488 
+Q 313 2950 642 3192 
+Q 972 3434 1603 3434 
+Q 2163 3434 2492 3237 
+Q 2822 3041 2909 2606 
+L 2403 2544 
+Q 2356 2769 2151 2889 
+Q 1947 3009 1603 3009 
+Q 1222 3009 1040 2893 
+Q 859 2778 859 2544 
+Q 859 2400 934 2306 
+Q 1009 2213 1156 2147 
+Q 1303 2081 1775 1966 
+Q 2222 1853 2419 1758 
+Q 2616 1663 2730 1547 
+Q 2844 1431 2906 1279 
+Q 2969 1128 2969 934 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-74" d="M 1656 366 
-Q 1794 366 1922 386 
-Q 2050 406 2125 428 
-L 2125 31 
-Q 2041 -9 1877 -36 
-Q 1713 -63 1581 -63 
-Q 588 -63 588 984 
-L 588 3022 
-L 97 3022 
-L 97 3272 
-L 588 3488 
-L 806 4219 
-L 1106 4219 
-L 1106 3425 
-L 2100 3425 
-L 2100 3022 
-L 1106 3022 
-L 1106 1006 
-Q 1106 697 1253 531 
-Q 1400 366 1656 366 
+       <path id="LiberationSans-74" d="M 1731 25 
+Q 1453 -50 1163 -50 
+Q 488 -50 488 716 
+L 488 2972 
+L 97 2972 
+L 97 3381 
+L 509 3381 
+L 675 4138 
+L 1050 4138 
+L 1050 3381 
+L 1675 3381 
+L 1675 2972 
+L 1050 2972 
+L 1050 838 
+Q 1050 594 1129 495 
+Q 1209 397 1406 397 
+Q 1519 397 1731 441 
+L 1731 25 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-61" d="M 2656 0 
-L 2553 488 
-L 2528 488 
-Q 2272 166 2017 51 
-Q 1763 -63 1381 -63 
-Q 872 -63 583 200 
-Q 294 463 294 947 
-Q 294 1984 1953 2034 
-L 2534 2053 
-L 2534 2266 
-Q 2534 2669 2361 2861 
-Q 2188 3053 1806 3053 
-Q 1378 3053 838 2791 
-L 678 3188 
-Q 931 3325 1232 3403 
-Q 1534 3481 1838 3481 
-Q 2450 3481 2745 3209 
-Q 3041 2938 3041 2338 
-L 3041 0 
-L 2656 0 
+       <path id="LiberationSans-61" d="M 1294 -63 
+Q 784 -63 528 206 
+Q 272 475 272 944 
+Q 272 1469 617 1750 
+Q 963 2031 1731 2050 
+L 2491 2063 
+L 2491 2247 
+Q 2491 2659 2316 2837 
+Q 2141 3016 1766 3016 
+Q 1388 3016 1216 2887 
+Q 1044 2759 1009 2478 
+L 422 2531 
+Q 566 3444 1778 3444 
+Q 2416 3444 2737 3151 
+Q 3059 2859 3059 2306 
+L 3059 850 
+Q 3059 600 3125 473 
+Q 3191 347 3375 347 
+Q 3456 347 3559 369 
+L 3559 19 
+Q 3347 -31 3125 -31 
+Q 2813 -31 2670 133 
+Q 2528 297 2509 647 
+L 2491 647 
+Q 2275 259 1989 98 
+Q 1703 -63 1294 -63 
 z
-M 1484 366 
-Q 1969 366 2245 631 
-Q 2522 897 2522 1375 
-L 2522 1684 
-L 2003 1663 
-Q 1384 1641 1111 1470 
-Q 838 1300 838 941 
-Q 838 659 1008 512 
-Q 1178 366 1484 366 
-z
-" transform="scale(0.015625)"/>
-       <path id="OpenSans-69" d="M 1069 0 
-L 550 0 
-L 550 3425 
-L 1069 3425 
-L 1069 0 
-z
-M 506 4353 
-Q 506 4531 593 4614 
-Q 681 4697 813 4697 
-Q 938 4697 1028 4612 
-Q 1119 4528 1119 4353 
-Q 1119 4178 1028 4092 
-Q 938 4006 813 4006 
-Q 681 4006 593 4092 
-Q 506 4178 506 4353 
+M 1422 359 
+Q 1731 359 1972 500 
+Q 2213 641 2352 886 
+Q 2491 1131 2491 1391 
+L 2491 1669 
+L 1875 1656 
+Q 1478 1650 1273 1575 
+Q 1069 1500 959 1344 
+Q 850 1188 850 934 
+Q 850 659 998 509 
+Q 1147 359 1422 359 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-6e" d="M 2894 0 
-L 2894 2216 
-Q 2894 2634 2703 2840 
-Q 2513 3047 2106 3047 
-Q 1569 3047 1319 2756 
-Q 1069 2466 1069 1797 
-L 1069 0 
-L 550 0 
-L 550 3425 
-L 972 3425 
-L 1056 2956 
-L 1081 2956 
-Q 1241 3209 1528 3348 
-Q 1816 3488 2169 3488 
-Q 2788 3488 3100 3189 
-Q 3413 2891 3413 2234 
-L 3413 0 
-L 2894 0 
+       <path id="LiberationSans-69" d="M 428 4100 
+L 428 4638 
+L 991 4638 
+L 991 4100 
+L 428 4100 
+z
+M 428 0 
+L 428 3381 
+L 991 3381 
+L 991 0 
+L 428 0 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-20" transform="scale(0.015625)"/>
-       <path id="OpenSans-28" d="M 256 1753 
-Q 256 2581 498 3303 
-Q 741 4025 1197 4569 
-L 1703 4569 
-Q 1253 3966 1026 3244 
-Q 800 2522 800 1759 
-Q 800 1009 1031 293 
-Q 1263 -422 1697 -1013 
-L 1197 -1013 
-Q 738 -481 497 228 
-Q 256 938 256 1753 
+       <path id="LiberationSans-6e" d="M 2578 0 
+L 2578 2144 
+Q 2578 2478 2512 2662 
+Q 2447 2847 2303 2928 
+Q 2159 3009 1881 3009 
+Q 1475 3009 1240 2731 
+Q 1006 2453 1006 1959 
+L 1006 0 
+L 444 0 
+L 444 2659 
+Q 444 3250 425 3381 
+L 956 3381 
+Q 959 3366 962 3297 
+Q 966 3228 970 3139 
+Q 975 3050 981 2803 
+L 991 2803 
+Q 1184 3153 1439 3298 
+Q 1694 3444 2072 3444 
+Q 2628 3444 2886 3167 
+Q 3144 2891 3144 2253 
+L 3144 0 
+L 2578 0 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-32" d="M 3316 0 
-L 313 0 
-L 313 447 
-L 1516 1656 
-Q 2066 2213 2241 2450 
-Q 2416 2688 2503 2913 
-Q 2591 3138 2591 3397 
-Q 2591 3763 2369 3977 
-Q 2147 4191 1753 4191 
-Q 1469 4191 1214 4097 
-Q 959 4003 647 3756 
-L 372 4109 
-Q 1003 4634 1747 4634 
-Q 2391 4634 2756 4304 
-Q 3122 3975 3122 3419 
-Q 3122 2984 2878 2559 
-Q 2634 2134 1966 1484 
-L 966 506 
-L 966 481 
-L 3316 481 
-L 3316 0 
+       <path id="LiberationSans-20" transform="scale(0.015625)"/>
+       <path id="LiberationSans-28" d="M 397 1663 
+Q 397 2566 680 3284 
+Q 963 4003 1550 4638 
+L 2094 4638 
+Q 1509 3988 1236 3256 
+Q 963 2525 963 1656 
+Q 963 791 1233 62 
+Q 1503 -666 2094 -1325 
+L 1550 -1325 
+Q 959 -688 678 32 
+Q 397 753 397 1650 
+L 397 1663 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-34" d="M 3531 1050 
-L 2853 1050 
-L 2853 0 
-L 2356 0 
-L 2356 1050 
-L 134 1050 
-L 134 1503 
-L 2303 4594 
-L 2853 4594 
-L 2853 1522 
-L 3531 1522 
-L 3531 1050 
+       <path id="LiberationSans-32" d="M 322 0 
+L 322 397 
+Q 481 763 711 1042 
+Q 941 1322 1194 1548 
+Q 1447 1775 1695 1969 
+Q 1944 2163 2144 2356 
+Q 2344 2550 2467 2762 
+Q 2591 2975 2591 3244 
+Q 2591 3606 2378 3806 
+Q 2166 4006 1788 4006 
+Q 1428 4006 1195 3811 
+Q 963 3616 922 3263 
+L 347 3316 
+Q 409 3844 795 4156 
+Q 1181 4469 1788 4469 
+Q 2453 4469 2811 4155 
+Q 3169 3841 3169 3263 
+Q 3169 3006 3051 2753 
+Q 2934 2500 2703 2247 
+Q 2472 1994 1819 1463 
+Q 1459 1169 1246 933 
+Q 1034 697 941 478 
+L 3238 478 
+L 3238 0 
+L 322 0 
 z
-M 2356 1522 
-L 2356 3041 
-Q 2356 3488 2388 4050 
-L 2363 4050 
-Q 2213 3750 2081 3553 
-L 653 1522 
-L 2356 1522 
+" transform="scale(0.015625)"/>
+       <path id="LiberationSans-34" d="M 2753 997 
+L 2753 0 
+L 2222 0 
+L 2222 997 
+L 147 997 
+L 147 1434 
+L 2163 4403 
+L 2753 4403 
+L 2753 1441 
+L 3372 1441 
+L 3372 997 
+L 2753 997 
+z
+M 2222 3769 
+Q 2216 3750 2134 3603 
+Q 2053 3456 2013 3397 
+L 884 1734 
+L 716 1503 
+L 666 1441 
+L 2222 1441 
+L 2222 3769 
 z
 " transform="scale(0.015625)"/>
        <path id="LiberationSans-2e" d="M 584 0 
@@ -1516,27 +1541,31 @@ L 1194 0
 L 584 0 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-37" d="M 891 0 
-L 2784 4091 
-L 294 4091 
-L 294 4569 
-L 3334 4569 
-L 3334 4153 
-L 1466 0 
-L 891 0 
+       <path id="LiberationSans-37" d="M 3238 3947 
+Q 2563 2916 2284 2331 
+Q 2006 1747 1867 1178 
+Q 1728 609 1728 0 
+L 1141 0 
+Q 1141 844 1498 1776 
+Q 1856 2709 2694 3925 
+L 328 3925 
+L 328 4403 
+L 3238 4403 
+L 3238 3947 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-29" d="M 1638 1753 
-Q 1638 931 1395 221 
-Q 1153 -488 697 -1013 
-L 197 -1013 
-Q 631 -425 862 292 
-Q 1094 1009 1094 1759 
-Q 1094 2522 867 3244 
-Q 641 3966 191 4569 
-L 697 4569 
-Q 1156 4022 1397 3298 
-Q 1638 2575 1638 1753 
+       <path id="LiberationSans-29" d="M 1734 1650 
+Q 1734 747 1451 28 
+Q 1169 -691 581 -1325 
+L 38 -1325 
+Q 625 -669 897 57 
+Q 1169 784 1169 1656 
+Q 1169 2528 895 3256 
+Q 622 3984 38 4638 
+L 581 4638 
+Q 1172 4000 1453 3279 
+Q 1734 2559 1734 1663 
+L 1734 1650 
 z
 " transform="scale(0.015625)"/>
       </defs>
@@ -1572,107 +1601,123 @@ L 538.82 74.51
      <!-- CoreOS (114.6k) -->
      <g style="fill: #616161" transform="translate(551.62 80.11) scale(0.16 -0.16)">
       <defs>
-       <path id="OpenSans-43" d="M 2584 4159 
-Q 1831 4159 1395 3657 
-Q 959 3156 959 2284 
-Q 959 1388 1379 898 
-Q 1800 409 2578 409 
-Q 3056 409 3669 581 
-L 3669 116 
-Q 3194 -63 2497 -63 
-Q 1488 -63 939 550 
-Q 391 1163 391 2291 
-Q 391 2997 655 3528 
-Q 919 4059 1417 4346 
-Q 1916 4634 2591 4634 
-Q 3309 4634 3847 4372 
-L 3622 3916 
-Q 3103 4159 2584 4159 
+       <path id="LiberationSans-43" d="M 2475 3981 
+Q 1744 3981 1337 3511 
+Q 931 3041 931 2222 
+Q 931 1413 1354 920 
+Q 1778 428 2500 428 
+Q 3425 428 3891 1344 
+L 4378 1100 
+Q 4106 531 3614 234 
+Q 3122 -63 2472 -63 
+Q 1806 -63 1320 214 
+Q 834 491 579 1005 
+Q 325 1519 325 2222 
+Q 325 3275 894 3872 
+Q 1463 4469 2469 4469 
+Q 3172 4469 3644 4194 
+Q 4116 3919 4338 3378 
+L 3772 3191 
+Q 3619 3575 3280 3778 
+Q 2941 3981 2475 3981 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-65" d="M 1997 -63 
-Q 1238 -63 798 400 
-Q 359 863 359 1684 
-Q 359 2513 767 3000 
-Q 1175 3488 1863 3488 
-Q 2506 3488 2881 3064 
-Q 3256 2641 3256 1947 
-L 3256 1619 
-L 897 1619 
-Q 913 1016 1202 703 
-Q 1491 391 2016 391 
-Q 2569 391 3109 622 
-L 3109 159 
-Q 2834 41 2589 -11 
-Q 2344 -63 1997 -63 
+       <path id="LiberationSans-65" d="M 863 1572 
+Q 863 991 1103 675 
+Q 1344 359 1806 359 
+Q 2172 359 2392 506 
+Q 2613 653 2691 878 
+L 3184 738 
+Q 2881 -63 1806 -63 
+Q 1056 -63 664 384 
+Q 272 831 272 1713 
+Q 272 2550 664 2997 
+Q 1056 3444 1784 3444 
+Q 3275 3444 3275 1647 
+L 3275 1572 
+L 863 1572 
 z
-M 1856 3053 
-Q 1444 3053 1198 2784 
-Q 953 2516 909 2041 
-L 2700 2041 
-Q 2700 2531 2481 2792 
-Q 2263 3053 1856 3053 
-z
-" transform="scale(0.015625)"/>
-       <path id="OpenSans-4f" d="M 4594 2291 
-Q 4594 1194 4039 565 
-Q 3484 -63 2497 -63 
-Q 1488 -63 939 554 
-Q 391 1172 391 2297 
-Q 391 3413 941 4027 
-Q 1491 4641 2503 4641 
-Q 3488 4641 4041 4016 
-Q 4594 3391 4594 2291 
-z
-M 953 2291 
-Q 953 1363 1348 883 
-Q 1744 403 2497 403 
-Q 3256 403 3643 881 
-Q 4031 1359 4031 2291 
-Q 4031 3213 3645 3689 
-Q 3259 4166 2503 4166 
-Q 1744 4166 1348 3686 
-Q 953 3206 953 2291 
+M 2694 2003 
+Q 2647 2538 2422 2783 
+Q 2197 3028 1775 3028 
+Q 1366 3028 1127 2754 
+Q 888 2481 869 2003 
+L 2694 2003 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-53" d="M 3206 1216 
-Q 3206 613 2768 275 
-Q 2331 -63 1581 -63 
-Q 769 -63 331 147 
-L 331 659 
-Q 613 541 944 472 
-Q 1275 403 1600 403 
-Q 2131 403 2400 604 
-Q 2669 806 2669 1166 
-Q 2669 1403 2573 1554 
-Q 2478 1706 2254 1834 
-Q 2031 1963 1575 2125 
-Q 938 2353 664 2665 
-Q 391 2978 391 3481 
-Q 391 4009 787 4321 
-Q 1184 4634 1838 4634 
-Q 2519 4634 3091 4384 
-L 2925 3922 
-Q 2359 4159 1825 4159 
-Q 1403 4159 1165 3978 
-Q 928 3797 928 3475 
-Q 928 3238 1015 3086 
-Q 1103 2934 1311 2807 
-Q 1519 2681 1947 2528 
-Q 2666 2272 2936 1978 
-Q 3206 1684 3206 1216 
+       <path id="LiberationSans-4f" d="M 4672 2222 
+Q 4672 1531 4408 1012 
+Q 4144 494 3650 215 
+Q 3156 -63 2484 -63 
+Q 1806 -63 1314 212 
+Q 822 488 562 1008 
+Q 303 1528 303 2222 
+Q 303 3278 881 3873 
+Q 1459 4469 2491 4469 
+Q 3163 4469 3656 4201 
+Q 4150 3934 4411 3425 
+Q 4672 2916 4672 2222 
+z
+M 4063 2222 
+Q 4063 3044 3652 3512 
+Q 3241 3981 2491 3981 
+Q 1734 3981 1321 3518 
+Q 909 3056 909 2222 
+Q 909 1394 1326 908 
+Q 1744 422 2484 422 
+Q 3247 422 3655 892 
+Q 4063 1363 4063 2222 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-31" d="M 2234 0 
-L 1728 0 
-L 1728 3256 
-Q 1728 3663 1753 4025 
-Q 1688 3959 1606 3887 
-Q 1525 3816 863 3278 
-L 588 3634 
-L 1797 4569 
-L 2234 4569 
-L 2234 0 
+       <path id="LiberationSans-53" d="M 3975 1216 
+Q 3975 606 3498 271 
+Q 3022 -63 2156 -63 
+Q 547 -63 291 1056 
+L 869 1172 
+Q 969 775 1294 589 
+Q 1619 403 2178 403 
+Q 2756 403 3070 601 
+Q 3384 800 3384 1184 
+Q 3384 1400 3286 1534 
+Q 3188 1669 3009 1756 
+Q 2831 1844 2584 1903 
+Q 2338 1963 2038 2031 
+Q 1516 2147 1245 2262 
+Q 975 2378 819 2520 
+Q 663 2663 580 2853 
+Q 497 3044 497 3291 
+Q 497 3856 930 4162 
+Q 1363 4469 2169 4469 
+Q 2919 4469 3316 4239 
+Q 3713 4009 3872 3456 
+L 3284 3353 
+Q 3188 3703 2916 3861 
+Q 2644 4019 2163 4019 
+Q 1634 4019 1356 3844 
+Q 1078 3669 1078 3322 
+Q 1078 3119 1186 2986 
+Q 1294 2853 1497 2761 
+Q 1700 2669 2306 2534 
+Q 2509 2488 2711 2439 
+Q 2913 2391 3097 2323 
+Q 3281 2256 3442 2165 
+Q 3603 2075 3722 1944 
+Q 3841 1813 3908 1634 
+Q 3975 1456 3975 1216 
+z
+" transform="scale(0.015625)"/>
+       <path id="LiberationSans-31" d="M 488 0 
+L 488 478 
+L 1609 478 
+L 1609 3866 
+L 616 3156 
+L 616 3688 
+L 1656 4403 
+L 2175 4403 
+L 2175 478 
+L 3247 478 
+L 3247 0 
+L 488 0 
 z
 " transform="scale(0.015625)"/>
        <path id="LiberationSans-36" d="M 3278 1441 
@@ -1731,111 +1776,116 @@ L 538.82 97.425
      <!-- KDE Plasma (93.2k) -->
      <g style="fill: #616161" transform="translate(551.62 103.025) scale(0.16 -0.16)">
       <defs>
-       <path id="OpenSans-4b" d="M 3928 0 
-L 3303 0 
-L 1638 2216 
-L 1159 1791 
-L 1159 0 
-L 628 0 
-L 628 4569 
-L 1159 4569 
-L 1159 2303 
-L 3231 4569 
-L 3859 4569 
-L 2022 2584 
-L 3928 0 
+       <path id="LiberationSans-4b" d="M 3456 0 
+L 1697 2125 
+L 1122 1688 
+L 1122 0 
+L 525 0 
+L 525 4403 
+L 1122 4403 
+L 1122 2197 
+L 3244 4403 
+L 3947 4403 
+L 2072 2491 
+L 4197 0 
+L 3456 0 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-44" d="M 4275 2328 
-Q 4275 1197 3661 598 
-Q 3047 0 1894 0 
-L 628 0 
-L 628 4569 
-L 2028 4569 
-Q 3094 4569 3684 3978 
-Q 4275 3388 4275 2328 
+       <path id="LiberationSans-44" d="M 4316 2247 
+Q 4316 1566 4050 1055 
+Q 3784 544 3296 272 
+Q 2809 0 2172 0 
+L 525 0 
+L 525 4403 
+L 1981 4403 
+Q 3100 4403 3708 3842 
+Q 4316 3281 4316 2247 
 z
-M 3713 2309 
-Q 3713 3203 3264 3656 
-Q 2816 4109 1931 4109 
-L 1159 4109 
-L 1159 459 
-L 1806 459 
-Q 2756 459 3234 926 
-Q 3713 1394 3713 2309 
-z
-" transform="scale(0.015625)"/>
-       <path id="OpenSans-45" d="M 3175 0 
-L 628 0 
-L 628 4569 
-L 3175 4569 
-L 3175 4097 
-L 1159 4097 
-L 1159 2625 
-L 3053 2625 
-L 3053 2156 
-L 1159 2156 
-L 1159 475 
-L 3175 475 
-L 3175 0 
+M 3716 2247 
+Q 3716 3066 3267 3495 
+Q 2819 3925 1969 3925 
+L 1122 3925 
+L 1122 478 
+L 2103 478 
+Q 2588 478 2955 690 
+Q 3322 903 3519 1303 
+Q 3716 1703 3716 2247 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-50" d="M 3525 3238 
-Q 3525 2544 3051 2170 
-Q 2578 1797 1697 1797 
-L 1159 1797 
-L 1159 0 
-L 628 0 
-L 628 4569 
-L 1813 4569 
-Q 3525 4569 3525 3238 
-z
-M 1159 2253 
-L 1638 2253 
-Q 2344 2253 2659 2481 
-Q 2975 2709 2975 3213 
-Q 2975 3666 2678 3887 
-Q 2381 4109 1753 4109 
-L 1159 4109 
-L 1159 2253 
+       <path id="LiberationSans-45" d="M 525 0 
+L 525 4403 
+L 3866 4403 
+L 3866 3916 
+L 1122 3916 
+L 1122 2503 
+L 3678 2503 
+L 3678 2022 
+L 1122 2022 
+L 1122 488 
+L 3994 488 
+L 3994 0 
+L 525 0 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-6c" d="M 1069 0 
-L 550 0 
-L 550 4863 
-L 1069 4863 
-L 1069 0 
+       <path id="LiberationSans-50" d="M 3931 3078 
+Q 3931 2453 3523 2084 
+Q 3116 1716 2416 1716 
+L 1122 1716 
+L 1122 0 
+L 525 0 
+L 525 4403 
+L 2378 4403 
+Q 3119 4403 3525 4056 
+Q 3931 3709 3931 3078 
+z
+M 3331 3072 
+Q 3331 3925 2306 3925 
+L 1122 3925 
+L 1122 2188 
+L 2331 2188 
+Q 3331 2188 3331 3072 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-6d" d="M 4916 0 
-L 4916 2228 
-Q 4916 2638 4741 2842 
-Q 4566 3047 4197 3047 
-Q 3713 3047 3481 2769 
-Q 3250 2491 3250 1913 
-L 3250 0 
-L 2731 0 
-L 2731 2228 
-Q 2731 2638 2556 2842 
-Q 2381 3047 2009 3047 
-Q 1522 3047 1295 2755 
-Q 1069 2463 1069 1797 
-L 1069 0 
-L 550 0 
-L 550 3425 
-L 972 3425 
-L 1056 2956 
-L 1081 2956 
-Q 1228 3206 1495 3347 
-Q 1763 3488 2094 3488 
-Q 2897 3488 3144 2906 
-L 3169 2906 
-Q 3322 3175 3612 3331 
-Q 3903 3488 4275 3488 
-Q 4856 3488 5145 3189 
-Q 5434 2891 5434 2234 
-L 5434 0 
-L 4916 0 
+       <path id="LiberationSans-6c" d="M 431 0 
+L 431 4638 
+L 994 4638 
+L 994 0 
+L 431 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="LiberationSans-6d" d="M 2400 0 
+L 2400 2144 
+Q 2400 2634 2265 2821 
+Q 2131 3009 1781 3009 
+Q 1422 3009 1212 2734 
+Q 1003 2459 1003 1959 
+L 1003 0 
+L 444 0 
+L 444 2659 
+Q 444 3250 425 3381 
+L 956 3381 
+Q 959 3366 962 3297 
+Q 966 3228 970 3139 
+Q 975 3050 981 2803 
+L 991 2803 
+Q 1172 3163 1406 3303 
+Q 1641 3444 1978 3444 
+Q 2363 3444 2586 3291 
+Q 2809 3138 2897 2803 
+L 2906 2803 
+Q 3081 3144 3329 3294 
+Q 3578 3444 3931 3444 
+Q 4444 3444 4676 3166 
+Q 4909 2888 4909 2253 
+L 4909 0 
+L 4353 0 
+L 4353 2144 
+Q 4353 2634 4218 2821 
+Q 4084 3009 3734 3009 
+Q 3366 3009 3161 2736 
+Q 2956 2463 2956 1959 
+L 2956 0 
+L 2400 0 
 z
 " transform="scale(0.015625)"/>
        <path id="LiberationSans-39" d="M 3256 2291 
@@ -1964,25 +2014,23 @@ L 2391 2309
 Q 2813 2241 3047 1952 
 Q 3281 1663 3281 1228 
 z
-M 838 1153 
-Q 838 778 1098 568 
-Q 1359 359 1831 359 
-Q 2297 359 2556 578 
-Q 2816 797 2816 1178 
-Q 2816 1481 2572 1717 
-Q 2328 1953 1722 2175 
-Q 1256 1975 1047 1733 
-Q 838 1491 838 1153 
+M 2588 3303 
+Q 2588 4050 1769 4050 
+Q 1372 4050 1164 3862 
+Q 956 3675 956 3303 
+Q 956 2925 1170 2726 
+Q 1384 2528 1775 2528 
+Q 2172 2528 2380 2711 
+Q 2588 2894 2588 3303 
 z
-M 1819 4213 
-Q 1428 4213 1206 4025 
-Q 984 3838 984 3525 
-Q 984 3238 1168 3031 
-Q 1353 2825 1850 2619 
-Q 2297 2806 2483 3022 
-Q 2669 3238 2669 3525 
-Q 2669 3841 2442 4027 
-Q 2216 4213 1819 4213 
+M 2697 1281 
+Q 2697 1691 2453 1898 
+Q 2209 2106 1769 2106 
+Q 1341 2106 1100 1882 
+Q 859 1659 859 1269 
+Q 859 359 1788 359 
+Q 2247 359 2472 579 
+Q 2697 800 2697 1281 
 z
 " transform="scale(0.015625)"/>
       </defs>
@@ -2012,52 +2060,58 @@ L 538.82 143.255
      <!-- Silverblue (7.4k) -->
      <g style="fill: #616161" transform="translate(551.62 148.855) scale(0.16 -0.16)">
       <defs>
-       <path id="OpenSans-62" d="M 2144 3481 
-Q 2819 3481 3192 3020 
-Q 3566 2559 3566 1716 
-Q 3566 872 3189 404 
-Q 2813 -63 2144 -63 
-Q 1809 -63 1532 60 
-Q 1256 184 1069 441 
-L 1031 441 
-L 922 0 
-L 550 0 
-L 550 4863 
-L 1069 4863 
-L 1069 3681 
-Q 1069 3284 1044 2969 
-L 1069 2969 
-Q 1431 3481 2144 3481 
+       <path id="LiberationSans-62" d="M 3291 1706 
+Q 3291 -63 2047 -63 
+Q 1663 -63 1408 76 
+Q 1153 216 994 525 
+L 988 525 
+Q 988 428 975 229 
+Q 963 31 956 0 
+L 413 0 
+Q 431 169 431 697 
+L 431 4638 
+L 994 4638 
+L 994 3316 
+Q 994 3113 981 2838 
+L 994 2838 
+Q 1150 3163 1408 3303 
+Q 1666 3444 2047 3444 
+Q 2688 3444 2989 3012 
+Q 3291 2581 3291 1706 
 z
-M 2069 3047 
-Q 1538 3047 1303 2742 
-Q 1069 2438 1069 1716 
-Q 1069 994 1309 683 
-Q 1550 372 2081 372 
-Q 2559 372 2793 720 
-Q 3028 1069 3028 1722 
-Q 3028 2391 2793 2719 
-Q 2559 3047 2069 3047 
+M 2700 1688 
+Q 2700 2397 2512 2703 
+Q 2325 3009 1903 3009 
+Q 1428 3009 1211 2684 
+Q 994 2359 994 1653 
+Q 994 988 1206 670 
+Q 1419 353 1897 353 
+Q 2322 353 2511 667 
+Q 2700 981 2700 1688 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-75" d="M 1038 3425 
-L 1038 1203 
-Q 1038 784 1228 578 
-Q 1419 372 1825 372 
-Q 2363 372 2611 665 
-Q 2859 959 2859 1625 
-L 2859 3425 
-L 3378 3425 
-L 3378 0 
-L 2950 0 
-L 2875 459 
-L 2847 459 
-Q 2688 206 2405 71 
-Q 2122 -63 1759 -63 
-Q 1134 -63 823 234 
-Q 513 531 513 1184 
-L 513 3425 
-L 1038 3425 
+       <path id="LiberationSans-75" d="M 981 3381 
+L 981 1238 
+Q 981 903 1047 718 
+Q 1113 534 1256 453 
+Q 1400 372 1678 372 
+Q 2084 372 2318 650 
+Q 2553 928 2553 1422 
+L 2553 3381 
+L 3116 3381 
+L 3116 722 
+Q 3116 131 3134 0 
+L 2603 0 
+Q 2600 16 2597 84 
+Q 2594 153 2589 242 
+Q 2584 331 2578 578 
+L 2569 578 
+Q 2375 228 2120 82 
+Q 1866 -63 1488 -63 
+Q 931 -63 673 214 
+Q 416 491 416 1128 
+L 416 3381 
+L 981 3381 
 z
 " transform="scale(0.015625)"/>
       </defs>
@@ -2090,35 +2144,35 @@ L 538.82 166.17
      <!-- IoT (3.7k) -->
      <g style="fill: #616161" transform="translate(551.62 171.77) scale(0.16 -0.16)">
       <defs>
-       <path id="OpenSans-49" d="M 628 0 
-L 628 4569 
-L 1159 4569 
-L 1159 0 
-L 628 0 
+       <path id="LiberationSans-49" d="M 591 0 
+L 591 4403 
+L 1188 4403 
+L 1188 0 
+L 591 0 
 z
 " transform="scale(0.015625)"/>
-       <path id="OpenSans-54" d="M 2034 0 
-L 1503 0 
-L 1503 4097 
-L 56 4097 
-L 56 4569 
-L 3481 4569 
-L 3481 4097 
-L 2034 4097 
-L 2034 0 
+       <path id="LiberationSans-54" d="M 2250 3916 
+L 2250 0 
+L 1656 0 
+L 1656 3916 
+L 144 3916 
+L 144 4403 
+L 3763 4403 
+L 3763 3916 
+L 2250 3916 
 z
 " transform="scale(0.015625)"/>
       </defs>
-      <use xlink:href="#OpenSans-49"/>
-      <use xlink:href="#OpenSans-6f" transform="translate(27.880859 0)"/>
-      <use xlink:href="#OpenSans-54" transform="translate(88.28125 0)"/>
-      <use xlink:href="#OpenSans-20" transform="translate(143.603516 0)"/>
-      <use xlink:href="#OpenSans-28" transform="translate(169.580078 0)"/>
-      <use xlink:href="#OpenSans-33" transform="translate(199.169922 0)"/>
-      <use xlink:href="#OpenSans-2e" transform="translate(256.347656 0)"/>
-      <use xlink:href="#OpenSans-37" transform="translate(282.958984 0)"/>
-      <use xlink:href="#OpenSans-6b" transform="translate(340.136719 0)"/>
-      <use xlink:href="#OpenSans-29" transform="translate(392.626953 0)"/>
+      <use xlink:href="#LiberationSans-49"/>
+      <use xlink:href="#LiberationSans-6f" transform="translate(27.783203 0)"/>
+      <use xlink:href="#LiberationSans-54" transform="translate(83.398438 0)"/>
+      <use xlink:href="#LiberationSans-20" transform="translate(142.732422 0)"/>
+      <use xlink:href="#LiberationSans-28" transform="translate(170.515625 0)"/>
+      <use xlink:href="#LiberationSans-33" transform="translate(203.816406 0)"/>
+      <use xlink:href="#LiberationSans-2e" transform="translate(259.431641 0)"/>
+      <use xlink:href="#LiberationSans-37" transform="translate(287.214844 0)"/>
+      <use xlink:href="#LiberationSans-6b" transform="translate(342.830078 0)"/>
+      <use xlink:href="#LiberationSans-29" transform="translate(392.830078 0)"/>
      </g>
     </g>
     <g id="line2d_46">
@@ -2150,7 +2204,7 @@ L 538.82 189.085
   </g>
  </g>
  <defs>
-  <clipPath id="p652a9f4bee">
+  <clipPath id="pccd21effad">
    <rect x="64.56" y="31.2" width="1076.64" height="558.143192"/>
   </clipPath>
  </defs>
