@@ -21,7 +21,7 @@ colors = {
     "uCore":                Light[7][3],  # Sunset
     "Workstation":          "Blue",
     "Server":               "Orange",
-    "KDE Plasma":           "Green",
+    "KDE":                  "Green",
     "CoreOS":               "Pink",
     "IoT":                  "Red"
 }
@@ -89,38 +89,53 @@ fedora_repos_hits = orig[
     )
 ]
 
-global_os = [
+fedora_atomic_desktops = [
     "Silverblue",
     "Kinoite",
+]
+
+universal_blue = [
     "Bluefin",
     "Bazzite",
     "Aurora",
-    "uCore"
+    "uCore",
 ]
 
 upstream_os = [
-    "Silverblue",
-    "Kinoite",
     "Workstation",
     "Server",
-    "KDE Plasma",
+    "KDE",
     "CoreOS",
-    "IoT"
+    "IoT",
 ]
 
-complete_os = upstream_os + global_os
+global_os = universal_blue + fedora_atomic_desktops
+
+upstream_os = upstream_os + fedora_atomic_desktops
+
+fedora_linux_os_name_os_variants = (
+    upstream_os +
+    ["uCore"] # uCore uses Fedora Linux as os_name
+)
 
 # Dataframe with one row per week in time range, one column per OS
 os_hits = pd.DataFrame()
-for os in complete_os:
-    mask = fedora_repos_hits["os_variant"].str.lower().str.contains(os.lower(), na=False)
+# OSs with custom os_name
+for os in universal_blue:
+    mask = fedora_repos_hits['os_name'] == os
     res = fedora_repos_hits[mask].groupby("week_end")["hits"].sum()
 
     os_hits[os] = res
 
-# LTS variants use os_name and are thus done separately and on data for all repos
-# They also used different names in the begining so those values need to be counted too
+# OSs with Fedora Linux as os_name
+for os in fedora_linux_os_name_os_variants:
+    mask = (fedora_repos_hits['os_name'] == 'Fedora Linux') & (fedora_repos_hits["os_variant"].str.lower().str.contains(os.lower(), na=False))
+    res = fedora_repos_hits[mask].groupby("week_end")["hits"].sum()
 
+    os_hits[os] = res
+
+# Bluefin LTS uses os_name and its data is not gathered from fedora repos
+# It also used different names in the begining so those values need to be counted too
 # Bluefin LTS hits by alt name
 bluefin_lts_alt_name_hits  = pd.DataFrame(index = os_hits.index)
 for alt_name in ["Achillobator", "Bluefin LTS"]:
@@ -130,16 +145,6 @@ for alt_name in ["Achillobator", "Bluefin LTS"]:
     bluefin_lts_alt_name_hits[alt_name] = res
 
 os_hits["Bluefin LTS"] = bluefin_lts_alt_name_hits.sum(axis=1, min_count=1)
-
-# Fedora KDE hits (other OS use kde too)
-fedora_kde_hits = pd.DataFrame(index=os_hits.index)
-for alt_name in ["Fedora Linux"]:
-    mask = (fedora_repos_hits["os_name"] == alt_name) & (fedora_repos_hits["os_variant"] == "kde")
-    res = fedora_repos_hits[mask].groupby("week_end")["hits"].sum()
-
-    fedora_kde_hits[alt_name] = res
-
-os_hits["KDE Plasma"] = fedora_kde_hits.sum(axis=1, min_count=1)
 
 
 # List of OSs ordered by most recent hits value
