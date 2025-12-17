@@ -41,36 +41,47 @@ def load_and_process_data():
 
 def calculate_os_hits(fedora_repos_hits, orig):
     """Calculate hits for each OS."""
-    os_list = [
-        "Silverblue", "Kinoite", "Bluefin", "Bazzite", "Aurora", "uCore",
-        "Workstation", "Server", "KDE Plasma", "CoreOS", "IoT"
-    ]
-
     # Create dataframe with one row per week, one column per OS
     os_hits = pd.DataFrame()
 
-    for os in os_list:
-        mask = fedora_repos_hits["os_variant"].str.lower().str.contains(os.lower(), na=False)
+    feodra_linux_os_name_variants = [
+        "Silverblue",
+        "Kinoite",
+        "Workstation",
+        "Server",
+        "KDE",
+        "CoreOS",
+        "IoT",
+        "uCore",
+    ]
+    for os in feodra_linux_os_name_variants:
+        mask = (fedora_repos_hits['os_name'] == 'Fedora Linux') & (fedora_repos_hits["os_variant"].str.lower().str.contains(os.lower(), na=False))
         res = fedora_repos_hits[mask].groupby("week_end")["hits"].sum()
+
         os_hits[os] = res
 
-    # Bluefin LTS hits
+    universal_blue = [
+        "Bluefin",
+        "Bazzite",
+        "Aurora",
+    ]
+    for os in universal_blue:
+        mask = fedora_repos_hits['os_name'] == os
+        res = fedora_repos_hits[mask].groupby("week_end")["hits"].sum()
+
+        os_hits[os] = res
+
+    # Bluefin LTS uses os_name and its data is not gathered from fedora repos
+    # It also used different names in the begining so those values need to be counted too
+    # Bluefin LTS hits by alt name
     bluefin_lts_alt_name_hits = pd.DataFrame(index=os_hits.index)
     for alt_name in ["Achillobator", "Bluefin LTS"]:
         mask = orig["os_name"] == alt_name
         res = orig[mask].groupby("week_end")["hits"].sum()
+
         bluefin_lts_alt_name_hits[alt_name] = res
 
     os_hits["Bluefin LTS"] = bluefin_lts_alt_name_hits.sum(axis=1, min_count=1)
-
-    # Fedora KDE hits
-    fedora_kde_hits = pd.DataFrame(index=os_hits.index)
-    for alt_name in ["Fedora Linux"]:
-        mask = (fedora_repos_hits["os_name"] == alt_name) & (fedora_repos_hits["os_variant"] == "kde")
-        res = fedora_repos_hits[mask].groupby("week_end")["hits"].sum()
-        fedora_kde_hits[alt_name] = res
-
-    os_hits["KDE Plasma"] = fedora_kde_hits.sum(axis=1, min_count=1)
 
     return os_hits
 
