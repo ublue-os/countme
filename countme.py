@@ -163,6 +163,7 @@ for fig, oss in [
     ("bluefins", ["Bluefin"]),
     # ("bluefins_stacked", ["Bluefin", "Bluefin LTS"]),
     ("aurora", ["Aurora"]),
+    ("upstream_with_bazzite", upstream_os + ["Bazzite"]),
 ]:
     # Take sorted_oss and only use values in oss
     #  this gives you only the OSs you care about, but ordered by most recent hits value.
