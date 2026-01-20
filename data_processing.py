@@ -3,6 +3,29 @@ from dateutil.relativedelta import relativedelta
 import polars as pl
 
 
+os_groups = {
+    "fedora_atomic_desktops": [
+        "Silverblue",
+        "Kinoite",
+    ],
+    "universal_blue": [
+        "Bluefin",
+        "Bazzite",
+        "Aurora",
+        "uCore",
+    ],
+    "upstream_os": [
+        "Workstation",
+        "Server",
+        "KDE",
+        "CoreOS",
+        "IoT",
+        "Silverblue",
+        "Kinoite",
+    ]
+}
+
+
 def _load_and_process_data(
     months: int = 9,
 ) -> tuple[pl.LazyFrame, pl.LazyFrame]:
@@ -52,29 +75,6 @@ def _load_and_process_data(
     return fedora_repos_hits, orig
 
 
-os_groups = {
-    "fedora_atomic_desktops": [
-        "Silverblue",
-        "Kinoite",
-    ],
-    "universal_blue": [
-        "Bluefin",
-        "Bazzite",
-        "Aurora",
-        "uCore",
-    ],
-    "upstream_os": [
-        "Workstation",
-        "Server",
-        "KDE",
-        "CoreOS",
-        "IoT",
-        "Silverblue",
-        "Kinoite",
-    ]
-}
-
-
 def calculate_os_hits(
     months: int = 9,
 ) -> pl.DataFrame:
@@ -86,13 +86,6 @@ def calculate_os_hits(
     :rtype: DataFrame
     """
     fedora_repos_hits, orig = _load_and_process_data(months)
-
-
-    fedora_linux_os_name_os_variants = (
-        os_groups["upstream_os"] +
-        ["uCore"] # uCore uses Fedora Linux as os_name
-    )
-
 
     # Dataframe with one row per week in time range, one column per OS
     os_hits = pl.LazyFrame(orig.select(pl.col("week_end").unique()).collect())
@@ -128,6 +121,10 @@ def calculate_os_hits(
     os_hits = os_hits.drop("uCore") # uCore has Fedora Linux as os_name. This solution isn't terribly elegant
 
     # OSs with Fedora Linux as os_name
+    fedora_linux_os_name_os_variants = (
+        os_groups["upstream_os"] +
+        ["uCore"] # uCore uses Fedora Linux as os_name
+    )
     fedora_linux_os_name_os_variants_hits = (
         fedora_repos_hits
         .filter(
