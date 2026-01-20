@@ -2,7 +2,6 @@ import json
 import os
 import polars as pl
 
-import data_processing
 
 def format_count(count: int) -> str:
     """Format count for badge display."""
@@ -89,17 +88,3 @@ def generate_badge_data(os_hits: pl.DataFrame | pl.LazyFrame):
         print(f"Generated endpoint for {project_info['name']}: {users_formatted} users")
 
     return generated_projects
-
-def main():
-        os_hits = data_processing.calculate_os_hits()
-
-        generated_projects = generate_badge_data(os_hits)
-
-        print(f"Generated {len(generated_projects)} project badges:")
-
-        for project in generated_projects:
-            print(f"  {project['name']}: {project['users_formatted']} users -> {project['file']}")
-
-
-if __name__ == "__main__":
-    main()

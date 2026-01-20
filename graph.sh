@@ -28,5 +28,4 @@ else
     echo "Skipping dataset download. Use -d flag to download fresh data."
 fi
 
-python3 countme.py
-python3 generate_badge_data.py
+python3 main.py
