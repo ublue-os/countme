@@ -52,6 +52,29 @@ def _load_and_process_data(
     return fedora_repos_hits, orig
 
 
+os_groups = {
+    "fedora_atomic_desktops": [
+        "Silverblue",
+        "Kinoite",
+    ],
+    "universal_blue": [
+        "Bluefin",
+        "Bazzite",
+        "Aurora",
+        "uCore",
+    ],
+    "upstream_os": [
+        "Workstation",
+        "Server",
+        "KDE",
+        "CoreOS",
+        "IoT",
+        "Silverblue",
+        "Kinoite",
+    ]
+}
+
+
 def calculate_os_hits(
     months: int = 9,
 ) -> pl.DataFrame:
@@ -65,32 +88,8 @@ def calculate_os_hits(
     fedora_repos_hits, orig = _load_and_process_data(months)
 
 
-    fedora_atomic_desktops = [
-        "Silverblue",
-        "Kinoite",
-    ]
-
-    universal_blue = [
-        "Bluefin",
-        "Bazzite",
-        "Aurora",
-        "uCore",
-    ]
-
-    upstream_os = [
-        "Workstation",
-        "Server",
-        "KDE",
-        "CoreOS",
-        "IoT",
-    ]
-
-    global_os = universal_blue + fedora_atomic_desktops
-
-    upstream_os = upstream_os + fedora_atomic_desktops
-
     fedora_linux_os_name_os_variants = (
-        upstream_os +
+        os_groups["upstream_os"] +
         ["uCore"] # uCore uses Fedora Linux as os_name
     )
 
@@ -101,7 +100,7 @@ def calculate_os_hits(
     universal_blue_hits = (
         fedora_repos_hits
         .filter(
-            pl.col("os_name").is_in(universal_blue),
+            pl.col("os_name").is_in(os_groups["universal_blue"]),
         )
         .group_by(
             pl.col("week_end"),
@@ -113,7 +112,7 @@ def calculate_os_hits(
         .pivot(
             on="os_name",
             index="week_end",
-            on_columns=universal_blue,
+            on_columns=os_groups["universal_blue"],
             values="hits"
         )
     )
