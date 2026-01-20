@@ -105,32 +105,34 @@ fedora_linux_os_name_os_variants = (
 # Dataframe with one row per week in time range, one column per OS
 os_hits = pl.LazyFrame(orig.select(pl.col("week_end").unique()).collect())
 # OSs with custom os_name
-for os in universal_blue:
-    res = (
-        fedora_repos_hits
-        .filter(
-            pl.col('os_name') == pl.lit(os)
-        )
-        .group_by(
-            pl.col("week_end")
-        )
-        .agg(
-            pl.col("hits").sum()
-        )
-        .select(
-            pl.col("week_end"),
-            pl.col("hits").alias(os),
-        )
+universal_blue_hits = (
+    fedora_repos_hits
+    .filter(
+        pl.col('os_name').is_in(universal_blue),
     )
+    .group_by(
+        pl.col("week_end"),
+        pl.col('os_name'),
+    )
+    .agg(
+        pl.col("hits").sum()
+    )
+    .pivot(
+        on='os_name',
+        index='week_end',
+        on_columns=universal_blue,
+        values='hits'
+    )
+)
 
-    os_hits = (
-        os_hits
-        .join(
-            other=res.lazy(),
-            on="week_end",
-            how="left",
-        )
+os_hits = (
+    os_hits
+    .join(
+        other=universal_blue_hits.lazy(),
+        on="week_end",
+        how="left",
     )
+)
 
 os_hits = os_hits.drop('uCore') # uCore has Fedora Linux as os_name. This solution isn't terribly elegant
 
