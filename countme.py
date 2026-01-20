@@ -47,16 +47,16 @@ orig = (
         },
     )
     .filter(
-        pl.col('sys_age') != pl.lit('-1'),
+        pl.col("sys_age") != pl.lit("-1"),
         # End of year partial week
         pl.col("week_end") != pl.lit("2024-12-29", dtype=pl.Date),
         # Fedora infrastructure migration; 40% drop
         pl.col("week_end") != pl.lit("2025-07-06", dtype=pl.Date),
         # Cut out old data
-        pl.col('week_end') >= pl.lit(START_DATE),
+        pl.col("week_end") >= pl.lit(START_DATE),
     )
     .sort(
-        pl.col('week_end')
+        pl.col("week_end")
     )
     .collect().lazy()
 )
@@ -65,7 +65,7 @@ orig = (
 fedora_repos_hits = (
     orig
     .filter(
-        pl.col('repo_tag').is_in([*[f"fedora-{v}" for v in range(30, 45)]])
+        pl.col("repo_tag").is_in([*[f"fedora-{v}" for v in range(30, 45)]])
     )
 )
 
@@ -106,20 +106,20 @@ os_hits = pl.LazyFrame(orig.select(pl.col("week_end").unique()).collect())
 universal_blue_hits = (
     fedora_repos_hits
     .filter(
-        pl.col('os_name').is_in(universal_blue),
+        pl.col("os_name").is_in(universal_blue),
     )
     .group_by(
         pl.col("week_end"),
-        pl.col('os_name'),
+        pl.col("os_name"),
     )
     .agg(
         pl.col("hits").sum()
     )
     .pivot(
-        on='os_name',
-        index='week_end',
+        on="os_name",
+        index="week_end",
         on_columns=universal_blue,
-        values='hits'
+        values="hits"
     )
 )
 
@@ -132,27 +132,27 @@ os_hits = (
     )
 )
 
-os_hits = os_hits.drop('uCore') # uCore has Fedora Linux as os_name. This solution isn't terribly elegant
+os_hits = os_hits.drop("uCore") # uCore has Fedora Linux as os_name. This solution isn't terribly elegant
 
 # OSs with Fedora Linux as os_name
 fedora_linux_os_name_os_variants_hits = (
     fedora_repos_hits
     .filter(
-        pl.col('os_name') == pl.lit('Fedora Linux'),
-        pl.col('os_variant').str.to_lowercase().is_in([x.lower() for x in fedora_linux_os_name_os_variants]),
+        pl.col("os_name") == pl.lit("Fedora Linux"),
+        pl.col("os_variant").str.to_lowercase().is_in([x.lower() for x in fedora_linux_os_name_os_variants]),
     )
     .group_by(
         pl.col("week_end"),
-        pl.col('os_variant'),
+        pl.col("os_variant"),
     )
     .agg(
         pl.col("hits").sum()
     )
     .pivot(
-        on='os_variant',
-        index='week_end',
+        on="os_variant",
+        index="week_end",
         on_columns=[x.lower() for x in fedora_linux_os_name_os_variants],
-        values='hits'
+        values="hits"
     )
     # Restore the original pretty names
     .rename(
@@ -176,7 +176,7 @@ bluefin_lts_alt_name_hits = (
     orig
     .filter(pl.col("os_name").is_in(["Achillobator", "Bluefin LTS"]))
     .group_by("week_end")
-    .agg(pl.col("hits").sum().alias('Bluefin LTS'))
+    .agg(pl.col("hits").sum().alias("Bluefin LTS"))
 )
 
 os_hits = (
@@ -197,15 +197,15 @@ sorted_oss = (
     os_hits
     .lazy()
     .filter(
-        pl.col('week_end') == pl.col('week_end').max(),
+        pl.col("week_end") == pl.col("week_end").max(),
     )
     .unpivot()
     .sort(
-        pl.col('value'),
+        pl.col("value"),
         descending=True,
     )
     .drop_nulls()
-    .select('variable')
+    .select("variable")
     .collect()
     .to_series()
 )
@@ -214,6 +214,7 @@ sorted_oss = (
 def number_format(x, pos):
     return f"{int(x / 1000)}k"
 
+print("Plotting")
 for fig, oss in [
     ("ublue", ["Bluefin", "Bazzite", "Aurora"]),
     ("nonbazzite", ["Bluefin", "Aurora"]),
@@ -230,7 +231,7 @@ for fig, oss in [
     #  This way you have a sorted legend
     oss = [os for os in sorted_oss if os in oss]
 
-    stacked = fig.split('_')[-1] == 'stacked'
+    stacked = fig.split("_")[-1] == "stacked"
 
     plt.figure(figsize=(16, 9))
     cumsum = 0
@@ -239,7 +240,7 @@ for fig, oss in [
         os_latest_hits = (
             os_hits
             .filter(
-                pl.col('week_end') == pl.col('week_end').max(),
+                pl.col("week_end") == pl.col("week_end").max(),
             )
             .select(
                 pl.col(os)
@@ -260,7 +261,7 @@ for fig, oss in [
 
         if stacked:
             plt.fill_between(
-                os_hits.select('week_end'),
+                os_hits.select("week_end"),
                 prev_hits,
                 hits,
                 color=color,
@@ -268,7 +269,7 @@ for fig, oss in [
             prev_hits = hits
         else:
             plt.plot(
-                os_hits.select('week_end'),
+                os_hits.select("week_end"),
                 hits,
                 # label=f"{os} ({os_latest_hits / 1000:.1f}k)",
                 color=color,
@@ -288,15 +289,15 @@ for fig, oss in [
     ]
     plt.legend(legend_lines, legend_labels, fontsize=16)
 
-    plt.title("Active Users (Weekly)", fontsize=20, fontweight='bold', color='black')
-    plt.ylabel("Devices", fontsize=16, fontweight='bold')
+    plt.title("Active Users (Weekly)", fontsize=20, fontweight="bold", color="black")
+    plt.ylabel("Devices", fontsize=16, fontweight="bold")
 
     plt.xlim([START_DATE, END_DATE])
 
     plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%m/%Y"))
 
-    plt.xticks(rotation=45, fontsize=14, fontweight='bold')
-    plt.yticks(fontsize=14, fontweight='bold')
+    plt.xticks(rotation=45, fontsize=14, fontweight="bold")
+    plt.yticks(fontsize=14, fontweight="bold")
 
     _, top = plt.ylim()
     plt.ylim(bottom=0)
