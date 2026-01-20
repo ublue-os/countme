@@ -135,33 +135,39 @@ for os in universal_blue:
 os_hits = os_hits.drop('uCore') # uCore has Fedora Linux as os_name. This solution isn't terribly elegant
 
 # OSs with Fedora Linux as os_name
-for os in fedora_linux_os_name_os_variants:
-    res = (
-        fedora_repos_hits
-        .filter(
-            pl.col('os_name') == pl.lit('Fedora Linux'),
-            pl.col('os_variant').str.to_lowercase().str.contains(os.lower()),
-        )
-        .group_by(
-            pl.col("week_end")
-        )
-        .agg(
-            pl.col("hits").sum()
-        )
-        .select(
-            pl.col("week_end"),
-            pl.col("hits").alias(os),
-        )
+fedora_linux_os_name_os_variants_hits = (
+    fedora_repos_hits
+    .filter(
+        pl.col('os_name') == pl.lit('Fedora Linux'),
+        pl.col('os_variant').str.to_lowercase().is_in([x.lower() for x in fedora_linux_os_name_os_variants]),
     )
+    .group_by(
+        pl.col("week_end"),
+        pl.col('os_variant'),
+    )
+    .agg(
+        pl.col("hits").sum()
+    )
+    .collect()
+    .pivot(
+        index='week_end',
+        on='os_variant',
+        values='hits'
+    )
+    # Restore the original pretty names
+    .rename(
+        {x.lower(): x for x in fedora_linux_os_name_os_variants}
+    )
+)
 
-    os_hits = (
-        os_hits
-        .join(
-            other=res.lazy(),
-            on="week_end",
-            how="left",
-        )
+os_hits = (
+    os_hits
+    .join(
+        other=fedora_linux_os_name_os_variants_hits.lazy(),
+        on="week_end",
+        how="left",
     )
+)
 
 # Bluefin LTS uses os_name and its data is not gathered from fedora repos
 # It also used different names in the begining so those values need to be counted too
