@@ -230,7 +230,6 @@ for fig, oss in [
     cumsum = 0
     prev_hits = 0
     for os in oss:
-        # os_latest_hits = os_hits[os].loc[os_hits[os].index.max()]
         os_latest_hits = (
             os_hits
             .filter(
