@@ -3,7 +3,7 @@ from dateutil.relativedelta import relativedelta
 import polars as pl
 
 
-def _load_and_process_data_(
+def _load_and_process_data(
     months: int = 9,
 ) -> tuple[pl.LazyFrame, pl.LazyFrame]:
     """
@@ -62,7 +62,7 @@ def calculate_os_hits(
         with one colum per OS containing its hits in the given week
     :rtype: DataFrame
     """
-    fedora_repos_hits, orig = _load_and_process_data_(months)
+    fedora_repos_hits, orig = _load_and_process_data(months)
 
 
     fedora_atomic_desktops = [
