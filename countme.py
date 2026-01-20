@@ -40,8 +40,6 @@ orig = (
             "week_start": pl.Date,
             "week_end": pl.Date,
             "repo_tag": pl.Categorical,
-            # "os_name": pl.Categorical,
-            # "os_variant": pl.Categorical,
             "os_version": pl.Categorical,
             "os_arch": pl.Categorical,
             "sys_age": pl.Categorical,
