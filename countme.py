@@ -128,7 +128,7 @@ universal_blue_hits = (
 os_hits = (
     os_hits
     .join(
-        other=universal_blue_hits.lazy(),
+        other=universal_blue_hits,
         on="week_end",
         how="left",
     )
@@ -150,10 +150,10 @@ fedora_linux_os_name_os_variants_hits = (
     .agg(
         pl.col("hits").sum()
     )
-    .collect()
     .pivot(
-        index='week_end',
         on='os_variant',
+        index='week_end',
+        on_columns=[x.lower() for x in fedora_linux_os_name_os_variants],
         values='hits'
     )
     # Restore the original pretty names
@@ -165,7 +165,7 @@ fedora_linux_os_name_os_variants_hits = (
 os_hits = (
     os_hits
     .join(
-        other=fedora_linux_os_name_os_variants_hits.lazy(),
+        other=fedora_linux_os_name_os_variants_hits,
         on="week_end",
         how="left",
     )
