@@ -238,8 +238,7 @@ for fig, oss in [
             .select(
                 pl.col(os)
             )
-            .to_series()
-            .first()
+            .item()
         )
 
         if fig == "bazzite_purple":
