@@ -1,4 +1,3 @@
-import pandas as pd
 import polars as pl
 from matplotlib.lines import Line2D
 import matplotlib.pyplot as plt
@@ -288,7 +287,7 @@ for fig, oss in [
     plt.title("Active Users (Weekly)", fontsize=20, fontweight='bold', color='black')
     plt.ylabel("Devices", fontsize=16, fontweight='bold')
 
-    plt.xlim([pd.to_datetime(START_DATE), pd.to_datetime(END_DATE)])
+    plt.xlim([START_DATE, END_DATE])
 
     plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%m/%Y"))
 
