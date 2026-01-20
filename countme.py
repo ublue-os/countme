@@ -132,7 +132,7 @@ for os in universal_blue:
         )
     )
 
-os_hits = os_hits.drop('uCore') # Ew
+os_hits = os_hits.drop('uCore') # uCore has Fedora Linux as os_name. This solution isn't terribly elegant
 
 # OSs with Fedora Linux as os_name
 for os in fedora_linux_os_name_os_variants:
