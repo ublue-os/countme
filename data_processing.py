@@ -68,7 +68,7 @@ def _load_and_process_data(
     fedora_repos_hits = (
         orig
         .filter(
-            pl.col('repo_tag').cast(pl.String).str.contains('^fedora-[0-9]+$')
+            pl.col("repo_tag").cast(pl.String).str.contains("^fedora-[0-9]+$")
         )
     )
 
