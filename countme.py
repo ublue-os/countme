@@ -46,6 +46,7 @@ def generate_graphs(
         .filter(
             pl.col("week_end") == pl.col("week_end").max(),
         )
+        .drop('week_end')
         .unpivot()
         .sort(
             pl.col("value"),
