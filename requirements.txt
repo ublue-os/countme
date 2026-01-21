@@ -43,6 +43,12 @@ pillow==11.1.0
     # via
     #   bokeh
     #   matplotlib
+polars==1.37.1
+    # via -r requirements.in
+polars-runtime-32==1.37.1
+    # via polars
+pyarrow==23.0.0
+    # via -r requirements.in
 pyparsing==3.2.3
     # via matplotlib
 python-dateutil==2.9.0.post0

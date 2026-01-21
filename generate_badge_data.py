@@ -1,93 +1,11 @@
-import pandas as pd
-import numpy as np
 import json
-import datetime
 import os
-from dateutil.relativedelta import relativedelta
+import polars as pl
 
-def load_and_process_data():
-    orig = pd.read_csv(
-        "totals.csv",
-        usecols=["week_end", "repo_tag", "os_variant", "hits", "os_name", "sys_age"],
-        parse_dates=["week_end"],
-        dtype={
-            "repo_tag": "object",
-            "os_variant": "category",
-            "os_name": "category",
-        },
-    )
 
-    # Filter for systems older than 1 week (active users)
-    orig = orig[orig["sys_age"] >= 1]
-
-    # Filter bad dates
-    orig = orig[
-        # End of year partial week
-        (orig["week_end"] != pd.to_datetime("2024-12-29"))
-        # Fedora infrastructure migration
-        & (orig["week_end"] != pd.to_datetime("2025-07-06"))
-    ]
-
-    # Get recent data (last 9 months)
-    START_DATE = datetime.datetime.now() - relativedelta(months=9)
-    orig = orig[orig["week_end"] >= START_DATE]
-
-    # Filter for Fedora repos
-    fedora_repos_hits = orig[
-        orig["repo_tag"].isin([f"fedora-{v}" for v in range(30, 45)])
-    ]
-
-    return fedora_repos_hits, orig
-
-def calculate_os_hits(fedora_repos_hits, orig):
-    """Calculate hits for each OS."""
-    # Create dataframe with one row per week, one column per OS
-    os_hits = pd.DataFrame()
-
-    feodra_linux_os_name_variants = [
-        "Silverblue",
-        "Kinoite",
-        "Workstation",
-        "Server",
-        "KDE",
-        "CoreOS",
-        "IoT",
-        "uCore",
-    ]
-    for os in feodra_linux_os_name_variants:
-        mask = (fedora_repos_hits['os_name'] == 'Fedora Linux') & (fedora_repos_hits["os_variant"].str.lower().str.contains(os.lower(), na=False))
-        res = fedora_repos_hits[mask].groupby("week_end")["hits"].sum()
-
-        os_hits[os] = res
-
-    universal_blue = [
-        "Bluefin",
-        "Bazzite",
-        "Aurora",
-    ]
-    for os in universal_blue:
-        mask = fedora_repos_hits['os_name'] == os
-        res = fedora_repos_hits[mask].groupby("week_end")["hits"].sum()
-
-        os_hits[os] = res
-
-    # Bluefin LTS uses os_name and its data is not gathered from fedora repos
-    # It also used different names in the begining so those values need to be counted too
-    # Bluefin LTS hits by alt name
-    bluefin_lts_alt_name_hits = pd.DataFrame(index=os_hits.index)
-    for alt_name in ["Achillobator", "Bluefin LTS"]:
-        mask = orig["os_name"] == alt_name
-        res = orig[mask].groupby("week_end")["hits"].sum()
-
-        bluefin_lts_alt_name_hits[alt_name] = res
-
-    os_hits["Bluefin LTS"] = bluefin_lts_alt_name_hits.sum(axis=1, min_count=1)
-
-    return os_hits
-
-def format_count(count):
+def format_count(count: int) -> str:
     """Format count for badge display."""
-    if pd.isna(count) or count == 0:
+    if count is None or count == 0:
         return "0"
     elif count < 1000:
         return str(int(count))
@@ -96,12 +14,12 @@ def format_count(count):
     else:
         return f"{int(count/1000)}k"
 
-def generate_badge_data(os_hits):
+def generate_badge_data(os_hits: pl.DataFrame | pl.LazyFrame):
     """Generate Shield.io endpoint files for each project."""
     print("Generating badge data...")
 
     # Get the most recent week's data
-    latest_data = os_hits.iloc[-1]
+    latest_data = os_hits.sort('week_end').lazy().last().collect()
 
     # Create badge-endpoints directory
     os.makedirs("badge-endpoints", exist_ok=True)
@@ -135,10 +53,14 @@ def generate_badge_data(os_hits):
 
     for project_key, project_info in project_mappings.items():
         # Calculate total users for this project
-        total_users = 0
-        for variant in project_info["os_variants"]:
-            if variant in latest_data and not pd.isna(latest_data[variant]):
-                total_users += latest_data[variant]
+        total_users = (
+            latest_data
+            .select(
+                [variant for variant in project_info["os_variants"]]
+            )
+            .sum_horizontal()
+            .item()
+        )
 
         # Format user count for display
         users_formatted = format_count(total_users)
@@ -166,18 +88,3 @@ def generate_badge_data(os_hits):
         print(f"Generated endpoint for {project_info['name']}: {users_formatted} users")
 
     return generated_projects
-
-def main():
-        fedora_repos_hits, orig = load_and_process_data()
-        os_hits = calculate_os_hits(fedora_repos_hits, orig)
-
-        generated_projects = generate_badge_data(os_hits)
-
-        print(f"Generated {len(generated_projects)} project badges:")
-
-        for project in generated_projects:
-            print(f"  {project['name']}: {project['users_formatted']} users -> {project['file']}")
-
-
-if __name__ == "__main__":
-    main()
