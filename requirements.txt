@@ -42,7 +42,7 @@ pillow==11.3.0
     # via
     #   bokeh
     #   matplotlib
-polars==1.37.1
+polars==1.38.1
     # via -r requirements.in
 polars-runtime-32==1.37.1
     # via polars
