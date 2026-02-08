@@ -38,7 +38,7 @@ pandas==3.0.0
     # via
     #   -r requirements.in
     #   bokeh
-pillow==11.3.0
+pillow==12.1.0
     # via
     #   bokeh
     #   matplotlib
