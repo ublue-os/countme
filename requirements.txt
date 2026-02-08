@@ -4,7 +4,7 @@
 #
 #    pip-compile
 #
-bokeh==3.7.2
+bokeh==3.8.2
     # via -r requirements.in
 contourpy==1.3.3
     # via
