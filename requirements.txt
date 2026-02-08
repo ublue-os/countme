@@ -4,15 +4,15 @@
 #
 #    pip-compile
 #
-bokeh==3.7.2
+bokeh==3.8.2
     # via -r requirements.in
-contourpy==1.3.1
+contourpy==1.3.3
     # via
     #   bokeh
     #   matplotlib
 cycler==0.12.1
     # via matplotlib
-fonttools==4.57.0
+fonttools==4.61.1
     # via matplotlib
 jinja2==3.1.6
     # via bokeh
@@ -20,11 +20,11 @@ kiwisolver==1.4.8
     # via matplotlib
 markupsafe==3.0.2
     # via jinja2
-matplotlib==3.10.1
+matplotlib==3.10.8
     # via -r requirements.in
-narwhals==1.34.1
+narwhals==1.48.1
     # via bokeh
-numpy==2.2.4
+numpy==2.4.2
     # via
     #   bokeh
     #   contourpy
@@ -34,9 +34,11 @@ packaging==24.2
     # via
     #   bokeh
     #   matplotlib
-pandas==2.2.3
-    # via bokeh
-pillow==11.1.0
+pandas==2.3.3
+    # via
+    #   -r requirements.in
+    #   bokeh
+pillow==11.3.0
     # via
     #   bokeh
     #   matplotlib
@@ -56,9 +58,9 @@ pyyaml==6.0.2
     # via bokeh
 six==1.17.0
     # via python-dateutil
-tornado==6.4.2
+tornado==6.5.4
     # via bokeh
 tzdata==2025.2
     # via pandas
-xyzservices==2025.1.0
+xyzservices==2025.11.0
     # via bokeh
