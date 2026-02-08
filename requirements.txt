@@ -54,7 +54,7 @@ python-dateutil==2.9.0.post0
     #   pandas
 pytz==2025.2
     # via pandas
-pyyaml==6.0.2
+pyyaml==6.0.3
     # via bokeh
 six==1.17.0
     # via python-dateutil
