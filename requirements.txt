@@ -34,7 +34,7 @@ packaging==26.0
     # via
     #   bokeh
     #   matplotlib
-pandas==3.0.0
+pandas==3.0.1
     # via
     #   -r requirements.in
     #   bokeh
