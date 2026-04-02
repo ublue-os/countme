@@ -44,7 +44,7 @@ pillow==12.1.1
     #   matplotlib
 polars==1.38.1
     # via -r requirements.in
-polars-runtime-32==1.38.1
+polars-runtime-32==1.39.3
     # via polars
 pyparsing==3.3.2
     # via matplotlib
