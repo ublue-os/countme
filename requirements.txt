@@ -30,7 +30,7 @@ numpy==2.4.3
     #   contourpy
     #   matplotlib
     #   pandas
-packaging==26.0
+packaging==26.2
     # via
     #   bokeh
     #   matplotlib
