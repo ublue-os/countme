@@ -60,7 +60,7 @@ six==1.17.0
     # via python-dateutil
 tornado==6.5.5
     # via bokeh
-tzdata==2025.3
+tzdata==2026.2
     # via pandas
 xyzservices==2025.11.0
     # via bokeh
