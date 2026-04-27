@@ -1,0 +1,27 @@
+name: Test on PR
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Create sample data
+        run: |
+          cat << EOF > totals.csv
+          week_start,week_end,hits,os_name,os_version,os_variant,os_arch,sys_age,repo_tag,repo_arch
+          $(date -d "7 days ago" +%Y-%m-%d),$(date +%Y-%m-%d),1,Os Name,99,variant,x86_64,4,repo-tag,x86_64
+          EOF
+
+      - name: Run main.py
+        run: python3 main.py
