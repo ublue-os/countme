@@ -20,7 +20,7 @@ kiwisolver==1.5.0
     # via matplotlib
 markupsafe==3.0.3
     # via jinja2
-matplotlib==3.10.8
+matplotlib==3.10.9
     # via -r requirements.in
 narwhals==2.18.0
     # via bokeh
