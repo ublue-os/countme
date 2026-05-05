@@ -138,7 +138,7 @@ def generate_graphs(
         ]
         plt.legend(legend_lines, legend_labels, fontsize=16)
 
-        plt.title("Active Users (Weekly)", fontsize=20, fontweight="bold", color="black")
+        plt.title("Weekly Active Devices", fontsize=20, fontweight="bold", color="black")
         plt.ylabel("Devices", fontsize=16, fontweight="bold")
 
         plt.xlim([START_DATE, END_DATE])
