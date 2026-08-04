@@ -22,7 +22,7 @@ markupsafe==3.0.3
     # via jinja2
 matplotlib==3.11.0
     # via -r requirements.in
-narwhals==2.22.1
+narwhals==2.24.0
     # via bokeh
 numpy==2.5.1
     # via
