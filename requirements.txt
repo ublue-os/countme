@@ -24,7 +24,7 @@ matplotlib==3.11.1
     # via -r requirements.in
 narwhals==2.24.0
     # via bokeh
-numpy==2.5.1
+numpy==2.5.2
     # via
     #   bokeh
     #   contourpy
