@@ -62,5 +62,5 @@ tornado==6.5.7
     # via bokeh
 tzdata==2026.3
     # via pandas
-xyzservices==2026.3.0
+xyzservices==2026.9.1
     # via bokeh
