@@ -46,6 +46,11 @@ def generate_badge_data(os_hits: pl.DataFrame | pl.LazyFrame):
             "name": "Aurora",
             "os_variants": ["Aurora"],
             "color": "9b59b6"
+        },
+        "ucore": {
+            "name": "uCore",
+            "os_variants": ["uCore"],
+            "color": "4c6fff"
         }
     }
 

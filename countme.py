@@ -20,7 +20,7 @@ colors = {
     "Aurora":               Light[5][1],  # Orange
     "Kinoite":              Light[5][2],  # Light orange
     "Bluefin LTS":          Light[7][1],  # Orange
-    "uCore":                Light[7][3],  # Sunset
+    "uCore":                "#4c6fff",  # uCore site accent
     "Workstation":          "Blue",
     "Server":               "Orange",
     "KDE":                  "Green",
@@ -73,6 +73,7 @@ def generate_graphs(
         ("bluefins", ["Bluefin"]),
         # ("bluefins_stacked", ["Bluefin", "Bluefin LTS"]),
         ("aurora", ["Aurora"]),
+        ("ucore", ["uCore"]),
         ("upstream_with_bazzite", os_groups["upstream_os"] + ["Bazzite"]),
     ]:
         # Take sorted_oss and only use values in oss
