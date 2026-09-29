@@ -21,7 +21,24 @@ jobs:
           cat << EOF > totals.csv
           week_start,week_end,hits,os_name,os_version,os_variant,os_arch,sys_age,repo_tag,repo_arch
           $(date -d "7 days ago" +%Y-%m-%d),$(date +%Y-%m-%d),1,Os Name,99,variant,x86_64,4,repo-tag,x86_64
+          $(date -d "7 days ago" +%Y-%m-%d),$(date +%Y-%m-%d),700,Fedora Linux,44,ucore,x86_64,4,fedora-44,x86_64
+          $(date -d "7 days ago" +%Y-%m-%d),$(date +%Y-%m-%d),600,Fedora Linux,44,ucore,aarch64,4,fedora-44,aarch64
+          $(date -d "7 days ago" +%Y-%m-%d),$(date +%Y-%m-%d),1000,Fedora Linux,44,ucore,x86_64,-1,fedora-44,x86_64
+          $(date -d "7 days ago" +%Y-%m-%d),$(date +%Y-%m-%d),2000,Fedora Linux,44,ucore,x86_64,4,updates-released-f44,x86_64
           EOF
 
       - name: Run main.py
         run: python3 main.py
+
+      - name: Verify uCore CountMe outputs
+        run: |
+          python3 - <<'PY'
+          import json
+
+          with open("badge-endpoints/ucore.json") as badge_file:
+              badge = json.load(badge_file)
+          assert badge["message"] == "1.3k", badge
+
+          with open("growth_ucore.svg") as chart_file:
+              assert chart_file.read().startswith("<?xml")
+          PY
