@@ -42,9 +42,9 @@ pillow==12.3.0
     # via
     #   bokeh
     #   matplotlib
-polars==1.44.2
+polars==2.1.0
     # via -r requirements.in
-polars-runtime-32==1.44.2
+polars-runtime-32==2.1.0
     # via polars
 pyparsing==3.3.3
     # via matplotlib
