@@ -14,13 +14,20 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
-      - name: Get Count
-        run: ./graph.sh -d
-        working-directory: ${{ github.workspace }}
-
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
+      - name: Cache CountMe dataset
+        id: cache-totals
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
+        with:
+          path: totals.csv
+          key: totals-csv-${{ steps.date.outputs.date }}
+
+      - name: Get Count
+        run: ./graph.sh ${{ steps.cache-totals.outputs.cache-hit != 'true' && '-d' || '' }}
+        working-directory: ${{ github.workspace }}
 
       - name: Write Growth Charts to Repostiory
         uses: test-room-7/action-update-file@6b8249d09d5926fbae288c0bb640757f09ec7ce0 # v2
